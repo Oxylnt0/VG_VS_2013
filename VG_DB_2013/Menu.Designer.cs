@@ -54,9 +54,9 @@
             this.panel1.Controls.Add(this.inventorybtn);
             this.panel1.Controls.Add(this.homebtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 622);
+            this.panel1.Location = new System.Drawing.Point(0, 753);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(873, 114);
+            this.panel1.Size = new System.Drawing.Size(1488, 114);
             this.panel1.TabIndex = 0;
             // 
             // logoutbtn
@@ -68,7 +68,7 @@
             this.logoutbtn.ForeColor = System.Drawing.Color.White;
             this.logoutbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_logout_50;
             this.logoutbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.logoutbtn.Location = new System.Drawing.Point(761, 10);
+            this.logoutbtn.Location = new System.Drawing.Point(1066, 10);
             this.logoutbtn.Name = "logoutbtn";
             this.logoutbtn.Size = new System.Drawing.Size(101, 92);
             this.logoutbtn.TabIndex = 7;
@@ -86,7 +86,7 @@
             this.adminbtn.ForeColor = System.Drawing.Color.White;
             this.adminbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_admin_50;
             this.adminbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.adminbtn.Location = new System.Drawing.Point(654, 10);
+            this.adminbtn.Location = new System.Drawing.Point(959, 10);
             this.adminbtn.Name = "adminbtn";
             this.adminbtn.Size = new System.Drawing.Size(101, 92);
             this.adminbtn.TabIndex = 6;
@@ -104,7 +104,7 @@
             this.suppliersbtn.ForeColor = System.Drawing.Color.White;
             this.suppliersbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_supplier_50;
             this.suppliersbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.suppliersbtn.Location = new System.Drawing.Point(547, 10);
+            this.suppliersbtn.Location = new System.Drawing.Point(852, 10);
             this.suppliersbtn.Name = "suppliersbtn";
             this.suppliersbtn.Size = new System.Drawing.Size(101, 92);
             this.suppliersbtn.TabIndex = 5;
@@ -121,7 +121,7 @@
             this.purchasesbtn.ForeColor = System.Drawing.Color.White;
             this.purchasesbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_bill_50;
             this.purchasesbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.purchasesbtn.Location = new System.Drawing.Point(440, 10);
+            this.purchasesbtn.Location = new System.Drawing.Point(745, 10);
             this.purchasesbtn.Name = "purchasesbtn";
             this.purchasesbtn.Size = new System.Drawing.Size(101, 92);
             this.purchasesbtn.TabIndex = 4;
@@ -138,7 +138,7 @@
             this.customersbtn.ForeColor = System.Drawing.Color.White;
             this.customersbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_customers_50;
             this.customersbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.customersbtn.Location = new System.Drawing.Point(333, 10);
+            this.customersbtn.Location = new System.Drawing.Point(638, 10);
             this.customersbtn.Name = "customersbtn";
             this.customersbtn.Size = new System.Drawing.Size(101, 92);
             this.customersbtn.TabIndex = 3;
@@ -155,7 +155,7 @@
             this.salesbtn.ForeColor = System.Drawing.Color.White;
             this.salesbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_sales_50;
             this.salesbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.salesbtn.Location = new System.Drawing.Point(226, 10);
+            this.salesbtn.Location = new System.Drawing.Point(531, 10);
             this.salesbtn.Name = "salesbtn";
             this.salesbtn.Size = new System.Drawing.Size(101, 92);
             this.salesbtn.TabIndex = 2;
@@ -172,7 +172,7 @@
             this.inventorybtn.ForeColor = System.Drawing.Color.White;
             this.inventorybtn.Image = global::VG_DB_2013.Properties.Resources.icons8_inventory_50;
             this.inventorybtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.inventorybtn.Location = new System.Drawing.Point(119, 10);
+            this.inventorybtn.Location = new System.Drawing.Point(424, 10);
             this.inventorybtn.Name = "inventorybtn";
             this.inventorybtn.Size = new System.Drawing.Size(101, 92);
             this.inventorybtn.TabIndex = 1;
@@ -190,7 +190,7 @@
             this.homebtn.ForeColor = System.Drawing.Color.White;
             this.homebtn.Image = global::VG_DB_2013.Properties.Resources.home;
             this.homebtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.homebtn.Location = new System.Drawing.Point(12, 10);
+            this.homebtn.Location = new System.Drawing.Point(317, 10);
             this.homebtn.Name = "homebtn";
             this.homebtn.Size = new System.Drawing.Size(101, 92);
             this.homebtn.TabIndex = 0;
@@ -206,16 +206,15 @@
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(873, 622);
+            this.MainPanel.Size = new System.Drawing.Size(1488, 753);
             this.MainPanel.TabIndex = 1;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VG_DB_2013.Properties.Resources._24753674;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(873, 736);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(1488, 867);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -14,6 +14,10 @@ namespace VG_DB_2013
 {
     public partial class Inventory : Form
     {
+
+        private string query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games";
+
+
         public Inventory()
         {
             InitializeComponent();
@@ -21,15 +25,16 @@ namespace VG_DB_2013
 
         private void Inventory_Load(object sender, EventArgs e)
         {
+
             this.BindData();
+
         }
 
         public void BindData()
         {
 
             string connectionstring = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
-            string query = "SELECT Game_ID, Game_Name, Game_Platform, Developer, Picture FROM Games";
-
+           
             using (SqlConnection conn = new SqlConnection(connectionstring))
             {
                 conn.Open();
@@ -65,6 +70,7 @@ namespace VG_DB_2013
                 InventoryGrid.Columns.Clear();
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Game ID", DataPropertyName = "Game_ID" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Game Name", DataPropertyName = "Game_Name" });
+                InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Price", DataPropertyName = "Price" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Platform", DataPropertyName = "Game_Platform" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Developer", DataPropertyName = "Developer" });
                 InventoryGrid.Columns.Add(imgColumn);
@@ -104,6 +110,98 @@ namespace VG_DB_2013
                 return null;
             }
         }
+
+        private void applybtn_Click(object sender, EventArgs e)
+        {
+            //checkboxes
+
+            
+
+            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games where";
+
+            bool condition1 = true;
+
+            if (ps4.Checked)
+            {
+                if (!condition1) query += " or ";
+                query += " Game_Platform = 'PS4'";
+                condition1 = false;
+            }
+
+            if (ps5.Checked)
+            {
+                if (!condition1) query += " or ";
+                query += " Game_Platform = 'PS5'";
+                condition1 = false;
+            }
+
+            if (nswitch.Checked)
+            {
+                if (!condition1) query += " or ";
+                query += " Game_Platform = 'Nintendo Switch'";
+                condition1 = false;
+            }
+
+            if (xboxone.Checked)
+            {
+                if (!condition1) query += " or ";
+                query += " Game_Platform = 'Xbox One'";
+                condition1 = false;
+            }
+
+
+            //sort by
+            if (sortby.SelectedItem == null)
+            {
+                
+            }
+
+            else if (sortby.SelectedItem.ToString() == "Name - Descending")
+            {
+                query += " order by Game_Name desc";
+            }
+
+            else if (sortby.SelectedItem.ToString() == "Name - Ascending")
+            {
+                query += " order by Game_Name asc";
+             
+            }
+
+            else if (sortby.SelectedItem.ToString() == "Price - Ascending")
+            {
+                query += " order by Price asc";
+           
+            }
+
+            else if (sortby.SelectedItem.ToString() == "Price - Descending")
+            {
+                query += " order by Price desc";
+        
+            }
+
+            else if (sortby.SelectedItem.ToString() == "Game ID - Ascending")
+            {
+                query += " order by Game_ID desc";
+ 
+            }
+
+            else if (sortby.SelectedItem.ToString() == "Game ID - Descending")
+            {
+                query += " order by Game_ID desc";
+          
+            }
+
+            this.BindData();
+            InventoryGrid.Update();
+            InventoryGrid.Refresh();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
 
     }
 }

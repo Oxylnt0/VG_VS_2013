@@ -209,5 +209,25 @@ namespace VG_DB_2013.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vecteezy_abstract_pattern_with_gamepad_joystick_geometric_pattern_50754331 {
+            get {
+                object obj = ResourceManager.GetObject("vecteezy_abstract-pattern-with-gamepad-joystick-geometric-pattern_50754331", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vector_Seamless_Game_Controller_Pattern_Abstract_Background_02 {
+            get {
+                object obj = ResourceManager.GetObject("Vector_Seamless_Game_Controller_Pattern_Abstract_Background-02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

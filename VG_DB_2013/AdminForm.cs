@@ -53,6 +53,8 @@ namespace VG_DB_2013
             this.AdminGrid.Columns[5].SortMode = DataGridViewColumnSortMode.NotSortable;
         }
 
+        
+
  
 
     }
