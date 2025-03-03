@@ -50,7 +50,7 @@
             this.loginbtn.FlatAppearance.BorderSize = 0;
             this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbtn.Location = new System.Drawing.Point(60, 280);
+            this.loginbtn.Location = new System.Drawing.Point(111, 273);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(83, 34);
             this.loginbtn.TabIndex = 9;
@@ -63,7 +63,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(56, 181);
+            this.label4.Location = new System.Drawing.Point(107, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 21);
             this.label4.TabIndex = 8;
@@ -74,7 +74,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(83, 40);
+            this.label2.Location = new System.Drawing.Point(134, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 40);
             this.label2.TabIndex = 7;
@@ -84,7 +84,7 @@
             // passwordbox
             // 
             this.passwordbox.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordbox.Location = new System.Drawing.Point(60, 205);
+            this.passwordbox.Location = new System.Drawing.Point(111, 198);
             this.passwordbox.Name = "passwordbox";
             this.passwordbox.Size = new System.Drawing.Size(209, 29);
             this.passwordbox.TabIndex = 5;
@@ -93,7 +93,7 @@
             // usernamebox
             // 
             this.usernamebox.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernamebox.Location = new System.Drawing.Point(60, 131);
+            this.usernamebox.Location = new System.Drawing.Point(111, 124);
             this.usernamebox.Name = "usernamebox";
             this.usernamebox.Size = new System.Drawing.Size(209, 29);
             this.usernamebox.TabIndex = 4;
@@ -103,7 +103,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(56, 107);
+            this.label3.Location = new System.Drawing.Point(107, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 2;
@@ -115,7 +115,7 @@
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(186, 280);
+            this.clearbtn.Location = new System.Drawing.Point(237, 273);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(83, 34);
             this.clearbtn.TabIndex = 10;
@@ -135,9 +135,9 @@
             this.panel1.Controls.Add(this.usernamebox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(270, 131);
+            this.panel1.Location = new System.Drawing.Point(516, 224);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 351);
+            this.panel1.Size = new System.Drawing.Size(431, 346);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -148,7 +148,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(852, 40);
+            this.panel2.Size = new System.Drawing.Size(1440, 40);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -169,7 +169,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(815, 3);
+            this.button1.Location = new System.Drawing.Point(1403, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 34);
             this.button1.TabIndex = 0;
@@ -180,9 +180,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VG_DB_2013.Properties.Resources.vecteezy_abstract_pattern_with_gamepad_joystick_geometric_pattern_50754331;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(852, 627);
+            this.BackgroundImage = global::VG_DB_2013.Properties.Resources._24753674;
+            this.ClientSize = new System.Drawing.Size(1440, 778);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

@@ -15,7 +15,7 @@ namespace VG_DB_2013
     public partial class Inventory : Form
     {
 
-        private string query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games";
+        private string query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games WHERE 1=1";
 
 
         public Inventory()
@@ -25,7 +25,6 @@ namespace VG_DB_2013
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-
             this.BindData();
 
         }
@@ -113,47 +112,108 @@ namespace VG_DB_2013
 
         private void applybtn_Click(object sender, EventArgs e)
         {
-            //checkboxes
 
-            
+            List<string> selectedPlatforms = new List<string>();
+            List<string> selectedDevelopers = new List<string>();
 
-            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games where";
-
-            bool condition1 = true;
-
-            if (ps4.Checked)
+            //platform
+            if (platformbox.GetItemChecked(0) == true)
             {
-                if (!condition1) query += " or ";
-                query += " Game_Platform = 'PS4'";
-                condition1 = false;
+                selectedPlatforms.Add("PS4");
+            }
+            if (platformbox.GetItemChecked(1) == true)
+            {
+                selectedPlatforms.Add("PS5");
+            }
+            if (platformbox.GetItemChecked(2) == true)
+            {
+                selectedPlatforms.Add("Nintendo Switch");
+            }
+            if (platformbox.GetItemChecked(3) == true)
+            {
+                selectedPlatforms.Add("Xbox One");
             }
 
-            if (ps5.Checked)
+            //developer
+            if (developerbox.GetItemChecked(0) == true)
             {
-                if (!condition1) query += " or ";
-                query += " Game_Platform = 'PS5'";
-                condition1 = false;
+                selectedDevelopers.Add("Aerosoft");
+            }
+            if (developerbox.GetItemChecked(1) == true)
+            {
+                selectedDevelopers.Add("Aniplex");
+            }
+            if (developerbox.GetItemChecked(2) == true)
+            {
+                selectedDevelopers.Add("Atlus");
+            }
+            if (developerbox.GetItemChecked(3) == true)
+            {
+                selectedDevelopers.Add("Bandai Namco Games");
+            }
+            if (developerbox.GetItemChecked(4) == true)
+            {
+                selectedDevelopers.Add("Capcom");
+            }
+            if (developerbox.GetItemChecked(5) == true)
+            {
+                selectedDevelopers.Add("Dotemu");
+            }
+            if (developerbox.GetItemChecked(6) == true)
+            {
+                selectedDevelopers.Add("Electronic Arts");
+            }
+            if (developerbox.GetItemChecked(7) == true)
+            {
+                selectedDevelopers.Add("Falcom");
+            }
+            if (developerbox.GetItemChecked(8) == true)
+            {
+                selectedDevelopers.Add("FromSoftware");
+            }
+            if (developerbox.GetItemChecked(9) == true)
+            {
+                selectedDevelopers.Add("Natsume");
+            }
+            if (developerbox.GetItemChecked(10) == true)
+            {
+                selectedDevelopers.Add("Nintendo");
+            }
+            if (developerbox.GetItemChecked(11) == true)
+            {
+                selectedDevelopers.Add("Rockstar Games");
+            }
+            if (developerbox.GetItemChecked(12) == true)
+            {
+                selectedDevelopers.Add("Sony Interactive Entertainment");
+            }
+            if (developerbox.GetItemChecked(13) == true)
+            {
+                selectedDevelopers.Add("Supergiant Games");
+            }
+            if (developerbox.GetItemChecked(14) == true)
+            {
+                selectedDevelopers.Add("Unknown Worlds");
+            }
+            if (developerbox.GetItemChecked(15) == true)
+            {
+                selectedDevelopers.Add("Warner Bros.");
             }
 
-            if (nswitch.Checked)
+            if (selectedPlatforms.Count > 0)
             {
-                if (!condition1) query += " or ";
-                query += " Game_Platform = 'Nintendo Switch'";
-                condition1 = false;
+                query += " AND Game_Platform IN ('" + string.Join("','", selectedPlatforms) + "')";
             }
 
-            if (xboxone.Checked)
+            if (selectedDevelopers.Count > 0)
             {
-                if (!condition1) query += " or ";
-                query += " Game_Platform = 'Xbox One'";
-                condition1 = false;
+                query += " AND Developer IN ('" + string.Join("','", selectedDevelopers) + "')";
             }
 
-
-            //sort by
+            //sortby
             if (sortby.SelectedItem == null)
             {
-                
+                sortby.SelectedValue = null;
             }
 
             else if (sortby.SelectedItem.ToString() == "Name - Descending")
@@ -164,44 +224,54 @@ namespace VG_DB_2013
             else if (sortby.SelectedItem.ToString() == "Name - Ascending")
             {
                 query += " order by Game_Name asc";
-             
+
             }
 
             else if (sortby.SelectedItem.ToString() == "Price - Ascending")
             {
                 query += " order by Price asc";
-           
+
             }
 
             else if (sortby.SelectedItem.ToString() == "Price - Descending")
             {
                 query += " order by Price desc";
-        
+
             }
 
             else if (sortby.SelectedItem.ToString() == "Game ID - Ascending")
             {
-                query += " order by Game_ID desc";
- 
+                query += " order by Game_ID asc";
+
             }
 
             else if (sortby.SelectedItem.ToString() == "Game ID - Descending")
             {
                 query += " order by Game_ID desc";
-          
+
             }
 
             this.BindData();
             InventoryGrid.Update();
             InventoryGrid.Refresh();
 
+            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games WHERE 1=1";
+            
         }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-
+        private void searchbtn_Click(object sender, EventArgs e)
+        {
+            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games where Game_Name Like '%" + search.Text + "%';";
+            this.BindData();
+            InventoryGrid.Update();
+            InventoryGrid.Refresh();
+            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games WHERE 1=1";
+        }
     }
 }

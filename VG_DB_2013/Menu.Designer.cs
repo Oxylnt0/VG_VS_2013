@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 753);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1488, 114);
+            this.panel1.Size = new System.Drawing.Size(1440, 114);
             this.panel1.TabIndex = 0;
             // 
             // logoutbtn
@@ -206,15 +206,16 @@
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1488, 753);
+            this.MainPanel.Size = new System.Drawing.Size(1440, 753);
             this.MainPanel.TabIndex = 1;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::VG_DB_2013.Properties.Resources._24753674;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1488, 867);
+            this.ClientSize = new System.Drawing.Size(1440, 867);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
