@@ -196,7 +196,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VG_DB_2013.Properties.Resources._24753674;
             this.ClientSize = new System.Drawing.Size(1440, 778);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
