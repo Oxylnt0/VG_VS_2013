@@ -83,6 +83,16 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _83b809857acd41a7bad4935b4734f9fc {
+            get {
+                object obj = ResourceManager.GetObject("83b809857acd41a7bad4935b4734f9fc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home {
             get {
                 object obj = ResourceManager.GetObject("home", resourceCulture);
@@ -206,6 +216,16 @@ namespace VG_DB_2013.Properties {
         internal static System.Drawing.Bitmap icons8_supplier_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-supplier-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap japan_aesthetic {
+            get {
+                object obj = ResourceManager.GetObject("japan-aesthetic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
