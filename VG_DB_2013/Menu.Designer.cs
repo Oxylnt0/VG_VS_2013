@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.logoutbtn);
             this.panel1.Controls.Add(this.adminbtn);
             this.panel1.Controls.Add(this.suppliersbtn);
@@ -128,6 +128,7 @@
             this.purchasesbtn.Text = "Purchases";
             this.purchasesbtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.purchasesbtn.UseVisualStyleBackColor = true;
+            this.purchasesbtn.Click += new System.EventHandler(this.purchasesbtn_Click);
             // 
             // customersbtn
             // 
@@ -235,11 +236,11 @@
         private System.Windows.Forms.Button logoutbtn;
         private System.Windows.Forms.Button adminbtn;
         private System.Windows.Forms.Button suppliersbtn;
-        private System.Windows.Forms.Button purchasesbtn;
         private System.Windows.Forms.Button customersbtn;
         private System.Windows.Forms.Button salesbtn;
         private System.Windows.Forms.Button inventorybtn;
         private System.Windows.Forms.Button homebtn;
         private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.Button purchasesbtn;
     }
 }

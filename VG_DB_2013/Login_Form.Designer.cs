@@ -46,11 +46,12 @@
             // 
             // loginbtn
             // 
-            this.loginbtn.BackColor = System.Drawing.Color.Orange;
+            this.loginbtn.BackColor = System.Drawing.Color.Gold;
             this.loginbtn.FlatAppearance.BorderSize = 0;
             this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbtn.Location = new System.Drawing.Point(111, 273);
+            this.loginbtn.ForeColor = System.Drawing.Color.Black;
+            this.loginbtn.Location = new System.Drawing.Point(64, 275);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(83, 34);
             this.loginbtn.TabIndex = 9;
@@ -62,8 +63,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(107, 174);
+            this.label4.ForeColor = System.Drawing.Color.Azure;
+            this.label4.Location = new System.Drawing.Point(60, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 21);
             this.label4.TabIndex = 8;
@@ -73,8 +74,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(134, 33);
+            this.label2.ForeColor = System.Drawing.Color.Azure;
+            this.label2.Location = new System.Drawing.Point(87, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 40);
             this.label2.TabIndex = 7;
@@ -84,7 +85,7 @@
             // passwordbox
             // 
             this.passwordbox.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordbox.Location = new System.Drawing.Point(111, 198);
+            this.passwordbox.Location = new System.Drawing.Point(64, 200);
             this.passwordbox.Name = "passwordbox";
             this.passwordbox.Size = new System.Drawing.Size(209, 29);
             this.passwordbox.TabIndex = 5;
@@ -93,7 +94,7 @@
             // usernamebox
             // 
             this.usernamebox.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernamebox.Location = new System.Drawing.Point(111, 124);
+            this.usernamebox.Location = new System.Drawing.Point(64, 126);
             this.usernamebox.Name = "usernamebox";
             this.usernamebox.Size = new System.Drawing.Size(209, 29);
             this.usernamebox.TabIndex = 4;
@@ -102,8 +103,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(107, 100);
+            this.label3.ForeColor = System.Drawing.Color.Azure;
+            this.label3.Location = new System.Drawing.Point(60, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 2;
@@ -111,11 +112,12 @@
             // 
             // clearbtn
             // 
-            this.clearbtn.BackColor = System.Drawing.Color.Orange;
+            this.clearbtn.BackColor = System.Drawing.Color.Gold;
             this.clearbtn.FlatAppearance.BorderSize = 0;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearbtn.Location = new System.Drawing.Point(237, 273);
+            this.clearbtn.ForeColor = System.Drawing.Color.Black;
+            this.clearbtn.Location = new System.Drawing.Point(190, 275);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(83, 34);
             this.clearbtn.TabIndex = 10;
@@ -126,7 +128,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.clearbtn);
             this.panel1.Controls.Add(this.loginbtn);
             this.panel1.Controls.Add(this.label4);
@@ -135,14 +137,14 @@
             this.panel1.Controls.Add(this.usernamebox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(516, 224);
+            this.panel1.Location = new System.Drawing.Point(563, 224);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(431, 346);
+            this.panel1.Size = new System.Drawing.Size(340, 346);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Firebrick;
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -155,12 +157,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semilight", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.ForeColor = System.Drawing.Color.Azure;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(533, 37);
+            this.label1.Size = new System.Drawing.Size(601, 37);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Video Game Inventory Management System";
+            this.label1.Text = "Video Game Store Inventory Management System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1

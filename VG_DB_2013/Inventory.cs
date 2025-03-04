@@ -273,5 +273,20 @@ namespace VG_DB_2013
             InventoryGrid.Refresh();
             query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games WHERE 1=1";
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+   
+
+
+
     }
 }

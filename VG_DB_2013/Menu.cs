@@ -53,5 +53,10 @@ namespace VG_DB_2013
         {
             loadform(new Inventory());
         }
+
+        private void purchasesbtn_Click(object sender, EventArgs e)
+        {
+            loadform(new Purchases());
+        }
     }
 }
