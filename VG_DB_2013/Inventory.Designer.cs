@@ -59,7 +59,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
@@ -86,7 +86,6 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_close_301;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -111,7 +110,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Azure;
+            this.label1.ForeColor = System.Drawing.Color.Lime;
             this.label1.Location = new System.Drawing.Point(5, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
@@ -286,7 +285,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.SlateGray;
+            this.panel5.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.applybtn);
             this.panel5.Controls.Add(this.label2);
@@ -300,7 +299,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.flowLayoutPanel1.Controls.Add(this.label3);
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.label4);
@@ -325,7 +324,7 @@
             // 
             // platformbox
             // 
-            this.platformbox.BackColor = System.Drawing.Color.SlateGray;
+            this.platformbox.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.platformbox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.platformbox.ForeColor = System.Drawing.Color.Azure;
             this.platformbox.FormattingEnabled = true;
@@ -341,7 +340,7 @@
             // 
             // developerbox
             // 
-            this.developerbox.BackColor = System.Drawing.Color.SlateGray;
+            this.developerbox.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.developerbox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.developerbox.ForeColor = System.Drawing.Color.Azure;
             this.developerbox.FormattingEnabled = true;
@@ -371,8 +370,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackColor = System.Drawing.Color.Gray;
+            this.BackgroundImage = global::VG_DB_2013.Properties.Resources.pixel_background_nxwecdh8vgxjfe96;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1440, 778);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel5);

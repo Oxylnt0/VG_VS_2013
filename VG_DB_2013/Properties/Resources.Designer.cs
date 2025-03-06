@@ -63,9 +63,9 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23163145 {
+        internal static System.Drawing.Bitmap _01073865290819_5d61d475f0072 {
             get {
-                object obj = ResourceManager.GetObject("23163145", resourceCulture);
+                object obj = ResourceManager.GetObject("01073865290819.5d61d475f0072", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _24753674 {
+        internal static System.Drawing.Bitmap _1008911 {
             get {
-                object obj = ResourceManager.GetObject("24753674", resourceCulture);
+                object obj = ResourceManager.GetObject("1008911", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,29 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _83b809857acd41a7bad4935b4734f9fc {
+        internal static System.Drawing.Bitmap _8bit_pixel_art_night_sky_game_space_landscape_vector {
             get {
-                object obj = ResourceManager.GetObject("83b809857acd41a7bad4935b4734f9fc", resourceCulture);
+                object obj = ResourceManager.GetObject("8bit-pixel-art-night-sky-game-space-landscape-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alien_mosaic_gif_5f0ca65becc6c8786adb1410ef479301 {
+            get {
+                object obj = ResourceManager.GetObject("alien_mosaic.gif.5f0ca65becc6c8786adb1410ef479301", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giphy {
+            get {
+                object obj = ResourceManager.GetObject("giphy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,16 +143,6 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_close_30 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-close-30", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_close_301 {
             get {
                 object obj = ResourceManager.GetObject("icons8-close-301", resourceCulture);
@@ -143,29 +153,19 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_close_window_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-close-window-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_controller_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-controller-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_customers_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-customers-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_insert_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-insert-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,16 +203,6 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_supplier_30 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-supplier-30", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_supplier_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-supplier-50", resourceCulture);
@@ -223,9 +213,9 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap japan_aesthetic {
+        internal static System.Drawing.Bitmap miguel_juarez_persona_5_first_encounterclear {
             get {
-                object obj = ResourceManager.GetObject("japan-aesthetic", resourceCulture);
+                object obj = ResourceManager.GetObject("miguel-juarez-persona-5-first-encounterclear", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +223,9 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap vecteezy_abstract_pattern_with_gamepad_joystick_geometric_pattern_50754331 {
+        internal static System.Drawing.Bitmap miguel_juarez_persona_5_first_encounterclear2 {
             get {
-                object obj = ResourceManager.GetObject("vecteezy_abstract-pattern-with-gamepad-joystick-geometric-pattern_50754331", resourceCulture);
+                object obj = ResourceManager.GetObject("miguel-juarez-persona-5-first-encounterclear2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +233,9 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Vector_Seamless_Game_Controller_Pattern_Abstract_Background_02 {
+        internal static System.Drawing.Bitmap pixel_background_nxwecdh8vgxjfe96 {
             get {
-                object obj = ResourceManager.GetObject("Vector_Seamless_Game_Controller_Pattern_Abstract_Background-02", resourceCulture);
+                object obj = ResourceManager.GetObject("pixel-background-nxwecdh8vgxjfe96", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

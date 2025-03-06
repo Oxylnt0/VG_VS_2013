@@ -44,7 +44,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.logoutbtn);
             this.panel1.Controls.Add(this.adminbtn);
             this.panel1.Controls.Add(this.suppliersbtn);
@@ -68,7 +68,7 @@
             this.logoutbtn.ForeColor = System.Drawing.Color.White;
             this.logoutbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_logout_50;
             this.logoutbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.logoutbtn.Location = new System.Drawing.Point(1066, 10);
+            this.logoutbtn.Location = new System.Drawing.Point(1049, 10);
             this.logoutbtn.Name = "logoutbtn";
             this.logoutbtn.Size = new System.Drawing.Size(101, 92);
             this.logoutbtn.TabIndex = 7;
@@ -82,11 +82,11 @@
             this.adminbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.adminbtn.FlatAppearance.BorderSize = 0;
             this.adminbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminbtn.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminbtn.ForeColor = System.Drawing.Color.White;
             this.adminbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_admin_50;
             this.adminbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.adminbtn.Location = new System.Drawing.Point(959, 10);
+            this.adminbtn.Location = new System.Drawing.Point(942, 10);
             this.adminbtn.Name = "adminbtn";
             this.adminbtn.Size = new System.Drawing.Size(101, 92);
             this.adminbtn.TabIndex = 6;
@@ -104,13 +104,14 @@
             this.suppliersbtn.ForeColor = System.Drawing.Color.White;
             this.suppliersbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_supplier_50;
             this.suppliersbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.suppliersbtn.Location = new System.Drawing.Point(852, 10);
+            this.suppliersbtn.Location = new System.Drawing.Point(835, 10);
             this.suppliersbtn.Name = "suppliersbtn";
             this.suppliersbtn.Size = new System.Drawing.Size(101, 92);
             this.suppliersbtn.TabIndex = 5;
             this.suppliersbtn.Text = "Suppliers";
             this.suppliersbtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.suppliersbtn.UseVisualStyleBackColor = true;
+            this.suppliersbtn.Click += new System.EventHandler(this.suppliersbtn_Click);
             // 
             // purchasesbtn
             // 
@@ -121,7 +122,7 @@
             this.purchasesbtn.ForeColor = System.Drawing.Color.White;
             this.purchasesbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_bill_50;
             this.purchasesbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.purchasesbtn.Location = new System.Drawing.Point(745, 10);
+            this.purchasesbtn.Location = new System.Drawing.Point(728, 10);
             this.purchasesbtn.Name = "purchasesbtn";
             this.purchasesbtn.Size = new System.Drawing.Size(101, 92);
             this.purchasesbtn.TabIndex = 4;
@@ -139,7 +140,7 @@
             this.customersbtn.ForeColor = System.Drawing.Color.White;
             this.customersbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_customers_50;
             this.customersbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.customersbtn.Location = new System.Drawing.Point(638, 10);
+            this.customersbtn.Location = new System.Drawing.Point(621, 10);
             this.customersbtn.Name = "customersbtn";
             this.customersbtn.Size = new System.Drawing.Size(101, 92);
             this.customersbtn.TabIndex = 3;
@@ -156,7 +157,7 @@
             this.salesbtn.ForeColor = System.Drawing.Color.White;
             this.salesbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_sales_50;
             this.salesbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.salesbtn.Location = new System.Drawing.Point(531, 10);
+            this.salesbtn.Location = new System.Drawing.Point(514, 10);
             this.salesbtn.Name = "salesbtn";
             this.salesbtn.Size = new System.Drawing.Size(101, 92);
             this.salesbtn.TabIndex = 2;
@@ -173,7 +174,7 @@
             this.inventorybtn.ForeColor = System.Drawing.Color.White;
             this.inventorybtn.Image = global::VG_DB_2013.Properties.Resources.icons8_inventory_50;
             this.inventorybtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.inventorybtn.Location = new System.Drawing.Point(424, 10);
+            this.inventorybtn.Location = new System.Drawing.Point(407, 10);
             this.inventorybtn.Name = "inventorybtn";
             this.inventorybtn.Size = new System.Drawing.Size(101, 92);
             this.inventorybtn.TabIndex = 1;
@@ -191,7 +192,7 @@
             this.homebtn.ForeColor = System.Drawing.Color.White;
             this.homebtn.Image = global::VG_DB_2013.Properties.Resources.home;
             this.homebtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.homebtn.Location = new System.Drawing.Point(317, 10);
+            this.homebtn.Location = new System.Drawing.Point(300, 10);
             this.homebtn.Name = "homebtn";
             this.homebtn.Size = new System.Drawing.Size(101, 92);
             this.homebtn.TabIndex = 0;
@@ -214,8 +215,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VG_DB_2013.Properties.Resources._24753674;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackColor = System.Drawing.Color.Gray;
+            this.BackgroundImage = global::VG_DB_2013.Properties.Resources.pixel_background_nxwecdh8vgxjfe96;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1440, 867);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.panel1);
@@ -240,7 +242,7 @@
         private System.Windows.Forms.Button salesbtn;
         private System.Windows.Forms.Button inventorybtn;
         private System.Windows.Forms.Button homebtn;
-        private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Button purchasesbtn;
+        private System.Windows.Forms.Panel MainPanel;
     }
 }
