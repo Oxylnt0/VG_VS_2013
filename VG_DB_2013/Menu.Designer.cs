@@ -147,6 +147,7 @@
             this.customersbtn.Text = "Customers";
             this.customersbtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.customersbtn.UseVisualStyleBackColor = true;
+            this.customersbtn.Click += new System.EventHandler(this.customersbtn_Click);
             // 
             // salesbtn
             // 

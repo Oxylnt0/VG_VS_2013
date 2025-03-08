@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.backbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.cust_id_search = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.price = new System.Windows.Forms.TextBox();
             this.game_id_search = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -83,8 +84,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.custgrid = new System.Windows.Forms.DataGridView();
             this.refresh = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.price = new System.Windows.Forms.TextBox();
+            this.add_cust_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.game_qty)).BeginInit();
@@ -141,7 +141,6 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label19);
             this.panel6.Controls.Add(this.price);
-            this.panel6.Controls.Add(this.cust_id_search);
             this.panel6.Controls.Add(this.game_id_search);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.label6);
@@ -165,20 +164,27 @@
             this.panel6.Size = new System.Drawing.Size(418, 577);
             this.panel6.TabIndex = 50;
             // 
-            // cust_id_search
+            // label19
             // 
-            this.cust_id_search.BackColor = System.Drawing.Color.Gold;
-            this.cust_id_search.FlatAppearance.BorderSize = 0;
-            this.cust_id_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cust_id_search.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cust_id_search.ForeColor = System.Drawing.Color.Black;
-            this.cust_id_search.Location = new System.Drawing.Point(254, 363);
-            this.cust_id_search.Name = "cust_id_search";
-            this.cust_id_search.Size = new System.Drawing.Size(76, 25);
-            this.cust_id_search.TabIndex = 60;
-            this.cust_id_search.Text = "Search";
-            this.cust_id_search.UseVisualStyleBackColor = false;
-            this.cust_id_search.Click += new System.EventHandler(this.cust_id_search_Click);
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label19.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(51, 161);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(92, 21);
+            this.label19.TabIndex = 62;
+            this.label19.Text = "Game Price:";
+            // 
+            // price
+            // 
+            this.price.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.price.Location = new System.Drawing.Point(157, 157);
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            this.price.Size = new System.Drawing.Size(201, 25);
+            this.price.TabIndex = 61;
+            this.price.Text = "0";
             // 
             // game_id_search
             // 
@@ -214,7 +220,7 @@
             this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(16, 367);
+            this.label6.Location = new System.Drawing.Point(15, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 21);
             this.label6.TabIndex = 58;
@@ -223,7 +229,7 @@
             // cust_id
             // 
             this.cust_id.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cust_id.Location = new System.Drawing.Point(158, 363);
+            this.cust_id.Location = new System.Drawing.Point(157, 319);
             this.cust_id.Name = "cust_id";
             this.cust_id.Size = new System.Drawing.Size(90, 25);
             this.cust_id.TabIndex = 59;
@@ -272,7 +278,7 @@
             // payment_method
             // 
             this.payment_method.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payment_method.Location = new System.Drawing.Point(158, 405);
+            this.payment_method.Location = new System.Drawing.Point(157, 361);
             this.payment_method.Name = "payment_method";
             this.payment_method.Size = new System.Drawing.Size(209, 25);
             this.payment_method.TabIndex = 47;
@@ -283,7 +289,7 @@
             this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(21, 409);
+            this.label2.Location = new System.Drawing.Point(20, 365);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 21);
             this.label2.TabIndex = 46;
@@ -295,7 +301,7 @@
             this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(107, 443);
+            this.label13.Location = new System.Drawing.Point(106, 399);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 21);
             this.label13.TabIndex = 45;
@@ -303,7 +309,7 @@
             // 
             // date
             // 
-            this.date.Location = new System.Drawing.Point(158, 443);
+            this.date.Location = new System.Drawing.Point(157, 399);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(200, 20);
             this.date.TabIndex = 44;
@@ -428,23 +434,23 @@
             this.gamegrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gamegrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gamegrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gamegrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gamegrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gamegrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gamegrid.DefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gamegrid.DefaultCellStyle = dataGridViewCellStyle10;
             this.gamegrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.gamegrid.EnableHeadersVisualStyles = false;
             this.gamegrid.GridColor = System.Drawing.Color.White;
@@ -452,18 +458,18 @@
             this.gamegrid.Name = "gamegrid";
             this.gamegrid.ReadOnly = true;
             this.gamegrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gamegrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gamegrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.gamegrid.RowHeadersVisible = false;
             this.gamegrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.Padding = new System.Windows.Forms.Padding(5);
-            this.gamegrid.RowsDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
+            this.gamegrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.gamegrid.Size = new System.Drawing.Size(436, 147);
             this.gamegrid.TabIndex = 5;
             // 
@@ -656,6 +662,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.add_cust_btn);
             this.panel4.Controls.Add(this.label18);
             this.panel4.Controls.Add(this.custgrid);
             this.panel4.Location = new System.Drawing.Point(16, 259);
@@ -688,23 +695,23 @@
             this.custgrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.custgrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.custgrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.custgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.custgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.custgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.custgrid.DefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.custgrid.DefaultCellStyle = dataGridViewCellStyle14;
             this.custgrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.custgrid.EnableHeadersVisualStyles = false;
             this.custgrid.GridColor = System.Drawing.Color.White;
@@ -712,18 +719,18 @@
             this.custgrid.Name = "custgrid";
             this.custgrid.ReadOnly = true;
             this.custgrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.custgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.custgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.custgrid.RowHeadersVisible = false;
             this.custgrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle48.Padding = new System.Windows.Forms.Padding(5);
-            this.custgrid.RowsDefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.Padding = new System.Windows.Forms.Padding(5);
+            this.custgrid.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.custgrid.Size = new System.Drawing.Size(436, 147);
             this.custgrid.TabIndex = 5;
             // 
@@ -742,27 +749,20 @@
             this.refresh.UseVisualStyleBackColor = false;
             this.refresh.Click += new System.EventHandler(this.refresh_Click);
             // 
-            // label19
+            // add_cust_btn
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(51, 161);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(92, 21);
-            this.label19.TabIndex = 62;
-            this.label19.Text = "Game Price:";
-            // 
-            // price
-            // 
-            this.price.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price.Location = new System.Drawing.Point(157, 157);
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            this.price.Size = new System.Drawing.Size(201, 25);
-            this.price.TabIndex = 61;
-            this.price.Text = "0";
+            this.add_cust_btn.BackColor = System.Drawing.Color.Gold;
+            this.add_cust_btn.FlatAppearance.BorderSize = 0;
+            this.add_cust_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_cust_btn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_cust_btn.ForeColor = System.Drawing.Color.Black;
+            this.add_cust_btn.Location = new System.Drawing.Point(322, 3);
+            this.add_cust_btn.Name = "add_cust_btn";
+            this.add_cust_btn.Size = new System.Drawing.Size(117, 25);
+            this.add_cust_btn.TabIndex = 62;
+            this.add_cust_btn.Text = "Add Customer";
+            this.add_cust_btn.UseVisualStyleBackColor = false;
+            this.add_cust_btn.Click += new System.EventHandler(this.add_cust_btn_Click);
             // 
             // AddSales
             // 
@@ -845,9 +845,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DataGridView custgrid;
         private System.Windows.Forms.Button game_id_search;
-        private System.Windows.Forms.Button cust_id_search;
         private System.Windows.Forms.Button refresh;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox price;
+        private System.Windows.Forms.Button add_cust_btn;
     }
 }

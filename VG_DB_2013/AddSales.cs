@@ -241,43 +241,6 @@ namespace VG_DB_2013
             custgrid.Refresh();
         }
 
-        private void cust_id_search_Click(object sender, EventArgs e)
-        {
-            FetchCustDeets(Convert.ToInt32(cust_id.Text));
-        }
-
-        private void FetchCustDeets(int custId)
-        {
-            string query = "SELECT Last_Name, First_Name, Middle_Initial, Email, Phone_Number, Customer_Address FROM Game_Customers WHERE Customer_ID = @custId";
-
-            using (SqlConnection conn = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@custId", custId);
-
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    last.Text = reader["Last_Name"].ToString();
-                    first.Text = reader["First_Name"].ToString();
-                    middle.Text = reader["Middle_Initial"].ToString();
-                    email.Text = reader["Email"].ToString();
-                    num.Text = reader["Phone_number"].ToString();
-                    address.Text = reader["Customer_Address"].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Customer ID not found. Enter New Customer on the Left");
-                    cust_id.Text = "";
-                }
-
-                reader.Close();
-            }
-            
-        }
-
         private void backbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -292,6 +255,13 @@ namespace VG_DB_2013
 
             decimal total = qty * Price;
             total_amount.Text = total.ToString();
+        }
+
+        private void add_cust_btn_Click(object sender, EventArgs e)
+        {
+            AddCustomer custform = new AddCustomer();
+            custform.Show();
+            custform.TopMost = true;
         }
 
     }
