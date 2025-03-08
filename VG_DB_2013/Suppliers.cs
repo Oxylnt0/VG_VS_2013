@@ -13,6 +13,9 @@ namespace VG_DB_2013
 {
     public partial class Suppliers : Form
     {
+
+        private Opacity opacity;
+
         public Suppliers()
         {
             InitializeComponent();
@@ -102,71 +105,56 @@ namespace VG_DB_2013
 
         private void add_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True");
-            sqlcon.Open();
-            SqlCommand cmd = new SqlCommand("insert into Game_Suppliers values (@Supplier_Name, @Supplier_Email, @Supplier_Phone_Number, @Supplier_Address)", sqlcon);
-            cmd.Parameters.AddWithValue("@Supplier_Name", (suppliernamebox.Text));
-            cmd.Parameters.AddWithValue("@Supplier_Email", (emailbox.Text));
-            cmd.Parameters.AddWithValue("@Supplier_Phone_Number", (numberbox.Text));
-            cmd.Parameters.AddWithValue("@Supplier_Address", (addressbox.Text));
-            cmd.ExecuteNonQuery();
-
-            sqlcon.Close();
-            MessageBox.Show("Supplier Added", "Game Suppliers", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         private void clear_Click(object sender, EventArgs e)
         {
-            suppliernamebox.Text = "";
-            emailbox.Text = "";
-            numberbox.Text = "";
-            addressbox.Text = "";
+            
         }
 
         private void editmode_Click(object sender, EventArgs e)
         {
 
-            DialogResult Result = MessageBox.Show("Deleting a Supplier turns Supplier in Purchases Null, Proceed?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (Result == DialogResult.Yes)
-            {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True");
-                sqlcon.Open();
-                SqlCommand cmd = new SqlCommand("delete Game_Suppliers where Supplier_ID=" + Convert.ToInt32(admin_id.Text), sqlcon);
-                cmd.ExecuteNonQuery();
-                sqlcon.Close();
-                MessageBox.Show("Delete Successful", "Game Supplier", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                admin_id.Text = "";
-            }
+            
         }
 
         private void find_Click(object sender, EventArgs e)
         {
-            int supplierid = int.Parse(find_supplier_id.Text);
-
-            string query = "SELECT Supplier_Name, Supplier_Email, Supplier_Phone_Number, Supplier_Address FROM Game_Suppliers WHERE Supplier_ID = @SupplierID";
-
-            using (SqlConnection conn = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@SupplierID", supplierid);
-
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    nameedit.Text = reader["Supplier_Name"].ToString();
-                    emailedit.Text = reader["Supplier_Email"].ToString();
-                    numberedit.Text = reader["Supplier_Phone_Number"].ToString();
-                    addressedit.Text = reader["Supplier_Address"].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Supplier ID not found.");
-                }
-
-                reader.Close();
-            }
+            
         }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addsupplierbtn_Click(object sender, EventArgs e)
+        {
+            opacity = new Opacity();
+            opacity.Show();
+            opacity.Opacity = 0.6;
+
+            AddSupplier asupplier = new AddSupplier(opacity);
+            asupplier.Show();
+            asupplier.TopMost = true;
+        }
+
+        private void editsupplierbtn_Click(object sender, EventArgs e)
+        {
+            opacity = new Opacity();
+            opacity.Show();
+            opacity.Opacity = 0.6;
+
+            EditSupplier supplier = new EditSupplier(opacity);
+            supplier.Show();
+            supplier.TopMost = true;
+        }
+
     }
 }

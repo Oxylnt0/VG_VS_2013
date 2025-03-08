@@ -51,6 +51,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.platformbox = new System.Windows.Forms.CheckedListBox();
             this.developerbox = new System.Windows.Forms.CheckedListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.genrebox = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).BeginInit();
             this.panel5.SuspendLayout();
@@ -162,6 +164,7 @@
             this.button2.TabIndex = 23;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // applybtn
             // 
@@ -306,6 +309,8 @@
             this.flowLayoutPanel1.Controls.Add(this.platformbox);
             this.flowLayoutPanel1.Controls.Add(this.label5);
             this.flowLayoutPanel1.Controls.Add(this.developerbox);
+            this.flowLayoutPanel1.Controls.Add(this.label6);
+            this.flowLayoutPanel1.Controls.Add(this.genrebox);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 99);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -328,11 +333,6 @@
             this.platformbox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.platformbox.ForeColor = System.Drawing.Color.Azure;
             this.platformbox.FormattingEnabled = true;
-            this.platformbox.Items.AddRange(new object[] {
-            "PS4",
-            "PS5",
-            "Nintendo Switch",
-            "Xbox One"});
             this.platformbox.Location = new System.Drawing.Point(8, 61);
             this.platformbox.Name = "platformbox";
             this.platformbox.Size = new System.Drawing.Size(205, 84);
@@ -344,27 +344,34 @@
             this.developerbox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.developerbox.ForeColor = System.Drawing.Color.Azure;
             this.developerbox.FormattingEnabled = true;
-            this.developerbox.Items.AddRange(new object[] {
-            "Aerosoft",
-            "Aniplex",
-            "Atlus",
-            "Bandai Namco Games",
-            "Capcom",
-            "Dotemu",
-            "Electronic Arts",
-            "Falcom",
-            "FromSoftware",
-            "Natsume",
-            "Nintendo",
-            "Rockstar Games",
-            "Sony Interactive Entertainment",
-            "Supergiant Games",
-            "Unknown Worlds",
-            "Warner Bros."});
             this.developerbox.Location = new System.Drawing.Point(8, 172);
             this.developerbox.Name = "developerbox";
-            this.developerbox.Size = new System.Drawing.Size(205, 324);
+            this.developerbox.Size = new System.Drawing.Size(205, 164);
             this.developerbox.TabIndex = 35;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Azure;
+            this.label6.Location = new System.Drawing.Point(8, 339);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 21);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Genre:";
+            // 
+            // genrebox
+            // 
+            this.genrebox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.genrebox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genrebox.ForeColor = System.Drawing.Color.Azure;
+            this.genrebox.FormattingEnabled = true;
+            this.genrebox.Location = new System.Drawing.Point(8, 363);
+            this.genrebox.Name = "genrebox";
+            this.genrebox.Size = new System.Drawing.Size(205, 124);
+            this.genrebox.TabIndex = 37;
             // 
             // Inventory
             // 
@@ -419,5 +426,7 @@
         private System.Windows.Forms.CheckedListBox developerbox;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckedListBox genrebox;
     }
 }

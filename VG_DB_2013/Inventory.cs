@@ -15,18 +15,20 @@ namespace VG_DB_2013
     public partial class Inventory : Form
     {
 
-        private string query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games WHERE 1=1";
+        private string query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer , Genre, Picture FROM Games WHERE 1=1";
 
 
         public Inventory()
         {
             InitializeComponent();
+            LoadPlatforms();
+            LoadDeveloper();
+            LoadGenre();
         }
 
         private void Inventory_Load(object sender, EventArgs e)
         {
             this.BindData();
-
         }
 
         public void BindData()
@@ -72,6 +74,7 @@ namespace VG_DB_2013
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Price", DataPropertyName = "Price" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Platform", DataPropertyName = "Game_Platform" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Developer", DataPropertyName = "Developer" });
+                InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Genre", DataPropertyName = "Genre" });
                 InventoryGrid.Columns.Add(imgColumn);
 
                 InventoryGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -110,104 +113,38 @@ namespace VG_DB_2013
             }
         }
 
+        List<string> selectedPlatforms = new List<string>();
+        List<string> selectedDeveloper = new List<string>();
+        List<string> selectedGenre = new List<string>();
+
+        private List<bool> platformCheckedStatus = new List<bool>();
+        private List<bool> developerCheckedStatus = new List<bool>();
+        private List<bool> genreCheckedStatus = new List<bool>();
+
         private void applybtn_Click(object sender, EventArgs e)
         {
-
-            List<string> selectedPlatforms = new List<string>();
-            List<string> selectedDevelopers = new List<string>();
-
             //platform
-            if (platformbox.GetItemChecked(0) == true)
-            {
-                selectedPlatforms.Add("PS4");
-            }
-            if (platformbox.GetItemChecked(1) == true)
-            {
-                selectedPlatforms.Add("PS5");
-            }
-            if (platformbox.GetItemChecked(2) == true)
-            {
-                selectedPlatforms.Add("Nintendo Switch");
-            }
-            if (platformbox.GetItemChecked(3) == true)
-            {
-                selectedPlatforms.Add("Xbox One");
-            }
+            UpdateSelectedPlatforms();
 
             //developer
-            if (developerbox.GetItemChecked(0) == true)
-            {
-                selectedDevelopers.Add("Aerosoft");
-            }
-            if (developerbox.GetItemChecked(1) == true)
-            {
-                selectedDevelopers.Add("Aniplex");
-            }
-            if (developerbox.GetItemChecked(2) == true)
-            {
-                selectedDevelopers.Add("Atlus");
-            }
-            if (developerbox.GetItemChecked(3) == true)
-            {
-                selectedDevelopers.Add("Bandai Namco Games");
-            }
-            if (developerbox.GetItemChecked(4) == true)
-            {
-                selectedDevelopers.Add("Capcom");
-            }
-            if (developerbox.GetItemChecked(5) == true)
-            {
-                selectedDevelopers.Add("Dotemu");
-            }
-            if (developerbox.GetItemChecked(6) == true)
-            {
-                selectedDevelopers.Add("Electronic Arts");
-            }
-            if (developerbox.GetItemChecked(7) == true)
-            {
-                selectedDevelopers.Add("Falcom");
-            }
-            if (developerbox.GetItemChecked(8) == true)
-            {
-                selectedDevelopers.Add("FromSoftware");
-            }
-            if (developerbox.GetItemChecked(9) == true)
-            {
-                selectedDevelopers.Add("Natsume");
-            }
-            if (developerbox.GetItemChecked(10) == true)
-            {
-                selectedDevelopers.Add("Nintendo");
-            }
-            if (developerbox.GetItemChecked(11) == true)
-            {
-                selectedDevelopers.Add("Rockstar Games");
-            }
-            if (developerbox.GetItemChecked(12) == true)
-            {
-                selectedDevelopers.Add("Sony Interactive Entertainment");
-            }
-            if (developerbox.GetItemChecked(13) == true)
-            {
-                selectedDevelopers.Add("Supergiant Games");
-            }
-            if (developerbox.GetItemChecked(14) == true)
-            {
-                selectedDevelopers.Add("Unknown Worlds");
-            }
-            if (developerbox.GetItemChecked(15) == true)
-            {
-                selectedDevelopers.Add("Warner Bros.");
-            }
+            UpdateSelectedDeveloper();
+        
+            //genre
+            UpdateSelectedGenre();
 
             if (selectedPlatforms.Count > 0)
             {
                 query += " AND Game_Platform IN ('" + string.Join("','", selectedPlatforms) + "')";
             }
 
-            if (selectedDevelopers.Count > 0)
+            if (selectedDeveloper.Count > 0)
             {
-                query += " AND Developer IN ('" + string.Join("','", selectedDevelopers) + "')";
+                query += " AND Developer IN ('" + string.Join("','", selectedDeveloper) + "')";
+            }
+            
+            if (selectedGenre.Count > 0)
+            {
+                query += " AND Genre IN ('" + string.Join("','", selectedGenre) + "')";
             }
 
             //sortby
@@ -255,10 +192,232 @@ namespace VG_DB_2013
             InventoryGrid.Update();
             InventoryGrid.Refresh();
 
-            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games WHERE 1=1";
+            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer , Genre, Picture FROM Games WHERE 1=1";
             
         }
         
+
+        //----------PLATFFORM----------
+        public void UpdateSelectedPlatforms()
+        {
+            selectedPlatforms.Clear();
+
+            for (int i = 0; i < platformbox.Items.Count; i++)
+            {
+                if (platformbox.GetItemChecked(i))
+                {
+                    selectedPlatforms.Add(platformbox.Items[i].ToString());
+                }
+            }
+        }
+
+        public void AddPlatform(string platform)
+        {
+            if (!selectedPlatforms.Contains(platform))
+            {
+                selectedPlatforms.Add(platform);     
+                genreCheckedStatus.Add(false);  
+
+                SavePlatforms();
+
+                LoadPlatforms();
+            }
+        }
+
+        private void SavePlatforms()
+        {
+            using (StreamWriter writer = new StreamWriter("platforms.txt", append: true))
+            {
+                int lastIndex = selectedPlatforms.Count - 1;
+                writer.WriteLine(selectedPlatforms[lastIndex] + "|" + genreCheckedStatus[lastIndex]);
+            }
+        }
+
+        private void LoadPlatforms()
+        {
+            platformbox.Items.Clear();
+            selectedPlatforms.Clear();
+            genreCheckedStatus.Clear();
+
+            if (File.Exists("platforms.txt"))
+            {
+                using (StreamReader reader = new StreamReader("platforms.txt"))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split('|');
+                        if (parts.Length == 2)
+                        {
+                            selectedPlatforms.Add(parts[0]);  
+                            genreCheckedStatus.Add(bool.Parse(parts[1])); 
+                        }
+                    }
+                }
+            }
+
+  
+            for (int i = 0; i < selectedPlatforms.Count; i++)
+            {
+                platformbox.Items.Add(selectedPlatforms[i]); 
+                platformbox.SetItemChecked(i, genreCheckedStatus[i]); 
+            }
+        }
+
+        private void platformbox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            genreCheckedStatus[e.Index] = e.NewValue == CheckState.Checked; 
+            SavePlatforms();
+        }
+        //----------PLATFORM----------
+
+        //----------DEVELOPER----------
+        public void UpdateSelectedDeveloper()
+        {
+            selectedDeveloper.Clear();
+
+            for (int i = 0; i < developerbox.Items.Count; i++)
+            {
+                if (developerbox.GetItemChecked(i))
+                {
+                    selectedDeveloper.Add(developerbox.Items[i].ToString());
+                }
+            }
+        }
+
+        public void AddDeveloper(string developer)
+        {
+            if (!selectedDeveloper.Contains(developer))
+            {
+                selectedDeveloper.Add(developer);
+                genreCheckedStatus.Add(false);
+
+                SaveDeveloper();
+
+                LoadDeveloper();
+            }
+        }
+
+        private void SaveDeveloper()
+        {
+            using (StreamWriter writer = new StreamWriter("developer.txt", append: true))
+            {
+                int lastIndex = selectedDeveloper.Count - 1;
+                writer.WriteLine(selectedDeveloper[lastIndex] + "|" + genreCheckedStatus[lastIndex]);
+            }
+        }
+
+        private void LoadDeveloper()
+        {
+            developerbox.Items.Clear();
+            selectedDeveloper.Clear();
+            genreCheckedStatus.Clear();
+
+            if (File.Exists("developer.txt"))
+            {
+                using (StreamReader reader = new StreamReader("developer.txt"))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split('|');
+                        if (parts.Length == 2)
+                        {
+                            selectedDeveloper.Add(parts[0]);
+                            genreCheckedStatus.Add(bool.Parse(parts[1]));
+                        }
+                    }
+                }
+            }
+
+
+            for (int i = 0; i < selectedDeveloper.Count; i++)
+            {
+                developerbox.Items.Add(selectedDeveloper[i]);
+                developerbox.SetItemChecked(i, genreCheckedStatus[i]);
+            }
+        }
+
+        private void developerbox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            genreCheckedStatus[e.Index] = e.NewValue == CheckState.Checked;
+            SaveDeveloper();
+        }
+        //----------DEVELOPER----------
+
+        //----------GENRE----------
+        public void UpdateSelectedGenre()
+        {
+            selectedGenre.Clear();
+
+            for (int i = 0; i < genrebox.Items.Count; i++)
+            {
+                if (genrebox.GetItemChecked(i))
+                {
+                    selectedGenre.Add(genrebox.Items[i].ToString());
+                }
+            }
+        }
+
+        public void AddGenre(string genre)
+        {
+            if (!selectedGenre.Contains(genre))
+            {
+                selectedGenre.Add(genre);
+                genreCheckedStatus.Add(false);
+
+                SaveGenre();
+
+                LoadGenre();
+            }
+        }
+
+        private void SaveGenre()
+        {
+            using (StreamWriter writer = new StreamWriter("genre.txt", append: true))
+            {
+                int lastIndex = selectedGenre.Count - 1;
+                writer.WriteLine(selectedGenre[lastIndex] + "|" + genreCheckedStatus[lastIndex]);
+            }
+        }
+
+        private void LoadGenre()
+        {
+            genrebox.Items.Clear();
+            selectedGenre.Clear();
+            genreCheckedStatus.Clear();
+
+            if (File.Exists("genre.txt"))
+            {
+                using (StreamReader reader = new StreamReader("genre.txt"))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] parts = line.Split('|');
+                        if (parts.Length == 2)
+                        {
+                            selectedGenre.Add(parts[0]);
+                            genreCheckedStatus.Add(bool.Parse(parts[1]));
+                        }
+                    }
+                }
+            }
+
+
+            for (int i = 0; i < selectedGenre.Count; i++)
+            {
+                genrebox.Items.Add(selectedGenre[i]);
+                genrebox.SetItemChecked(i, genreCheckedStatus[i]);
+            }
+        }
+
+        private void genrebox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            genreCheckedStatus[e.Index] = e.NewValue == CheckState.Checked;
+            SaveGenre();
+        }
+        //----------GENRE----------
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -267,11 +426,11 @@ namespace VG_DB_2013
 
         private void searchbtn_Click(object sender, EventArgs e)
         {
-            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games where Game_Name Like '%" + search.Text + "%';";
+            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer , Genre, Picture FROM Games where Game_Name Like '%" + search.Text + "%';";
             this.BindData();
             InventoryGrid.Update();
             InventoryGrid.Refresh();
-            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer, Picture FROM Games WHERE 1=1";
+            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer , Genre, Picture FROM Games WHERE 1=1";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -279,18 +438,9 @@ namespace VG_DB_2013
             Application.Exit();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
-
-    
-
-       
-
-   
-
-
-
     }
 }

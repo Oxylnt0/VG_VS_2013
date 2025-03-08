@@ -44,6 +44,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAdmin.Designer.cs">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPurchases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPurchases.Designer.cs">
+      <DependentUpon>AddPurchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSupplier.Designer.cs">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAdmin.Designer.cs">
+      <DependentUpon>EditAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSupplier.Designer.cs">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewDev.Designer.cs">
+      <DependentUpon>NewDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewGenre.Designer.cs">
+      <DependentUpon>NewGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPlatform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPlatform.Designer.cs">
+      <DependentUpon>NewPlatform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opacity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opacity.Designer.cs">
+      <DependentUpon>Opacity.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +142,33 @@
     <Compile Include="Suppliers.Designer.cs">
       <DependentUpon>Suppliers.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddAdmin.resx">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPurchases.resx">
+      <DependentUpon>AddPurchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSupplier.resx">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAdmin.resx">
+      <DependentUpon>EditAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSupplier.resx">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewDev.resx">
+      <DependentUpon>NewDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewGenre.resx">
+      <DependentUpon>NewGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPlatform.resx">
+      <DependentUpon>NewPlatform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opacity.resx">
+      <DependentUpon>Opacity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>

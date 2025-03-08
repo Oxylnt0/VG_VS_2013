@@ -13,6 +13,9 @@ namespace VG_DB_2013
 {
     public partial class AdminForm : Form
     {
+
+        private Opacity opacity;
+
         public AdminForm()
         {
             InitializeComponent();
@@ -96,22 +99,6 @@ namespace VG_DB_2013
             query = "select Admin_ID, Username, Admin_Password, Last_Name, First_Name, Middle_Initial from Admins where 1=1";
         }
 
-        private void add_Click_1(object sender, EventArgs e)
-        {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True");
-            sqlcon.Open();
-            SqlCommand cmd = new SqlCommand("insert into Admins values (@Username, @Admin_Password, @Last_Name, @First_Name, @Middle_Initial)", sqlcon);
-            cmd.Parameters.AddWithValue("@Username", (usernamebox.Text));
-            cmd.Parameters.AddWithValue("@Admin_Password", (passwordbox.Text));
-            cmd.Parameters.AddWithValue("@Last_Name", (lastbox.Text));
-            cmd.Parameters.AddWithValue("@First_Name", (firstbox.Text));
-            cmd.Parameters.AddWithValue("@Middle_Initial", (middlebox.Text));
-            cmd.ExecuteNonQuery();
-
-            sqlcon.Close();
-            MessageBox.Show("Admin Added", "System Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void refresh_Click_1(object sender, EventArgs e)
         {
             this.BindData();
@@ -119,103 +106,26 @@ namespace VG_DB_2013
             AdminGrid.Refresh();
         }
 
-        private void clear_Click(object sender, EventArgs e)
+        private void addadminbtn_Click(object sender, EventArgs e)
         {
-            usernamebox.Text = "";
-            passwordbox.Text = "";
-            lastbox.Text = "";
-            firstbox.Text = "";
-            middlebox.Text = "";
+            opacity = new Opacity();
+            opacity.Show();
+            opacity.Opacity = 0.6;
+
+            AddAdmin add = new AddAdmin(opacity);
+            add.Show();
+            add.TopMost = true;
         }
 
-        private void delete_Click(object sender, EventArgs e)
+        private void editadminbtn_Click(object sender, EventArgs e)
         {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True");
-                sqlcon.Open();
-                SqlCommand cmd = new SqlCommand("delete Admins where Admin_ID=" + Convert.ToInt32(admin_id.Text), sqlcon);
-                cmd.ExecuteNonQuery();
-                sqlcon.Close();
-                MessageBox.Show("Delete Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                admin_id.Text = "";
+            opacity = new Opacity();
+            opacity.Show();
+            opacity.Opacity = 0.6;
 
-        }
-
-        private void find_Click(object sender, EventArgs e)
-        {
-            int adminId = int.Parse(find_supplier_id.Text);
-
-            string query = "SELECT Username, Admin_password, Last_Name, First_Name, Middle_Initial FROM admins WHERE Admin_ID = @AdminId";
-
-            using (SqlConnection conn = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@AdminId", adminId);
-
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    useredit.Text = reader["Username"].ToString();
-                    passedit.Text = reader["Admin_Password"].ToString();
-                    lastedit.Text = reader["Last_Name"].ToString();
-                    firstedit.Text = reader["First_Name"].ToString();
-                    middleedit.Text = reader["Middle_initial"].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Admin ID not found.");
-                }
-
-                reader.Close();
-            }
-        }
-
-        private void update_Click(object sender, EventArgs e)
-        {
-            int adminId = int.Parse(find_supplier_id.Text);
-            string username = useredit.Text;
-            string password = passedit.Text;
-            string lastname = lastedit.Text;
-            string firstname = firstedit.Text;
-            string middlename = middleedit.Text;
-
-            string updateQuery = "UPDATE admins SET Username = @Username, Admin_Password = @Password, Last_Name = @Lastname, First_Name = @Firstname, Middle_initial = @Middleinitial WHERE Admin_ID = @AdminId";
-
-            using (SqlConnection conn = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand(updateQuery, conn);
-
-                cmd.Parameters.AddWithValue("@AdminId", adminId);
-                cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Password", password);
-                cmd.Parameters.AddWithValue("@Lastname", lastname);
-                cmd.Parameters.AddWithValue("@Firstname", firstname);
-                cmd.Parameters.AddWithValue("@Middleinitial", middlename);
-
-                conn.Open();
-
-                int rowsAffected = cmd.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Admin Updated Successfully", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Failed to Update Admin", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            find_supplier_id.Text = "";
-            useredit.Text = "";
-            passedit.Text = "";
-            lastedit.Text = "";
-            firstedit.Text = "";
-            middleedit.Text = "";
+            EditAdmin edit = new EditAdmin(opacity);
+            edit.Show();
+            edit.TopMost = true;
         }
 
    }
