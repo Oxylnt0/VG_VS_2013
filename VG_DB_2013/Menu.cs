@@ -64,5 +64,10 @@ namespace VG_DB_2013
             loadform(new Suppliers());
         }
 
+        private void salesbtn_Click(object sender, EventArgs e)
+        {
+            loadform(new Sales());
+        }
+
     }
 }

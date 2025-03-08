@@ -164,6 +164,7 @@
             this.salesbtn.Text = "Sales";
             this.salesbtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.salesbtn.UseVisualStyleBackColor = true;
+            this.salesbtn.Click += new System.EventHandler(this.salesbtn_Click);
             // 
             // inventorybtn
             // 
