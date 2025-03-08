@@ -112,7 +112,7 @@ namespace VG_DB_2013
             AddSales sales = new AddSales(opacity);
 
             sales.Show();
-            sales.TopMost = true;
+            //sales.TopMost = true;
         }
 
  
