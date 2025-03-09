@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.editadminbtn = new System.Windows.Forms.Button();
             this.addadminbtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -50,7 +50,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminGrid)).BeginInit();
             this.SuspendLayout();
@@ -67,17 +66,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1440, 93);
             this.panel1.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1403, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 34);
-            this.button1.TabIndex = 22;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -102,28 +90,28 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1403, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 34);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.Gray;
             this.MainPanel.BackgroundImage = global::VG_DB_2013.Properties.Resources.pixel_background_nxwecdh8vgxjfe96;
             this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MainPanel.Controls.Add(this.panel6);
             this.MainPanel.Controls.Add(this.panel3);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1440, 778);
+            this.MainPanel.Size = new System.Drawing.Size(1440, 786);
             this.MainPanel.TabIndex = 40;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel6.Controls.Add(this.editadminbtn);
-            this.panel6.Controls.Add(this.addadminbtn);
-            this.panel6.Location = new System.Drawing.Point(1098, 99);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(280, 132);
-            this.panel6.TabIndex = 56;
             // 
             // editadminbtn
             // 
@@ -132,7 +120,7 @@
             this.editadminbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editadminbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editadminbtn.ForeColor = System.Drawing.Color.Black;
-            this.editadminbtn.Location = new System.Drawing.Point(16, 73);
+            this.editadminbtn.Location = new System.Drawing.Point(823, 90);
             this.editadminbtn.Name = "editadminbtn";
             this.editadminbtn.Size = new System.Drawing.Size(248, 44);
             this.editadminbtn.TabIndex = 55;
@@ -147,7 +135,7 @@
             this.addadminbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addadminbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addadminbtn.ForeColor = System.Drawing.Color.Black;
-            this.addadminbtn.Location = new System.Drawing.Point(17, 13);
+            this.addadminbtn.Location = new System.Drawing.Point(823, 40);
             this.addadminbtn.Name = "addadminbtn";
             this.addadminbtn.Size = new System.Drawing.Size(248, 44);
             this.addadminbtn.TabIndex = 54;
@@ -159,16 +147,18 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.editadminbtn);
             this.panel3.Controls.Add(this.refresh);
+            this.panel3.Controls.Add(this.addadminbtn);
             this.panel3.Controls.Add(this.searchbtn);
             this.panel3.Controls.Add(this.applybtn);
             this.panel3.Controls.Add(this.search);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.sortby);
             this.panel3.Controls.Add(this.AdminGrid);
-            this.panel3.Location = new System.Drawing.Point(270, 99);
+            this.panel3.Location = new System.Drawing.Point(170, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(822, 630);
+            this.panel3.Size = new System.Drawing.Size(1087, 630);
             this.panel3.TabIndex = 7;
             // 
             // refresh
@@ -178,9 +168,9 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(12, 587);
+            this.refresh.Location = new System.Drawing.Point(823, 586);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(139, 30);
+            this.refresh.Size = new System.Drawing.Size(248, 30);
             this.refresh.TabIndex = 39;
             this.refresh.Text = "Refresh Table";
             this.refresh.UseVisualStyleBackColor = false;
@@ -193,7 +183,7 @@
             this.searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchbtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchbtn.ForeColor = System.Drawing.Color.Black;
-            this.searchbtn.Location = new System.Drawing.Point(189, 10);
+            this.searchbtn.Location = new System.Drawing.Point(282, 9);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(76, 25);
             this.searchbtn.TabIndex = 25;
@@ -208,9 +198,9 @@
             this.applybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.applybtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applybtn.ForeColor = System.Drawing.Color.Black;
-            this.applybtn.Location = new System.Drawing.Point(734, 8);
+            this.applybtn.Location = new System.Drawing.Point(880, 194);
             this.applybtn.Name = "applybtn";
-            this.applybtn.Size = new System.Drawing.Size(76, 25);
+            this.applybtn.Size = new System.Drawing.Size(191, 25);
             this.applybtn.TabIndex = 25;
             this.applybtn.Text = "Apply";
             this.applybtn.UseVisualStyleBackColor = false;
@@ -219,9 +209,9 @@
             // search
             // 
             this.search.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(3, 9);
+            this.search.Location = new System.Drawing.Point(15, 10);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(180, 25);
+            this.search.Size = new System.Drawing.Size(261, 25);
             this.search.TabIndex = 26;
             // 
             // label2
@@ -231,7 +221,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Azure;
-            this.label2.Location = new System.Drawing.Point(513, 8);
+            this.label2.Location = new System.Drawing.Point(823, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 25);
             this.label2.TabIndex = 16;
@@ -246,9 +236,9 @@
             this.sortby.Items.AddRange(new object[] {
             "Last Name - Ascending",
             "Last Name - Descending"});
-            this.sortby.Location = new System.Drawing.Point(570, 8);
+            this.sortby.Location = new System.Drawing.Point(880, 163);
             this.sortby.Name = "sortby";
-            this.sortby.Size = new System.Drawing.Size(158, 25);
+            this.sortby.Size = new System.Drawing.Size(191, 25);
             this.sortby.TabIndex = 15;
             // 
             // AdminGrid
@@ -257,41 +247,43 @@
             this.AdminGrid.AllowUserToDeleteRows = false;
             this.AdminGrid.AllowUserToResizeColumns = false;
             this.AdminGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lavender;
+            this.AdminGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.AdminGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.AdminGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.AdminGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.AdminGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.AdminGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.AdminGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AdminGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LawnGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AdminGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.AdminGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AdminGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.AdminGrid.EnableHeadersVisualStyles = false;
             this.AdminGrid.GridColor = System.Drawing.Color.White;
-            this.AdminGrid.Location = new System.Drawing.Point(3, 40);
+            this.AdminGrid.Location = new System.Drawing.Point(15, 40);
             this.AdminGrid.Name = "AdminGrid";
             this.AdminGrid.ReadOnly = true;
             this.AdminGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AdminGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AdminGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.AdminGrid.RowHeadersVisible = false;
             this.AdminGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
-            this.AdminGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.AdminGrid.Size = new System.Drawing.Size(814, 541);
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
+            this.AdminGrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.AdminGrid.Size = new System.Drawing.Size(802, 576);
             this.AdminGrid.TabIndex = 5;
             // 
             // AdminForm
@@ -300,7 +292,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1440, 778);
+            this.ClientSize = new System.Drawing.Size(1440, 786);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -310,7 +302,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MainPanel.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminGrid)).EndInit();
@@ -332,7 +323,6 @@
         private System.Windows.Forms.TextBox search;
         private System.Windows.Forms.Button refresh;
         private System.Windows.Forms.Panel MainPanel;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button editadminbtn;
         private System.Windows.Forms.Button addadminbtn;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -35,16 +35,17 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.loginbtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.passwordbox = new System.Windows.Forms.TextBox();
             this.usernamebox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,19 +121,6 @@
             this.loginbtn.UseVisualStyleBackColor = false;
             this.loginbtn.Click += new System.EventHandler(this.logibtn_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(414, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 40);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Login Form";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -177,23 +165,33 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.clearbtn);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.loginbtn);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.usernamebox);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.passwordbox);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(382, 230);
+            this.panel1.Location = new System.Drawing.Point(400, 311);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(656, 327);
             this.panel1.TabIndex = 12;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::VG_DB_2013.Properties.Resources.Login_3_10_2025;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(394, 7);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(207, 62);
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.pictureBox2.BackColor = System.Drawing.Color.LawnGreen;
             this.pictureBox2.Image = global::VG_DB_2013.Properties.Resources.disven_onetwothree;
             this.pictureBox2.Location = new System.Drawing.Point(0, -36);
             this.pictureBox2.Name = "pictureBox2";
@@ -207,7 +205,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::VG_DB_2013.Properties.Resources._1008911;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1440, 778);
+            this.ClientSize = new System.Drawing.Size(1440, 900);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -221,6 +219,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -234,12 +233,12 @@
         private System.Windows.Forms.Button clearbtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button loginbtn;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox passwordbox;
         private System.Windows.Forms.TextBox usernamebox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

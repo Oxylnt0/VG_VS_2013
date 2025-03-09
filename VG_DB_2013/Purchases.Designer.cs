@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.clearbtn = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.addpurchasebtn = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.updategamestock = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,7 +59,6 @@
             this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -115,53 +114,59 @@
             this.purchasegrid.AllowUserToDeleteRows = false;
             this.purchasegrid.AllowUserToResizeColumns = false;
             this.purchasegrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lavender;
+            this.purchasegrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.purchasegrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.purchasegrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.purchasegrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.purchasegrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.purchasegrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.purchasegrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.purchasegrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LawnGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.purchasegrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.purchasegrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.purchasegrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.purchasegrid.EnableHeadersVisualStyles = false;
             this.purchasegrid.GridColor = System.Drawing.Color.White;
-            this.purchasegrid.Location = new System.Drawing.Point(3, 40);
+            this.purchasegrid.Location = new System.Drawing.Point(7, 40);
             this.purchasegrid.Name = "purchasegrid";
             this.purchasegrid.ReadOnly = true;
             this.purchasegrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.purchasegrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.purchasegrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.purchasegrid.RowHeadersVisible = false;
             this.purchasegrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
-            this.purchasegrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.purchasegrid.Size = new System.Drawing.Size(845, 545);
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
+            this.purchasegrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.purchasegrid.Size = new System.Drawing.Size(841, 572);
             this.purchasegrid.TabIndex = 5;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.updategamestock);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.addpurchasebtn);
             this.panel3.Controls.Add(this.refresh);
+            this.panel3.Controls.Add(this.flowLayoutPanel1);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.purchasegrid);
-            this.panel3.Location = new System.Drawing.Point(245, 99);
+            this.panel3.Location = new System.Drawing.Point(176, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(853, 630);
+            this.panel3.Size = new System.Drawing.Size(1095, 630);
             this.panel3.TabIndex = 6;
             // 
             // refresh
@@ -171,9 +176,9 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(7, 591);
+            this.refresh.Location = new System.Drawing.Point(854, 582);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(139, 30);
+            this.refresh.Size = new System.Drawing.Size(230, 30);
             this.refresh.TabIndex = 40;
             this.refresh.Text = "Refresh Table";
             this.refresh.UseVisualStyleBackColor = false;
@@ -243,10 +248,10 @@
             this.flowLayoutPanel1.Controls.Add(this.label5);
             this.flowLayoutPanel1.Controls.Add(this.supplierbox);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 99);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(854, 138);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5, 5, 0, 10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(226, 180);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(230, 180);
             this.flowLayoutPanel1.TabIndex = 27;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -256,7 +261,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Azure;
+            this.label3.ForeColor = System.Drawing.Color.Lime;
             this.label3.Location = new System.Drawing.Point(8, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 25);
@@ -303,14 +308,14 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel5.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel5.Controls.Add(this.clearbtn);
             this.panel5.Controls.Add(this.applybtn);
             this.panel5.Controls.Add(this.sortby);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(12, 285);
+            this.panel5.Location = new System.Drawing.Point(854, 309);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(226, 100);
+            this.panel5.Size = new System.Drawing.Size(230, 115);
             this.panel5.TabIndex = 28;
             // 
             // clearbtn
@@ -339,23 +344,13 @@
             this.addpurchasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addpurchasebtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addpurchasebtn.ForeColor = System.Drawing.Color.Black;
-            this.addpurchasebtn.Location = new System.Drawing.Point(17, 13);
+            this.addpurchasebtn.Location = new System.Drawing.Point(854, 40);
             this.addpurchasebtn.Name = "addpurchasebtn";
-            this.addpurchasebtn.Size = new System.Drawing.Size(248, 44);
+            this.addpurchasebtn.Size = new System.Drawing.Size(230, 44);
             this.addpurchasebtn.TabIndex = 54;
             this.addpurchasebtn.Text = "Add Purchases";
             this.addpurchasebtn.UseVisualStyleBackColor = false;
             this.addpurchasebtn.Click += new System.EventHandler(this.addpurchasebtn_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel6.Controls.Add(this.updategamestock);
-            this.panel6.Controls.Add(this.addpurchasebtn);
-            this.panel6.Location = new System.Drawing.Point(1104, 100);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(280, 133);
-            this.panel6.TabIndex = 55;
             // 
             // updategamestock
             // 
@@ -364,9 +359,9 @@
             this.updategamestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updategamestock.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updategamestock.ForeColor = System.Drawing.Color.Black;
-            this.updategamestock.Location = new System.Drawing.Point(17, 72);
+            this.updategamestock.Location = new System.Drawing.Point(854, 88);
             this.updategamestock.Name = "updategamestock";
-            this.updategamestock.Size = new System.Drawing.Size(248, 44);
+            this.updategamestock.Size = new System.Drawing.Size(230, 44);
             this.updategamestock.TabIndex = 55;
             this.updategamestock.Text = "Update Game Stock";
             this.updategamestock.UseVisualStyleBackColor = false;
@@ -379,12 +374,9 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImage = global::VG_DB_2013.Properties.Resources.pixel_background_nxwecdh8vgxjfe96;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1440, 778);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1440, 786);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Purchases";
             this.Text = "Purchases";
@@ -398,7 +390,6 @@
             this.flowLayoutPanel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -424,7 +415,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button refresh;
         private System.Windows.Forms.Button addpurchasebtn;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button updategamestock;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

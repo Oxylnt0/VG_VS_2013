@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -43,13 +44,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.sortby = new System.Windows.Forms.ComboBox();
             this.customergrid = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.editcustbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customergrid)).BeginInit();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -106,13 +105,14 @@
             this.panel3.Controls.Add(this.refresh);
             this.panel3.Controls.Add(this.searchbtn);
             this.panel3.Controls.Add(this.applybtn);
+            this.panel3.Controls.Add(this.editcustbtn);
             this.panel3.Controls.Add(this.search);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.sortby);
             this.panel3.Controls.Add(this.customergrid);
-            this.panel3.Location = new System.Drawing.Point(12, 99);
+            this.panel3.Location = new System.Drawing.Point(99, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(978, 630);
+            this.panel3.Size = new System.Drawing.Size(1244, 630);
             this.panel3.TabIndex = 8;
             // 
             // refresh
@@ -122,9 +122,9 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(12, 587);
+            this.refresh.Location = new System.Drawing.Point(979, 579);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(139, 30);
+            this.refresh.Size = new System.Drawing.Size(248, 30);
             this.refresh.TabIndex = 39;
             this.refresh.Text = "Refresh Table";
             this.refresh.UseVisualStyleBackColor = false;
@@ -137,7 +137,7 @@
             this.searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchbtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchbtn.ForeColor = System.Drawing.Color.Black;
-            this.searchbtn.Location = new System.Drawing.Point(189, 10);
+            this.searchbtn.Location = new System.Drawing.Point(253, 9);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(76, 25);
             this.searchbtn.TabIndex = 25;
@@ -151,9 +151,9 @@
             this.applybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.applybtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applybtn.ForeColor = System.Drawing.Color.Black;
-            this.applybtn.Location = new System.Drawing.Point(891, 10);
+            this.applybtn.Location = new System.Drawing.Point(1037, 138);
             this.applybtn.Name = "applybtn";
-            this.applybtn.Size = new System.Drawing.Size(76, 25);
+            this.applybtn.Size = new System.Drawing.Size(190, 25);
             this.applybtn.TabIndex = 25;
             this.applybtn.Text = "Apply";
             this.applybtn.UseVisualStyleBackColor = false;
@@ -161,9 +161,9 @@
             // search
             // 
             this.search.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(3, 9);
+            this.search.Location = new System.Drawing.Point(13, 9);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(180, 25);
+            this.search.Size = new System.Drawing.Size(234, 25);
             this.search.TabIndex = 26;
             // 
             // label2
@@ -173,7 +173,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Azure;
-            this.label2.Location = new System.Drawing.Point(670, 10);
+            this.label2.Location = new System.Drawing.Point(980, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 25);
             this.label2.TabIndex = 16;
@@ -188,9 +188,9 @@
             this.sortby.Items.AddRange(new object[] {
             "Last Name - Ascending",
             "Last Name - Descending"});
-            this.sortby.Location = new System.Drawing.Point(727, 10);
+            this.sortby.Location = new System.Drawing.Point(1037, 107);
             this.sortby.Name = "sortby";
-            this.sortby.Size = new System.Drawing.Size(158, 25);
+            this.sortby.Size = new System.Drawing.Size(190, 25);
             this.sortby.TabIndex = 15;
             // 
             // customergrid
@@ -199,51 +199,44 @@
             this.customergrid.AllowUserToDeleteRows = false;
             this.customergrid.AllowUserToResizeColumns = false;
             this.customergrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lavender;
+            this.customergrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.customergrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.customergrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.customergrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.customergrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.customergrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.customergrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Azure;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.customergrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LawnGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.customergrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.customergrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customergrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.customergrid.EnableHeadersVisualStyles = false;
             this.customergrid.GridColor = System.Drawing.Color.White;
-            this.customergrid.Location = new System.Drawing.Point(3, 40);
+            this.customergrid.Location = new System.Drawing.Point(13, 40);
             this.customergrid.Name = "customergrid";
             this.customergrid.ReadOnly = true;
             this.customergrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.customergrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.customergrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.customergrid.RowHeadersVisible = false;
             this.customergrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
-            this.customergrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.customergrid.Size = new System.Drawing.Size(970, 541);
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
+            this.customergrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.customergrid.Size = new System.Drawing.Size(960, 569);
             this.customergrid.TabIndex = 5;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel6.Controls.Add(this.editcustbtn);
-            this.panel6.Location = new System.Drawing.Point(996, 99);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(280, 71);
-            this.panel6.TabIndex = 57;
             // 
             // editcustbtn
             // 
@@ -252,7 +245,7 @@
             this.editcustbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editcustbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editcustbtn.ForeColor = System.Drawing.Color.Black;
-            this.editcustbtn.Location = new System.Drawing.Point(16, 11);
+            this.editcustbtn.Location = new System.Drawing.Point(979, 40);
             this.editcustbtn.Name = "editcustbtn";
             this.editcustbtn.Size = new System.Drawing.Size(248, 44);
             this.editcustbtn.TabIndex = 55;
@@ -266,8 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::VG_DB_2013.Properties.Resources.pixel_background_nxwecdh8vgxjfe96;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1440, 778);
-            this.Controls.Add(this.panel6);
+            this.ClientSize = new System.Drawing.Size(1440, 786);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -280,7 +272,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customergrid)).EndInit();
-            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -298,7 +289,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox sortby;
         private System.Windows.Forms.DataGridView customergrid;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button editcustbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

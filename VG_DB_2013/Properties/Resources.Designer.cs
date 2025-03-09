@@ -293,6 +293,26 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Login_3_10_2025 {
+            get {
+                object obj = ResourceManager.GetObject("Login-3-10-2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Main_menu_3_10_2025 {
+            get {
+                object obj = ResourceManager.GetObject("Main-menu-3-10-2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap miguel_juarez_persona_5_first_encounterclear {
             get {
                 object obj = ResourceManager.GetObject("miguel-juarez-persona-5-first-encounterclear", resourceCulture);

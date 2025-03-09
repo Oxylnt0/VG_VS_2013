@@ -74,5 +74,10 @@ namespace VG_DB_2013
             loadform(new Customers());
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
