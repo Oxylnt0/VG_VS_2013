@@ -13,6 +13,8 @@ namespace VG_DB_2013
 {
     public partial class Customers : Form
     {
+        private Opacity opacity;
+
         public Customers()
         {
             InitializeComponent();
@@ -59,6 +61,23 @@ namespace VG_DB_2013
         private void Customers_Load(object sender, EventArgs e)
         {
             this.BindData();
+        }
+
+        private void editcustbtn_Click(object sender, EventArgs e)
+        {
+            opacity = new Opacity();
+            opacity.Show();
+            opacity.Opacity = 0.6;
+
+            EditCustomer custform = new EditCustomer(opacity);
+            custform.Show();
+        }
+
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            this.BindData();
+            customergrid.Update();
+            customergrid.Refresh();
         }
 
    

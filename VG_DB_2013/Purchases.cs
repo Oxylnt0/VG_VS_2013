@@ -146,5 +146,18 @@ namespace VG_DB_2013
 
         }
 
+        private void updategamestock_Click(object sender, EventArgs e)
+        {
+            opacity = new Opacity();
+            opacity.Show();
+            opacity.Opacity = 0.6;
+
+            UpdateGameStock update = new UpdateGameStock(opacity);
+            update.Show();
+            update.TopMost = true;
+        }
+
+
+
     }
 }

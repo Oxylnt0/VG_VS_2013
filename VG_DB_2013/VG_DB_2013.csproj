@@ -86,6 +86,12 @@
     <Compile Include="EditAdmin.Designer.cs">
       <DependentUpon>EditAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCustomer.Designer.cs">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,12 @@
     <Compile Include="Suppliers.Designer.cs">
       <DependentUpon>Suppliers.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateGameStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateGameStock.Designer.cs">
+      <DependentUpon>UpdateGameStock.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddAdmin.resx">
       <DependentUpon>AddAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditAdmin.resx">
       <DependentUpon>EditAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCustomer.resx">
+      <DependentUpon>EditCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditSupplier.resx">
       <DependentUpon>EditSupplier.cs</DependentUpon>
@@ -226,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Suppliers.resx">
       <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateGameStock.resx">
+      <DependentUpon>UpdateGameStock.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -347,6 +365,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-insert-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo7hobx43um81.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disven-onetwothree.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game-Store-Inventory-Managemen-3-9-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME-Inventory-3-9-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME-sales-3-9-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME-Customers-3-9-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME-Purchases-3-9-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME-SUPPLIERS-3-9-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-admins-3-9-2025.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

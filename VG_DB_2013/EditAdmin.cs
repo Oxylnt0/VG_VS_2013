@@ -29,7 +29,7 @@ namespace VG_DB_2013
             SqlCommand cmd = new SqlCommand("delete Admins where Admin_ID=" + Convert.ToInt32(admin_id.Text), sqlcon);
             cmd.ExecuteNonQuery();
             sqlcon.Close();
-            MessageBox.Show("Delete Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Delete Successful", "Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
             admin_id.Text = "";
         }
 
@@ -117,5 +117,7 @@ namespace VG_DB_2013
 
             opacity.Close();
         }
+
+  
     }
 }

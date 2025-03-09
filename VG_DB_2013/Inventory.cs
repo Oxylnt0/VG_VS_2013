@@ -15,7 +15,7 @@ namespace VG_DB_2013
     public partial class Inventory : Form
     {
 
-        private string query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer , Genre, Picture FROM Games WHERE 1=1";
+        private string query = "select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Games.Game_Platform, Games.Developer, Games.Genre, Games.Picture from Games_Inventory inner join Games on Games.Game_ID = Games_Inventory.Game_ID WHERE 1=1";
 
 
         public Inventory()
@@ -71,6 +71,7 @@ namespace VG_DB_2013
                 InventoryGrid.Columns.Clear();
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Game ID", DataPropertyName = "Game_ID" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Game Name", DataPropertyName = "Game_Name" });
+                InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Stock", DataPropertyName = "Games_Stock" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Price", DataPropertyName = "Price" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Platform", DataPropertyName = "Game_Platform" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Developer", DataPropertyName = "Developer" });
@@ -192,7 +193,7 @@ namespace VG_DB_2013
             InventoryGrid.Update();
             InventoryGrid.Refresh();
 
-            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer , Genre, Picture FROM Games WHERE 1=1";
+            query = "select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Games.Game_Platform, Games.Developer, Games.Genre, Games.Picture from Games_Inventory inner join Games on Games.Game_ID = Games_Inventory.Game_ID WHERE 1=1";
             
         }
         
@@ -426,11 +427,11 @@ namespace VG_DB_2013
 
         private void searchbtn_Click(object sender, EventArgs e)
         {
-            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer , Genre, Picture FROM Games where Game_Name Like '%" + search.Text + "%';";
+            query = "select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Games.Game_Platform, Games.Developer, Games.Genre, Games.Picture from Games_Inventory inner join Games on Games.Game_ID = Games_Inventory.Game_ID where Game_Name Like '%" + search.Text + "%';";
             this.BindData();
             InventoryGrid.Update();
             InventoryGrid.Refresh();
-            query = "SELECT Game_ID ,Price ,Game_Name, Game_Platform, Developer , Genre, Picture FROM Games WHERE 1=1";
+            query = "select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Games.Game_Platform, Games.Developer, Games.Genre, Games.Picture from Games_Inventory inner join Games on Games.Game_ID = Games_Inventory.Game_ID WHERE 1=1";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -442,5 +443,7 @@ namespace VG_DB_2013
         {
 
         }
+
+  
     }
 }

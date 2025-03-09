@@ -103,6 +103,86 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bo7hobx43um81 {
+            get {
+                object obj = ResourceManager.GetObject("bo7hobx43um81", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap disven_onetwothree {
+            get {
+                object obj = ResourceManager.GetObject("disven-onetwothree", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GAME_Customers_3_9_2025 {
+            get {
+                object obj = ResourceManager.GetObject("GAME-Customers-3-9-2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GAME_Inventory_3_9_2025 {
+            get {
+                object obj = ResourceManager.GetObject("GAME-Inventory-3-9-2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GAME_Purchases_3_9_2025 {
+            get {
+                object obj = ResourceManager.GetObject("GAME-Purchases-3-9-2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GAME_sales_3_9_2025 {
+            get {
+                object obj = ResourceManager.GetObject("GAME-sales-3-9-2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Game_Store_Inventory_Managemen_3_9_2025 {
+            get {
+                object obj = ResourceManager.GetObject("Game-Store-Inventory-Managemen-3-9-2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GAME_SUPPLIERS_3_9_2025 {
+            get {
+                object obj = ResourceManager.GetObject("GAME-SUPPLIERS-3-9-2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap giphy {
             get {
                 object obj = ResourceManager.GetObject("giphy", resourceCulture);
@@ -236,6 +316,16 @@ namespace VG_DB_2013.Properties {
         internal static System.Drawing.Bitmap pixel_background_nxwecdh8vgxjfe96 {
             get {
                 object obj = ResourceManager.GetObject("pixel-background-nxwecdh8vgxjfe96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap system_admins_3_9_2025 {
+            get {
+                object obj = ResourceManager.GetObject("system-admins-3-9-2025", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
