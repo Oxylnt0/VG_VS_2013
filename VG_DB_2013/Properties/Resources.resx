@@ -190,6 +190,9 @@
   <data name="GAME-SUPPLIERS-3-9-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GAME-SUPPLIERS-3-9-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Login-3-10-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login-3-10-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="giphy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\giphy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,7 +205,7 @@
   <data name="GAME-Inventory-3-9-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GAME-Inventory-3-9-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login-3-10-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login-3-10-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wallpaperflare.com_wallpaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wallpaperflare.com_wallpaper.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

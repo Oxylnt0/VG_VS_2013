@@ -37,25 +37,25 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.sortby = new System.Windows.Forms.ComboBox();
             this.applybtn = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.addsalesbtn = new System.Windows.Forms.Button();
             this.refresh = new System.Windows.Forms.Button();
             this.salesgrid = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.salesgrid)).BeginInit();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.salesgrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
@@ -110,9 +110,20 @@
             this.panel3.Controls.Add(this.salesgrid);
             this.panel3.Location = new System.Drawing.Point(162, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1121, 630);
+            this.panel3.Size = new System.Drawing.Size(1121, 675);
             this.panel3.TabIndex = 7;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.sortby);
+            this.panel2.Controls.Add(this.applybtn);
+            this.panel2.Location = new System.Drawing.Point(868, 131);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(237, 90);
+            this.panel2.TabIndex = 59;
             // 
             // label2
             // 
@@ -158,6 +169,15 @@
             this.applybtn.UseVisualStyleBackColor = false;
             this.applybtn.Click += new System.EventHandler(this.applybtn_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel4.Controls.Add(this.addsalesbtn);
+            this.panel4.Location = new System.Drawing.Point(868, 40);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(237, 73);
+            this.panel4.TabIndex = 58;
+            // 
             // addsalesbtn
             // 
             this.addsalesbtn.BackColor = System.Drawing.Color.Gold;
@@ -180,7 +200,7 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(868, 582);
+            this.refresh.Location = new System.Drawing.Point(868, 627);
             this.refresh.Name = "refresh";
             this.refresh.Size = new System.Drawing.Size(237, 30);
             this.refresh.TabIndex = 40;
@@ -214,7 +234,7 @@
             this.salesgrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.salesgrid.EnableHeadersVisualStyles = false;
             this.salesgrid.GridColor = System.Drawing.Color.White;
-            this.salesgrid.Location = new System.Drawing.Point(7, 40);
+            this.salesgrid.Location = new System.Drawing.Point(18, 40);
             this.salesgrid.Name = "salesgrid";
             this.salesgrid.ReadOnly = true;
             this.salesgrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -230,34 +250,14 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
             this.salesgrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.salesgrid.Size = new System.Drawing.Size(855, 572);
+            this.salesgrid.Size = new System.Drawing.Size(844, 617);
             this.salesgrid.TabIndex = 5;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel4.Controls.Add(this.addsalesbtn);
-            this.panel4.Location = new System.Drawing.Point(868, 40);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(237, 73);
-            this.panel4.TabIndex = 58;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.sortby);
-            this.panel2.Controls.Add(this.applybtn);
-            this.panel2.Location = new System.Drawing.Point(868, 131);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(237, 90);
-            this.panel2.TabIndex = 59;
             // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VG_DB_2013.Properties.Resources.pixel_background_nxwecdh8vgxjfe96;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1440, 786);
             this.Controls.Add(this.panel3);
@@ -269,10 +269,10 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.salesgrid)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.salesgrid)).EndInit();
             this.ResumeLayout(false);
 
         }

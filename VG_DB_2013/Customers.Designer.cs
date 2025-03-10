@@ -37,27 +37,27 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.refresh = new System.Windows.Forms.Button();
-            this.searchbtn = new System.Windows.Forms.Button();
-            this.applybtn = new System.Windows.Forms.Button();
-            this.editcustbtn = new System.Windows.Forms.Button();
-            this.search = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.sortby = new System.Windows.Forms.ComboBox();
-            this.customergrid = new System.Windows.Forms.DataGridView();
+            this.applybtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.editcustbtn = new System.Windows.Forms.Button();
+            this.refresh = new System.Windows.Forms.Button();
+            this.searchbtn = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.TextBox();
+            this.customergrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customergrid)).BeginInit();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customergrid)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
@@ -114,74 +114,19 @@
             this.panel3.Controls.Add(this.customergrid);
             this.panel3.Location = new System.Drawing.Point(99, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1244, 630);
+            this.panel3.Size = new System.Drawing.Size(1244, 675);
             this.panel3.TabIndex = 8;
             // 
-            // refresh
+            // panel2
             // 
-            this.refresh.BackColor = System.Drawing.Color.Gold;
-            this.refresh.FlatAppearance.BorderSize = 0;
-            this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(979, 579);
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(248, 30);
-            this.refresh.TabIndex = 39;
-            this.refresh.Text = "Refresh Table";
-            this.refresh.UseVisualStyleBackColor = false;
-            this.refresh.Click += new System.EventHandler(this.refresh_Click);
-            // 
-            // searchbtn
-            // 
-            this.searchbtn.BackColor = System.Drawing.Color.Gold;
-            this.searchbtn.FlatAppearance.BorderSize = 0;
-            this.searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchbtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchbtn.ForeColor = System.Drawing.Color.Black;
-            this.searchbtn.Location = new System.Drawing.Point(253, 9);
-            this.searchbtn.Name = "searchbtn";
-            this.searchbtn.Size = new System.Drawing.Size(76, 25);
-            this.searchbtn.TabIndex = 25;
-            this.searchbtn.Text = "Search";
-            this.searchbtn.UseVisualStyleBackColor = false;
-            // 
-            // applybtn
-            // 
-            this.applybtn.BackColor = System.Drawing.Color.Gold;
-            this.applybtn.FlatAppearance.BorderSize = 0;
-            this.applybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.applybtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applybtn.ForeColor = System.Drawing.Color.Black;
-            this.applybtn.Location = new System.Drawing.Point(64, 46);
-            this.applybtn.Name = "applybtn";
-            this.applybtn.Size = new System.Drawing.Size(170, 25);
-            this.applybtn.TabIndex = 25;
-            this.applybtn.Text = "Apply";
-            this.applybtn.UseVisualStyleBackColor = false;
-            // 
-            // editcustbtn
-            // 
-            this.editcustbtn.BackColor = System.Drawing.Color.Gold;
-            this.editcustbtn.FlatAppearance.BorderSize = 0;
-            this.editcustbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editcustbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editcustbtn.ForeColor = System.Drawing.Color.Black;
-            this.editcustbtn.Location = new System.Drawing.Point(12, 14);
-            this.editcustbtn.Name = "editcustbtn";
-            this.editcustbtn.Size = new System.Drawing.Size(222, 44);
-            this.editcustbtn.TabIndex = 55;
-            this.editcustbtn.Text = "Edit Customers";
-            this.editcustbtn.UseVisualStyleBackColor = false;
-            this.editcustbtn.Click += new System.EventHandler(this.editcustbtn_Click);
-            // 
-            // search
-            // 
-            this.search.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(13, 9);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(234, 25);
-            this.search.TabIndex = 26;
+            this.panel2.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.sortby);
+            this.panel2.Controls.Add(this.applybtn);
+            this.panel2.Location = new System.Drawing.Point(979, 134);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(248, 90);
+            this.panel2.TabIndex = 59;
             // 
             // label2
             // 
@@ -209,6 +154,81 @@
             this.sortby.Name = "sortby";
             this.sortby.Size = new System.Drawing.Size(170, 25);
             this.sortby.TabIndex = 15;
+            // 
+            // applybtn
+            // 
+            this.applybtn.BackColor = System.Drawing.Color.Gold;
+            this.applybtn.FlatAppearance.BorderSize = 0;
+            this.applybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.applybtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applybtn.ForeColor = System.Drawing.Color.Black;
+            this.applybtn.Location = new System.Drawing.Point(64, 46);
+            this.applybtn.Name = "applybtn";
+            this.applybtn.Size = new System.Drawing.Size(170, 25);
+            this.applybtn.TabIndex = 25;
+            this.applybtn.Text = "Apply";
+            this.applybtn.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel4.Controls.Add(this.editcustbtn);
+            this.panel4.Location = new System.Drawing.Point(979, 40);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(248, 74);
+            this.panel4.TabIndex = 58;
+            // 
+            // editcustbtn
+            // 
+            this.editcustbtn.BackColor = System.Drawing.Color.Gold;
+            this.editcustbtn.FlatAppearance.BorderSize = 0;
+            this.editcustbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editcustbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editcustbtn.ForeColor = System.Drawing.Color.Black;
+            this.editcustbtn.Location = new System.Drawing.Point(12, 14);
+            this.editcustbtn.Name = "editcustbtn";
+            this.editcustbtn.Size = new System.Drawing.Size(222, 44);
+            this.editcustbtn.TabIndex = 55;
+            this.editcustbtn.Text = "Edit Customers";
+            this.editcustbtn.UseVisualStyleBackColor = false;
+            this.editcustbtn.Click += new System.EventHandler(this.editcustbtn_Click);
+            // 
+            // refresh
+            // 
+            this.refresh.BackColor = System.Drawing.Color.Gold;
+            this.refresh.FlatAppearance.BorderSize = 0;
+            this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refresh.ForeColor = System.Drawing.Color.Black;
+            this.refresh.Location = new System.Drawing.Point(979, 629);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(248, 30);
+            this.refresh.TabIndex = 39;
+            this.refresh.Text = "Refresh Table";
+            this.refresh.UseVisualStyleBackColor = false;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
+            // searchbtn
+            // 
+            this.searchbtn.BackColor = System.Drawing.Color.Gold;
+            this.searchbtn.FlatAppearance.BorderSize = 0;
+            this.searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchbtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchbtn.ForeColor = System.Drawing.Color.Black;
+            this.searchbtn.Location = new System.Drawing.Point(253, 9);
+            this.searchbtn.Name = "searchbtn";
+            this.searchbtn.Size = new System.Drawing.Size(76, 25);
+            this.searchbtn.TabIndex = 25;
+            this.searchbtn.Text = "Search";
+            this.searchbtn.UseVisualStyleBackColor = false;
+            // 
+            // search
+            // 
+            this.search.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search.Location = new System.Drawing.Point(13, 9);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(234, 25);
+            this.search.TabIndex = 26;
             // 
             // customergrid
             // 
@@ -252,34 +272,14 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
             this.customergrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.customergrid.Size = new System.Drawing.Size(960, 569);
+            this.customergrid.Size = new System.Drawing.Size(960, 619);
             this.customergrid.TabIndex = 5;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel4.Controls.Add(this.editcustbtn);
-            this.panel4.Location = new System.Drawing.Point(979, 40);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(248, 74);
-            this.panel4.TabIndex = 58;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.sortby);
-            this.panel2.Controls.Add(this.applybtn);
-            this.panel2.Location = new System.Drawing.Point(979, 134);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(248, 90);
-            this.panel2.TabIndex = 59;
             // 
             // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VG_DB_2013.Properties.Resources.pixel_background_nxwecdh8vgxjfe96;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1440, 786);
             this.Controls.Add(this.panel3);
@@ -293,10 +293,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customergrid)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.customergrid)).EndInit();
             this.ResumeLayout(false);
 
         }

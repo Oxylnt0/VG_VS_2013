@@ -51,7 +51,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;

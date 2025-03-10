@@ -38,34 +38,33 @@
             this.button1 = new System.Windows.Forms.Button();
             this.purchasegrid = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.addpurchasebtn = new System.Windows.Forms.Button();
             this.updategamestock = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.clearbtn = new System.Windows.Forms.Button();
             this.applybtn = new System.Windows.Forms.Button();
             this.sortby = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.addpurchasebtn = new System.Windows.Forms.Button();
             this.refresh = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.supplierbox = new System.Windows.Forms.CheckedListBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasegrid)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
@@ -136,7 +135,7 @@
             this.purchasegrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.purchasegrid.EnableHeadersVisualStyles = false;
             this.purchasegrid.GridColor = System.Drawing.Color.White;
-            this.purchasegrid.Location = new System.Drawing.Point(7, 40);
+            this.purchasegrid.Location = new System.Drawing.Point(17, 40);
             this.purchasegrid.Name = "purchasegrid";
             this.purchasegrid.ReadOnly = true;
             this.purchasegrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -152,7 +151,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
             this.purchasegrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.purchasegrid.Size = new System.Drawing.Size(841, 572);
+            this.purchasegrid.Size = new System.Drawing.Size(831, 614);
             this.purchasegrid.TabIndex = 5;
             // 
             // panel3
@@ -163,12 +162,36 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.refresh);
             this.panel3.Controls.Add(this.flowLayoutPanel1);
-            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.purchasegrid);
             this.panel3.Location = new System.Drawing.Point(176, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1095, 630);
+            this.panel3.Size = new System.Drawing.Size(1095, 675);
             this.panel3.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel2.Controls.Add(this.addpurchasebtn);
+            this.panel2.Controls.Add(this.updategamestock);
+            this.panel2.Location = new System.Drawing.Point(854, 40);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(230, 117);
+            this.panel2.TabIndex = 58;
+            // 
+            // addpurchasebtn
+            // 
+            this.addpurchasebtn.BackColor = System.Drawing.Color.Gold;
+            this.addpurchasebtn.FlatAppearance.BorderSize = 0;
+            this.addpurchasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addpurchasebtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addpurchasebtn.ForeColor = System.Drawing.Color.Black;
+            this.addpurchasebtn.Location = new System.Drawing.Point(10, 12);
+            this.addpurchasebtn.Name = "addpurchasebtn";
+            this.addpurchasebtn.Size = new System.Drawing.Size(207, 44);
+            this.addpurchasebtn.TabIndex = 54;
+            this.addpurchasebtn.Text = "Add Purchases";
+            this.addpurchasebtn.UseVisualStyleBackColor = false;
+            this.addpurchasebtn.Click += new System.EventHandler(this.addpurchasebtn_Click);
             // 
             // updategamestock
             // 
@@ -254,21 +277,6 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Sort:";
             // 
-            // addpurchasebtn
-            // 
-            this.addpurchasebtn.BackColor = System.Drawing.Color.Gold;
-            this.addpurchasebtn.FlatAppearance.BorderSize = 0;
-            this.addpurchasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addpurchasebtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addpurchasebtn.ForeColor = System.Drawing.Color.Black;
-            this.addpurchasebtn.Location = new System.Drawing.Point(10, 12);
-            this.addpurchasebtn.Name = "addpurchasebtn";
-            this.addpurchasebtn.Size = new System.Drawing.Size(207, 44);
-            this.addpurchasebtn.TabIndex = 54;
-            this.addpurchasebtn.Text = "Add Purchases";
-            this.addpurchasebtn.UseVisualStyleBackColor = false;
-            this.addpurchasebtn.Click += new System.EventHandler(this.addpurchasebtn_Click);
-            // 
             // refresh
             // 
             this.refresh.BackColor = System.Drawing.Color.Gold;
@@ -276,7 +284,7 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(854, 582);
+            this.refresh.Location = new System.Drawing.Point(854, 624);
             this.refresh.Name = "refresh";
             this.refresh.Size = new System.Drawing.Size(230, 30);
             this.refresh.TabIndex = 40;
@@ -351,39 +359,15 @@
             this.supplierbox.Size = new System.Drawing.Size(205, 104);
             this.supplierbox.TabIndex = 34;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Azure;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 37);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Purchases";
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel2.Controls.Add(this.addpurchasebtn);
-            this.panel2.Controls.Add(this.updategamestock);
-            this.panel2.Location = new System.Drawing.Point(854, 40);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 117);
-            this.panel2.TabIndex = 58;
             // 
             // Purchases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.BackgroundImage = global::VG_DB_2013.Properties.Resources.pixel_background_nxwecdh8vgxjfe96;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1440, 786);
             this.Controls.Add(this.panel3);
@@ -396,12 +380,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchasegrid)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -413,7 +396,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView purchasegrid;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox sortby;
         private System.Windows.Forms.Button applybtn;

@@ -399,6 +399,9 @@
   <ItemGroup>
     <None Include="Resources\Login-3-10-2025.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpaperflare.com_wallpaper.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

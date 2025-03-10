@@ -223,7 +223,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button1);
@@ -272,8 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.BackgroundImage = global::VG_DB_2013.Properties.Resources.pixel_background_nxwecdh8vgxjfe96;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1440, 900);
             this.Controls.Add(this.MainPanel);
