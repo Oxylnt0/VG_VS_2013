@@ -34,33 +34,38 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.addadminbtn = new System.Windows.Forms.Button();
             this.sortby = new System.Windows.Forms.ComboBox();
             this.applybtn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.addadminbtn = new System.Windows.Forms.Button();
             this.editadminbtn = new System.Windows.Forms.Button();
             this.refresh = new System.Windows.Forms.Button();
             this.searchbtn = new System.Windows.Forms.Button();
             this.search = new System.Windows.Forms.TextBox();
             this.AdminGrid = new System.Windows.Forms.DataGridView();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
@@ -82,10 +87,33 @@
             this.button1.TabIndex = 22;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::VG_DB_2013.Properties.Resources._4c972f52280221_590b153db2f7f;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(105, 81);
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::VG_DB_2013.Properties.Resources._6adba752280221_590b153db1bf5;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(78, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(105, 81);
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::VG_DB_2013.Properties.Resources.System_Admin_3_10_2025;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(-91, -6);
+            this.pictureBox1.Location = new System.Drawing.Point(361, -6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(673, 99);
             this.pictureBox1.TabIndex = 25;
@@ -93,6 +121,7 @@
             // 
             // button3
             // 
+            this.button3.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_close_48;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -106,6 +135,7 @@
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.MainPanel.BackgroundImage = global::VG_DB_2013.Properties.Resources._725487_final;
             this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MainPanel.Controls.Add(this.panel3);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -116,29 +146,21 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.addadminbtn);
+            this.panel3.Controls.Add(this.sortby);
+            this.panel3.Controls.Add(this.applybtn);
+            this.panel3.Controls.Add(this.editadminbtn);
             this.panel3.Controls.Add(this.refresh);
             this.panel3.Controls.Add(this.searchbtn);
             this.panel3.Controls.Add(this.search);
             this.panel3.Controls.Add(this.AdminGrid);
             this.panel3.Location = new System.Drawing.Point(170, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1087, 675);
+            this.panel3.Size = new System.Drawing.Size(1097, 675);
             this.panel3.TabIndex = 7;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.sortby);
-            this.panel4.Controls.Add(this.applybtn);
-            this.panel4.Location = new System.Drawing.Point(828, 198);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(243, 84);
-            this.panel4.TabIndex = 57;
             // 
             // label2
             // 
@@ -147,11 +169,26 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Azure;
-            this.label2.Location = new System.Drawing.Point(4, 13);
+            this.label2.Location = new System.Drawing.Point(822, 169);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 25);
             this.label2.TabIndex = 16;
             this.label2.Text = "Sort:";
+            // 
+            // addadminbtn
+            // 
+            this.addadminbtn.BackColor = System.Drawing.Color.Gold;
+            this.addadminbtn.FlatAppearance.BorderSize = 0;
+            this.addadminbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addadminbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addadminbtn.ForeColor = System.Drawing.Color.Black;
+            this.addadminbtn.Location = new System.Drawing.Point(823, 40);
+            this.addadminbtn.Name = "addadminbtn";
+            this.addadminbtn.Size = new System.Drawing.Size(248, 44);
+            this.addadminbtn.TabIndex = 54;
+            this.addadminbtn.Text = "Add Admin";
+            this.addadminbtn.UseVisualStyleBackColor = false;
+            this.addadminbtn.Click += new System.EventHandler(this.addadminbtn_Click);
             // 
             // sortby
             // 
@@ -162,9 +199,9 @@
             this.sortby.Items.AddRange(new object[] {
             "Last Name - Ascending",
             "Last Name - Descending"});
-            this.sortby.Location = new System.Drawing.Point(60, 13);
+            this.sortby.Location = new System.Drawing.Point(878, 169);
             this.sortby.Name = "sortby";
-            this.sortby.Size = new System.Drawing.Size(170, 25);
+            this.sortby.Size = new System.Drawing.Size(193, 25);
             this.sortby.TabIndex = 15;
             // 
             // applybtn
@@ -174,38 +211,13 @@
             this.applybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.applybtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applybtn.ForeColor = System.Drawing.Color.Black;
-            this.applybtn.Location = new System.Drawing.Point(60, 44);
+            this.applybtn.Location = new System.Drawing.Point(878, 200);
             this.applybtn.Name = "applybtn";
-            this.applybtn.Size = new System.Drawing.Size(170, 25);
+            this.applybtn.Size = new System.Drawing.Size(193, 25);
             this.applybtn.TabIndex = 25;
             this.applybtn.Text = "Apply";
             this.applybtn.UseVisualStyleBackColor = false;
             this.applybtn.Click += new System.EventHandler(this.applybtn_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel2.Controls.Add(this.addadminbtn);
-            this.panel2.Controls.Add(this.editadminbtn);
-            this.panel2.Location = new System.Drawing.Point(828, 40);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(243, 135);
-            this.panel2.TabIndex = 56;
-            // 
-            // addadminbtn
-            // 
-            this.addadminbtn.BackColor = System.Drawing.Color.Gold;
-            this.addadminbtn.FlatAppearance.BorderSize = 0;
-            this.addadminbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addadminbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addadminbtn.ForeColor = System.Drawing.Color.Black;
-            this.addadminbtn.Location = new System.Drawing.Point(9, 12);
-            this.addadminbtn.Name = "addadminbtn";
-            this.addadminbtn.Size = new System.Drawing.Size(221, 44);
-            this.addadminbtn.TabIndex = 54;
-            this.addadminbtn.Text = "Add Admin";
-            this.addadminbtn.UseVisualStyleBackColor = false;
-            this.addadminbtn.Click += new System.EventHandler(this.addadminbtn_Click);
             // 
             // editadminbtn
             // 
@@ -214,9 +226,9 @@
             this.editadminbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editadminbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editadminbtn.ForeColor = System.Drawing.Color.Black;
-            this.editadminbtn.Location = new System.Drawing.Point(9, 75);
+            this.editadminbtn.Location = new System.Drawing.Point(823, 90);
             this.editadminbtn.Name = "editadminbtn";
-            this.editadminbtn.Size = new System.Drawing.Size(221, 44);
+            this.editadminbtn.Size = new System.Drawing.Size(248, 44);
             this.editadminbtn.TabIndex = 55;
             this.editadminbtn.Text = "Edit Admin";
             this.editadminbtn.UseVisualStyleBackColor = false;
@@ -229,7 +241,7 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(823, 628);
+            this.refresh.Location = new System.Drawing.Point(823, 618);
             this.refresh.Name = "refresh";
             this.refresh.Size = new System.Drawing.Size(248, 30);
             this.refresh.TabIndex = 39;
@@ -244,7 +256,7 @@
             this.searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchbtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchbtn.ForeColor = System.Drawing.Color.Black;
-            this.searchbtn.Location = new System.Drawing.Point(282, 10);
+            this.searchbtn.Location = new System.Drawing.Point(293, 9);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(76, 25);
             this.searchbtn.TabIndex = 25;
@@ -255,7 +267,7 @@
             // search
             // 
             this.search.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(15, 10);
+            this.search.Location = new System.Drawing.Point(26, 9);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(261, 25);
             this.search.TabIndex = 26;
@@ -275,7 +287,7 @@
             this.AdminGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.AdminGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LawnGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AntiqueWhite;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -286,7 +298,7 @@
             this.AdminGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.AdminGrid.EnableHeadersVisualStyles = false;
             this.AdminGrid.GridColor = System.Drawing.Color.White;
-            this.AdminGrid.Location = new System.Drawing.Point(15, 40);
+            this.AdminGrid.Location = new System.Drawing.Point(26, 40);
             this.AdminGrid.Name = "AdminGrid";
             this.AdminGrid.ReadOnly = true;
             this.AdminGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -302,8 +314,19 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
             this.AdminGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.AdminGrid.Size = new System.Drawing.Size(802, 618);
+            this.AdminGrid.Size = new System.Drawing.Size(791, 608);
             this.AdminGrid.TabIndex = 5;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::VG_DB_2013.Properties.Resources.e9277452280221_590b153db20bf;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(152, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(105, 81);
+            this.pictureBox4.TabIndex = 36;
+            this.pictureBox4.TabStop = false;
             // 
             // AdminForm
             // 
@@ -319,14 +342,14 @@
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MainPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AdminGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,8 +371,9 @@
         private System.Windows.Forms.Button editadminbtn;
         private System.Windows.Forms.Button addadminbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
 
 
     }

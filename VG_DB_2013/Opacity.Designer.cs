@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Addpurchases
+            // Opacity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1440, 867);
+            this.ClientSize = new System.Drawing.Size(1440, 900);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Addpurchases";
+            this.Name = "Opacity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addpurchases";
             this.ResumeLayout(false);

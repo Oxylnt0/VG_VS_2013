@@ -115,11 +115,6 @@ namespace VG_DB_2013
             sales.TopMost = true;
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 
     }
 }

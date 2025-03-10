@@ -42,16 +42,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -62,6 +68,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::VG_DB_2013.Properties.Resources.Game_Store_Inventory_Managemen_3_10_2025;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(184, -105);
             this.pictureBox1.Name = "pictureBox1";
@@ -71,6 +78,7 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_close_48;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -88,7 +96,7 @@
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearbtn.ForeColor = System.Drawing.Color.Black;
-            this.clearbtn.Location = new System.Drawing.Point(520, 245);
+            this.clearbtn.Location = new System.Drawing.Point(580, 279);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(83, 34);
             this.clearbtn.TabIndex = 10;
@@ -99,7 +107,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Snow;
-            this.panel4.Location = new System.Drawing.Point(345, 75);
+            this.panel4.Location = new System.Drawing.Point(405, 109);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(304, 1);
             this.panel4.TabIndex = 3;
@@ -111,7 +119,7 @@
             this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginbtn.ForeColor = System.Drawing.Color.Black;
-            this.loginbtn.Location = new System.Drawing.Point(394, 245);
+            this.loginbtn.Location = new System.Drawing.Point(454, 279);
             this.loginbtn.Name = "loginbtn";
             this.loginbtn.Size = new System.Drawing.Size(83, 34);
             this.loginbtn.TabIndex = 9;
@@ -124,8 +132,8 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(390, 165);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(450, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 21);
             this.label4.TabIndex = 8;
@@ -136,8 +144,8 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(390, 91);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(450, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 2;
@@ -146,7 +154,7 @@
             // passwordbox
             // 
             this.passwordbox.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordbox.Location = new System.Drawing.Point(394, 189);
+            this.passwordbox.Location = new System.Drawing.Point(454, 223);
             this.passwordbox.Name = "passwordbox";
             this.passwordbox.Size = new System.Drawing.Size(209, 29);
             this.passwordbox.TabIndex = 5;
@@ -155,32 +163,33 @@
             // usernamebox
             // 
             this.usernamebox.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernamebox.Location = new System.Drawing.Point(394, 115);
+            this.usernamebox.Location = new System.Drawing.Point(454, 149);
             this.usernamebox.Name = "usernamebox";
             this.usernamebox.Size = new System.Drawing.Size(209, 29);
             this.usernamebox.TabIndex = 4;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.clearbtn);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.loginbtn);
             this.panel1.Controls.Add(this.usernamebox);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.passwordbox);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(400, 311);
+            this.panel1.Location = new System.Drawing.Point(376, 291);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(656, 327);
+            this.panel1.Size = new System.Drawing.Size(719, 375);
             this.panel1.TabIndex = 12;
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackgroundImage = global::VG_DB_2013.Properties.Resources.login_3_10_2025;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(394, 7);
+            this.pictureBox3.Location = new System.Drawing.Point(454, 25);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(207, 62);
             this.pictureBox3.TabIndex = 11;
@@ -188,22 +197,47 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Gray;
-            this.pictureBox2.Location = new System.Drawing.Point(0, -36);
+            this.pictureBox2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.pictureBox2.Image = global::VG_DB_2013.Properties.Resources.giphy;
+            this.pictureBox2.Location = new System.Drawing.Point(-42, -60);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(339, 363);
+            this.pictureBox2.Size = new System.Drawing.Size(441, 454);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::VG_DB_2013.Properties.Resources._60a7c101219ee5f;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(57, 48);
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::VG_DB_2013.Properties.Resources._7b2d1341e20f674;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(75, 33);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(57, 48);
+            this.pictureBox5.TabIndex = 14;
+            this.pictureBox5.TabStop = false;
             // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::VG_DB_2013.Properties.Resources._725487_final;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1440, 900);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -216,6 +250,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,5 +271,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

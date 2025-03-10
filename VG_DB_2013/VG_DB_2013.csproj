@@ -260,7 +260,151 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\Main-Menu-3-10-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game-Store-Inventory-Managemen-3-10-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-3-10-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-inventory-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sales-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customers-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-purchases-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-supplier-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-admin-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sales-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Customerss-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game-inventory-3-10-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\725487-final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original-25e3ea9859161088373176df9917eb7b.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPf12H.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c9a5f0cb3428b6325d15d47ee85e2df0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game-Sales-3-10-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game-Customers-3-10-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game-Purchases-3-10-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game-suppliers-3-10-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System-Admin-3-10-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60a7c101219ee5f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7b2d1341e20f674.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8624c2affb9d249.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnnaMapIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChromMapIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7fc58f6ef11689c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7b2d1341e20f6741.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mega-man-pixel-art-sprite-s9iz80toolajhtd0-s9iz80toolajhtd0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mario-Coin-PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixelated-sonic-gold-ring-ko7m1p5bgzjh753i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ac436bf4c39be73.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d7zocpm-cc542e02-187f-420a-8757-b66662090417.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y409ay4tac651.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-fire-emblem-fates-fire-emblem-awakening-sprite-role-playing-game-overworld-sprite-purple-rectangle-symmetry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d1c0afa23ad55e199d8a6931fd230cafe9f1303a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wartortle-Pokemon-Transparent-Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91738-character-symbol-metal-slug-fictional-png-download-free.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\237-2372758_tarma-metal-slug-pixel-art-metal-slug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6adba752280221.590b153db1bf5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4c972f52280221.590b153db2f7f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e9277452280221.590b153db20bf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e73b43fac3e4cdcbdd928208c9001fa3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\187-1873650_click-to-expand-aigis-persona-3-pixel-art.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
