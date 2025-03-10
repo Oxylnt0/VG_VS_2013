@@ -51,7 +51,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel2.BackColor = System.Drawing.Color.SeaGreen;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -63,16 +63,14 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::VG_DB_2013.Properties.Resources.Game_Store_Inventory_Managemen_3_9_2025;
-            this.pictureBox1.Location = new System.Drawing.Point(-28, -25);
+            this.pictureBox1.Location = new System.Drawing.Point(184, -105);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1184, 152);
+            this.pictureBox1.Size = new System.Drawing.Size(1078, 301);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_close_301;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -124,9 +122,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Azure;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(390, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 21);
@@ -136,9 +134,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Azure;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(390, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 21);
@@ -164,7 +162,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.clearbtn);
             this.panel1.Controls.Add(this.panel4);
@@ -181,7 +179,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::VG_DB_2013.Properties.Resources.Login_3_10_2025;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(394, 7);
             this.pictureBox3.Name = "pictureBox3";
@@ -191,8 +188,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.LawnGreen;
-            this.pictureBox2.Image = global::VG_DB_2013.Properties.Resources.disven_onetwothree;
+            this.pictureBox2.BackColor = System.Drawing.Color.Gray;
             this.pictureBox2.Location = new System.Drawing.Point(0, -36);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(339, 363);
@@ -203,7 +199,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VG_DB_2013.Properties.Resources._1008911;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1440, 900);
             this.ControlBox = false;
@@ -238,7 +233,7 @@
         private System.Windows.Forms.TextBox passwordbox;
         private System.Windows.Forms.TextBox usernamebox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

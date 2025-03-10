@@ -25,6 +25,7 @@ namespace VG_DB_2013
         private void UpdateGameStock_Load(object sender, EventArgs e)
         {
             this.BindData();
+            LoadComboBox();
         }
 
         private void find_Click(object sender, EventArgs e)
@@ -104,55 +105,33 @@ namespace VG_DB_2013
 
         private void add_Click(object sender, EventArgs e)
         {
-            int supplier_code = 0;
+        
             double price = Convert.ToDouble(pricebox.Text);
             int qty = Convert.ToInt32(qtybox.Text);
             DateTime date_purchased = dateTimePicker1.Value;
             double total_amount;
             int game_id = Convert.ToInt32(find_gameid.Text);
 
-            if (suppliercombo.SelectedItem.ToString() == "TechWare")
-            {
-                supplier_code = 1;
-            }
-
-            else if (suppliercombo.SelectedItem.ToString() == "Pixel Games")
-            {
-                supplier_code = 2;
-            }
-
-            else if (suppliercombo.SelectedItem.ToString() == "GameLab Supplies")
-            {
-                supplier_code = 3;
-            }
-
-            else if (suppliercombo.SelectedItem.ToString() == "GameXpert")
-            {
-                supplier_code = 4;
-            }
-
-            else if (suppliercombo.SelectedItem.ToString() == "PlayCraft Supplies")
-            {
-                supplier_code = 5;
-            }
+            int supplier_code = Convert.ToInt32(suppliercombo.SelectedValue);
 
             total_amount = qty * price;
 
-            updatestock(Convert.ToInt32(find_gameid.Text), Convert.ToInt32(qtybox.Value));
+            updatestock(Convert.ToInt32(find_gameid.Text), Convert.ToInt32(qtybox.Value), date_purchased);
             addpurchase(supplier_code, game_id, qty, total_amount, date_purchased);
 
         }
 
-        private void updatestock(int gameID, int newStock)
+        private void updatestock(int gameID, int newStock, DateTime date)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True"))
             {
-                string query = "UPDATE Games_Inventory SET Games_Stock = Games_Stock + @Stock WHERE Game_ID = @GameID";
+                string query = "UPDATE Games_Inventory SET Games_Stock = Games_Stock + @Stock, Date_Updated = @Date WHERE Game_ID = @GameID";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@Stock", newStock);
                     cmd.Parameters.AddWithValue("@GameID", gameID);
+                    cmd.Parameters.AddWithValue("@Date", date);
 
                     try
                     {
@@ -206,6 +185,36 @@ namespace VG_DB_2013
             }
 
         }
+
+        private void LoadComboBox()
+        {
+            try
+            {
+                string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT Supplier_ID, Supplier_Name FROM Game_Suppliers"; // Adjust table and column names
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        suppliercombo.DataSource = dt;
+                        suppliercombo.DisplayMember = "Supplier_Name";  // Column to display
+                        suppliercombo.ValueMember = "Supplier_ID";      // Column holding actual values
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
 
     }
 }

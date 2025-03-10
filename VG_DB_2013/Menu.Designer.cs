@@ -73,7 +73,6 @@
             this.logoutbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutbtn.ForeColor = System.Drawing.Color.White;
-            this.logoutbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_logout_50;
             this.logoutbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.logoutbtn.Location = new System.Drawing.Point(1049, 10);
             this.logoutbtn.Name = "logoutbtn";
@@ -91,7 +90,6 @@
             this.adminbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adminbtn.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminbtn.ForeColor = System.Drawing.Color.White;
-            this.adminbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_admin_50;
             this.adminbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.adminbtn.Location = new System.Drawing.Point(942, 10);
             this.adminbtn.Name = "adminbtn";
@@ -109,7 +107,6 @@
             this.suppliersbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.suppliersbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suppliersbtn.ForeColor = System.Drawing.Color.White;
-            this.suppliersbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_supplier_50;
             this.suppliersbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.suppliersbtn.Location = new System.Drawing.Point(835, 10);
             this.suppliersbtn.Name = "suppliersbtn";
@@ -127,7 +124,6 @@
             this.purchasesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.purchasesbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.purchasesbtn.ForeColor = System.Drawing.Color.White;
-            this.purchasesbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_bill_50;
             this.purchasesbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.purchasesbtn.Location = new System.Drawing.Point(728, 10);
             this.purchasesbtn.Name = "purchasesbtn";
@@ -145,7 +141,6 @@
             this.customersbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customersbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customersbtn.ForeColor = System.Drawing.Color.White;
-            this.customersbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_customers_50;
             this.customersbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.customersbtn.Location = new System.Drawing.Point(621, 10);
             this.customersbtn.Name = "customersbtn";
@@ -163,7 +158,6 @@
             this.salesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.salesbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salesbtn.ForeColor = System.Drawing.Color.White;
-            this.salesbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_sales_50;
             this.salesbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.salesbtn.Location = new System.Drawing.Point(514, 10);
             this.salesbtn.Name = "salesbtn";
@@ -181,7 +175,6 @@
             this.inventorybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inventorybtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventorybtn.ForeColor = System.Drawing.Color.White;
-            this.inventorybtn.Image = global::VG_DB_2013.Properties.Resources.icons8_inventory_50;
             this.inventorybtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.inventorybtn.Location = new System.Drawing.Point(407, 10);
             this.inventorybtn.Name = "inventorybtn";
@@ -199,7 +192,6 @@
             this.homebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homebtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homebtn.ForeColor = System.Drawing.Color.White;
-            this.homebtn.Image = global::VG_DB_2013.Properties.Resources.home;
             this.homebtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.homebtn.Location = new System.Drawing.Point(300, 10);
             this.homebtn.Name = "homebtn";
@@ -236,7 +228,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::VG_DB_2013.Properties.Resources.Main_menu_3_10_2025;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(-137, -6);
             this.pictureBox1.Name = "pictureBox1";
@@ -246,7 +237,6 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_close_301;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

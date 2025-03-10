@@ -77,7 +77,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::VG_DB_2013.Properties.Resources.GAME_Purchases_3_9_2025;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(-75, -6);
             this.pictureBox1.Name = "pictureBox1";
@@ -87,7 +86,6 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_close_301;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -348,12 +346,6 @@
             this.supplierbox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supplierbox.ForeColor = System.Drawing.Color.Azure;
             this.supplierbox.FormattingEnabled = true;
-            this.supplierbox.Items.AddRange(new object[] {
-            "GameLab Supplies",
-            "GameXpert",
-            "Pixel Games",
-            "PlayCraft Supplies",
-            "TechWare"});
             this.supplierbox.Location = new System.Drawing.Point(8, 61);
             this.supplierbox.Name = "supplierbox";
             this.supplierbox.Size = new System.Drawing.Size(205, 104);

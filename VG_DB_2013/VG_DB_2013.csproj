@@ -149,11 +149,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Purchases.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,7 +226,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Purchases.resx">
       <DependentUpon>Purchases.cs</DependentUpon>
@@ -401,6 +395,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wallpaperflare.com_wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game-Store-Inventory-Managemen-3-10-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-3-10-20251.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

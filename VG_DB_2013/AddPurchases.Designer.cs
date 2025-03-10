@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel6 = new System.Windows.Forms.Panel();
+            this.addnewgenre = new System.Windows.Forms.LinkLabel();
+            this.addnewdev = new System.Windows.Forms.LinkLabel();
+            this.addnewplatform = new System.Windows.Forms.LinkLabel();
             this.genrecombo = new System.Windows.Forms.ComboBox();
             this.platformcombo = new System.Windows.Forms.ComboBox();
             this.developercombo = new System.Windows.Forms.ComboBox();
@@ -52,9 +55,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.backbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.addnewplatform = new System.Windows.Forms.LinkLabel();
-            this.addnewdev = new System.Windows.Forms.LinkLabel();
-            this.addnewgenre = new System.Windows.Forms.LinkLabel();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qtybox)).BeginInit();
@@ -92,6 +92,42 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(458, 673);
             this.panel6.TabIndex = 47;
+            // 
+            // addnewgenre
+            // 
+            this.addnewgenre.AutoSize = true;
+            this.addnewgenre.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addnewgenre.Location = new System.Drawing.Point(328, 275);
+            this.addnewgenre.Name = "addnewgenre";
+            this.addnewgenre.Size = new System.Drawing.Size(54, 13);
+            this.addnewgenre.TabIndex = 59;
+            this.addnewgenre.TabStop = true;
+            this.addnewgenre.Text = "Add New";
+            this.addnewgenre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.addnewgenre_LinkClicked);
+            // 
+            // addnewdev
+            // 
+            this.addnewdev.AutoSize = true;
+            this.addnewdev.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addnewdev.Location = new System.Drawing.Point(328, 225);
+            this.addnewdev.Name = "addnewdev";
+            this.addnewdev.Size = new System.Drawing.Size(54, 13);
+            this.addnewdev.TabIndex = 58;
+            this.addnewdev.TabStop = true;
+            this.addnewdev.Text = "Add New";
+            this.addnewdev.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.addnewdev_LinkClicked);
+            // 
+            // addnewplatform
+            // 
+            this.addnewplatform.AutoSize = true;
+            this.addnewplatform.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addnewplatform.Location = new System.Drawing.Point(328, 177);
+            this.addnewplatform.Name = "addnewplatform";
+            this.addnewplatform.Size = new System.Drawing.Size(54, 13);
+            this.addnewplatform.TabIndex = 57;
+            this.addnewplatform.TabStop = true;
+            this.addnewplatform.Text = "Add New";
+            this.addnewplatform.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.addnewplatform_LinkClicked);
             // 
             // genrecombo
             // 
@@ -206,7 +242,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.pictureBox1.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_insert_50;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(113, 388);
             this.pictureBox1.Name = "pictureBox1";
@@ -268,12 +303,6 @@
             this.suppliercombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.suppliercombo.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suppliercombo.FormattingEnabled = true;
-            this.suppliercombo.Items.AddRange(new object[] {
-            "GameLab Supplies",
-            "GameXpert",
-            "Pixel Games",
-            "PlayCraft Supplies",
-            "TechWare"});
             this.suppliercombo.Location = new System.Drawing.Point(113, 22);
             this.suppliercombo.Name = "suppliercombo";
             this.suppliercombo.Size = new System.Drawing.Size(209, 25);
@@ -393,42 +422,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Add Purchases";
             // 
-            // addnewplatform
-            // 
-            this.addnewplatform.AutoSize = true;
-            this.addnewplatform.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addnewplatform.Location = new System.Drawing.Point(328, 177);
-            this.addnewplatform.Name = "addnewplatform";
-            this.addnewplatform.Size = new System.Drawing.Size(54, 13);
-            this.addnewplatform.TabIndex = 57;
-            this.addnewplatform.TabStop = true;
-            this.addnewplatform.Text = "Add New";
-            this.addnewplatform.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.addnewplatform_LinkClicked);
-            // 
-            // addnewdev
-            // 
-            this.addnewdev.AutoSize = true;
-            this.addnewdev.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addnewdev.Location = new System.Drawing.Point(328, 225);
-            this.addnewdev.Name = "addnewdev";
-            this.addnewdev.Size = new System.Drawing.Size(54, 13);
-            this.addnewdev.TabIndex = 58;
-            this.addnewdev.TabStop = true;
-            this.addnewdev.Text = "Add New";
-            this.addnewdev.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.addnewdev_LinkClicked);
-            // 
-            // addnewgenre
-            // 
-            this.addnewgenre.AutoSize = true;
-            this.addnewgenre.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addnewgenre.Location = new System.Drawing.Point(328, 275);
-            this.addnewgenre.Name = "addnewgenre";
-            this.addnewgenre.Size = new System.Drawing.Size(54, 13);
-            this.addnewgenre.TabIndex = 59;
-            this.addnewgenre.TabStop = true;
-            this.addnewgenre.Text = "Add New";
-            this.addnewgenre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.addnewgenre_LinkClicked);
-            // 
             // AddPurchases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,6 +433,7 @@
             this.Name = "AddPurchases";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPurchases";
+            this.Load += new System.EventHandler(this.AddPurchases_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

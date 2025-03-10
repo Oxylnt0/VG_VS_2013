@@ -39,34 +39,10 @@ namespace VG_DB_2013
             string genre = genrecombo.Text;
             int qty = Convert.ToInt32(qtybox.Text);
             DateTime date_purchased = dateTimePicker1.Value;
-            int supplier_code = 0;
             double total_amount;
             int game_id;
 
-            if (suppliercombo.SelectedItem.ToString() == "TechWare")
-            {
-                supplier_code = 1;
-            }
-
-            else if (suppliercombo.SelectedItem.ToString() == "Pixel Games")
-            {
-                supplier_code = 2;
-            }
-
-            else if (suppliercombo.SelectedItem.ToString() == "GameLab Supplies")
-            {
-                supplier_code = 3;
-            }
-
-            else if (suppliercombo.SelectedItem.ToString() == "GameXpert")
-            {
-                supplier_code = 4;
-            }
-
-            else if (suppliercombo.SelectedItem.ToString() == "PlayCraft Supplies")
-            {
-                supplier_code = 5;
-            }
+            int supplier_code = Convert.ToInt32(suppliercombo.SelectedValue);
 
             total_amount = qty * price;
 
@@ -77,6 +53,8 @@ namespace VG_DB_2013
             game_id = get_game_id();
 
             InsertToPurchases(supplier_code, game_id, qty, total_amount, date_purchased);
+
+            InsertToInventory(game_id, supplier_code, qty, date_purchased);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -163,6 +141,34 @@ namespace VG_DB_2013
             }
         }
 
+        private void InsertToInventory(int gameid, int supplierid, int gamestock, DateTime date)
+        {
+            string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+            string query = "INSERT INTO Games_Inventory (Game_ID, Supplier_ID, Games_Stock, Date_Updated) VALUES (@gameid, @supplierid, @stock, @date)";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+
+                        cmd.Parameters.Add("@gameid", System.Data.SqlDbType.Int).Value = gameid;
+                        cmd.Parameters.Add("@supplierid", System.Data.SqlDbType.Int).Value = supplierid;
+                        cmd.Parameters.Add("@stock", System.Data.SqlDbType.Int).Value = gamestock;
+                        cmd.Parameters.Add("@date", System.Data.SqlDbType.Date).Value = date;
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
         private int get_game_id()
         {
             string con = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
@@ -212,6 +218,39 @@ namespace VG_DB_2013
             gen.TopMost = true;
         }
 
+        private void AddPurchases_Load(object sender, EventArgs e)
+        {
+            LoadComboBox();
+        }
+
+        private void LoadComboBox()
+        {
+            try
+            {
+                string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT Supplier_ID, Supplier_Name FROM Game_Suppliers"; // Adjust table and column names
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        suppliercombo.DataSource = dt;
+                        suppliercombo.DisplayMember = "Supplier_Name";  // Column to display
+                        suppliercombo.ValueMember = "Supplier_ID";      // Column holding actual values
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
   
 
   

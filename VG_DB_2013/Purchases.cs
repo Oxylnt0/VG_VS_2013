@@ -30,6 +30,7 @@ namespace VG_DB_2013
         private void Purchases_Load(object sender, EventArgs e)
         {
             this.BindData();
+            LoadCheckedListBox();
         }
 
         private string query = "select Purchase_ID, Game_Suppliers.Supplier_Name, Games.Game_Name, Purchase_QTY, Total_Amount_Purchases, Purchase_Date from Game_Purchases inner join Games on Game_Purchases.Game_ID=Games.Game_ID inner join Game_Suppliers on Game_Purchases.Supplier_ID=Game_Suppliers.Supplier_ID where 1=1";
@@ -157,8 +158,57 @@ namespace VG_DB_2013
             update.TopMost = true;
         }
 
+        private void LoadCheckedListBox()
+        {
+            try
+            {
+                string connectionstring = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
 
+                using (SqlConnection conn = new SqlConnection(connectionstring))
+                {
+                    conn.Open();
+                    string query = "SELECT Supplier_ID, Supplier_Name FROM Game_Suppliers"; // Adjust table and column names
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            supplierbox.Items.Clear(); // Clear existing items
+
+                            while (reader.Read())
+                            {
+                                // Add item (you can store the ID as a Tag for reference)
+                                supplierbox.Items.Add(new ListItem(reader["Supplier_Name"].ToString(), reader["Supplier_ID"].ToString()));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
 
 
     }
+
+
+    public class ListItem
+    {
+        public string Name { get; set; }
+        public string Id { get; set; }
+
+        public ListItem(string name, string id)
+        {
+            Name = name;
+            Id = id;
+        }
+
+        public override string ToString()
+        {
+            return Name; // This will display in the CheckedListBox
+        }
+    }
+
 }

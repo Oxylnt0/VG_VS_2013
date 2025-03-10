@@ -84,7 +84,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::VG_DB_2013.Properties.Resources.system_admins_3_9_2025;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(-91, -6);
             this.pictureBox1.Name = "pictureBox1";
@@ -94,7 +93,6 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_close_301;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
