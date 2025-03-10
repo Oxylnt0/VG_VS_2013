@@ -28,25 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.addsalesbtn = new System.Windows.Forms.Button();
-            this.applybtn = new System.Windows.Forms.Button();
-            this.sortby = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.sortby = new System.Windows.Forms.ComboBox();
+            this.applybtn = new System.Windows.Forms.Button();
+            this.addsalesbtn = new System.Windows.Forms.Button();
             this.refresh = new System.Windows.Forms.Button();
             this.salesgrid = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesgrid)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,10 +104,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.sortby);
-            this.panel3.Controls.Add(this.applybtn);
-            this.panel3.Controls.Add(this.addsalesbtn);
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.refresh);
             this.panel3.Controls.Add(this.salesgrid);
             this.panel3.Location = new System.Drawing.Point(162, 99);
@@ -112,35 +114,18 @@
             this.panel3.TabIndex = 7;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // addsalesbtn
+            // label2
             // 
-            this.addsalesbtn.BackColor = System.Drawing.Color.Gold;
-            this.addsalesbtn.FlatAppearance.BorderSize = 0;
-            this.addsalesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addsalesbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addsalesbtn.ForeColor = System.Drawing.Color.Black;
-            this.addsalesbtn.Location = new System.Drawing.Point(868, 40);
-            this.addsalesbtn.Name = "addsalesbtn";
-            this.addsalesbtn.Size = new System.Drawing.Size(237, 44);
-            this.addsalesbtn.TabIndex = 54;
-            this.addsalesbtn.Text = "Add Sales";
-            this.addsalesbtn.UseVisualStyleBackColor = false;
-            this.addsalesbtn.Click += new System.EventHandler(this.addsalesbtn_Click);
-            // 
-            // applybtn
-            // 
-            this.applybtn.BackColor = System.Drawing.Color.Gold;
-            this.applybtn.FlatAppearance.BorderSize = 0;
-            this.applybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.applybtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applybtn.ForeColor = System.Drawing.Color.Black;
-            this.applybtn.Location = new System.Drawing.Point(940, 139);
-            this.applybtn.Name = "applybtn";
-            this.applybtn.Size = new System.Drawing.Size(165, 25);
-            this.applybtn.TabIndex = 25;
-            this.applybtn.Text = "Apply";
-            this.applybtn.UseVisualStyleBackColor = false;
-            this.applybtn.Click += new System.EventHandler(this.applybtn_Click);
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Azure;
+            this.label2.Location = new System.Drawing.Point(15, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 25);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Sort:";
             // 
             // sortby
             // 
@@ -153,23 +138,40 @@
             "Sales Date - Descending",
             "Amount - Ascending",
             "Amount - Descending"});
-            this.sortby.Location = new System.Drawing.Point(940, 108);
+            this.sortby.Location = new System.Drawing.Point(69, 16);
             this.sortby.Name = "sortby";
-            this.sortby.Size = new System.Drawing.Size(165, 25);
+            this.sortby.Size = new System.Drawing.Size(156, 25);
             this.sortby.TabIndex = 15;
             // 
-            // label2
+            // applybtn
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Azure;
-            this.label2.Location = new System.Drawing.Point(883, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 25);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Sort:";
+            this.applybtn.BackColor = System.Drawing.Color.Gold;
+            this.applybtn.FlatAppearance.BorderSize = 0;
+            this.applybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.applybtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applybtn.ForeColor = System.Drawing.Color.Black;
+            this.applybtn.Location = new System.Drawing.Point(69, 47);
+            this.applybtn.Name = "applybtn";
+            this.applybtn.Size = new System.Drawing.Size(156, 25);
+            this.applybtn.TabIndex = 25;
+            this.applybtn.Text = "Apply";
+            this.applybtn.UseVisualStyleBackColor = false;
+            this.applybtn.Click += new System.EventHandler(this.applybtn_Click);
+            // 
+            // addsalesbtn
+            // 
+            this.addsalesbtn.BackColor = System.Drawing.Color.Gold;
+            this.addsalesbtn.FlatAppearance.BorderSize = 0;
+            this.addsalesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addsalesbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addsalesbtn.ForeColor = System.Drawing.Color.Black;
+            this.addsalesbtn.Location = new System.Drawing.Point(11, 13);
+            this.addsalesbtn.Name = "addsalesbtn";
+            this.addsalesbtn.Size = new System.Drawing.Size(214, 44);
+            this.addsalesbtn.TabIndex = 54;
+            this.addsalesbtn.Text = "Add Sales";
+            this.addsalesbtn.UseVisualStyleBackColor = false;
+            this.addsalesbtn.Click += new System.EventHandler(this.addsalesbtn_Click);
             // 
             // refresh
             // 
@@ -192,22 +194,22 @@
             this.salesgrid.AllowUserToDeleteRows = false;
             this.salesgrid.AllowUserToResizeColumns = false;
             this.salesgrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lavender;
-            this.salesgrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.salesgrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.salesgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.salesgrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.salesgrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.salesgrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.salesgrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.salesgrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LawnGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.salesgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LawnGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.salesgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.salesgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.salesgrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.salesgrid.EnableHeadersVisualStyles = false;
@@ -216,20 +218,40 @@
             this.salesgrid.Name = "salesgrid";
             this.salesgrid.ReadOnly = true;
             this.salesgrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.salesgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.salesgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.salesgrid.RowHeadersVisible = false;
             this.salesgrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
-            this.salesgrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            this.salesgrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.salesgrid.Size = new System.Drawing.Size(855, 572);
             this.salesgrid.TabIndex = 5;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel4.Controls.Add(this.addsalesbtn);
+            this.panel4.Location = new System.Drawing.Point(868, 40);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(237, 73);
+            this.panel4.TabIndex = 58;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.sortby);
+            this.panel2.Controls.Add(this.applybtn);
+            this.panel2.Location = new System.Drawing.Point(868, 131);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(237, 90);
+            this.panel2.TabIndex = 59;
             // 
             // Sales
             // 
@@ -247,8 +269,10 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesgrid)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -266,5 +290,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addsalesbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

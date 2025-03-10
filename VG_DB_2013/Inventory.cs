@@ -198,7 +198,7 @@ namespace VG_DB_2013
         }
         
 
-        //----------PLATFFORM----------
+        //----------PLATFORM----------
         public void UpdateSelectedPlatforms()
         {
             selectedPlatforms.Clear();
@@ -217,7 +217,7 @@ namespace VG_DB_2013
             if (!selectedPlatforms.Contains(platform))
             {
                 selectedPlatforms.Add(platform);     
-                genreCheckedStatus.Add(false);  
+                platformCheckedStatus.Add(false);  
 
                 SavePlatforms();
 
@@ -230,7 +230,7 @@ namespace VG_DB_2013
             using (StreamWriter writer = new StreamWriter("platforms.txt", append: true))
             {
                 int lastIndex = selectedPlatforms.Count - 1;
-                writer.WriteLine(selectedPlatforms[lastIndex] + "|" + genreCheckedStatus[lastIndex]);
+                writer.WriteLine(selectedPlatforms[lastIndex] + "|" + platformCheckedStatus[lastIndex]);
             }
         }
 
@@ -238,7 +238,7 @@ namespace VG_DB_2013
         {
             platformbox.Items.Clear();
             selectedPlatforms.Clear();
-            genreCheckedStatus.Clear();
+            platformCheckedStatus.Clear();
 
             if (File.Exists("platforms.txt"))
             {
@@ -251,7 +251,7 @@ namespace VG_DB_2013
                         if (parts.Length == 2)
                         {
                             selectedPlatforms.Add(parts[0]);  
-                            genreCheckedStatus.Add(bool.Parse(parts[1])); 
+                            platformCheckedStatus.Add(bool.Parse(parts[1])); 
                         }
                     }
                 }
@@ -261,13 +261,13 @@ namespace VG_DB_2013
             for (int i = 0; i < selectedPlatforms.Count; i++)
             {
                 platformbox.Items.Add(selectedPlatforms[i]); 
-                platformbox.SetItemChecked(i, genreCheckedStatus[i]); 
+                platformbox.SetItemChecked(i, platformCheckedStatus[i]); 
             }
         }
 
         private void platformbox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            genreCheckedStatus[e.Index] = e.NewValue == CheckState.Checked; 
+            platformCheckedStatus[e.Index] = e.NewValue == CheckState.Checked; 
             SavePlatforms();
         }
         //----------PLATFORM----------
@@ -291,7 +291,7 @@ namespace VG_DB_2013
             if (!selectedDeveloper.Contains(developer))
             {
                 selectedDeveloper.Add(developer);
-                genreCheckedStatus.Add(false);
+                developerCheckedStatus.Add(false);
 
                 SaveDeveloper();
 
@@ -304,7 +304,7 @@ namespace VG_DB_2013
             using (StreamWriter writer = new StreamWriter("developer.txt", append: true))
             {
                 int lastIndex = selectedDeveloper.Count - 1;
-                writer.WriteLine(selectedDeveloper[lastIndex] + "|" + genreCheckedStatus[lastIndex]);
+                writer.WriteLine(selectedDeveloper[lastIndex] + "|" + developerCheckedStatus[lastIndex]);
             }
         }
 
@@ -312,7 +312,7 @@ namespace VG_DB_2013
         {
             developerbox.Items.Clear();
             selectedDeveloper.Clear();
-            genreCheckedStatus.Clear();
+            developerCheckedStatus.Clear();
 
             if (File.Exists("developer.txt"))
             {
@@ -325,7 +325,7 @@ namespace VG_DB_2013
                         if (parts.Length == 2)
                         {
                             selectedDeveloper.Add(parts[0]);
-                            genreCheckedStatus.Add(bool.Parse(parts[1]));
+                            developerCheckedStatus.Add(bool.Parse(parts[1]));
                         }
                     }
                 }
@@ -335,13 +335,13 @@ namespace VG_DB_2013
             for (int i = 0; i < selectedDeveloper.Count; i++)
             {
                 developerbox.Items.Add(selectedDeveloper[i]);
-                developerbox.SetItemChecked(i, genreCheckedStatus[i]);
+                developerbox.SetItemChecked(i, developerCheckedStatus[i]);
             }
         }
 
         private void developerbox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            genreCheckedStatus[e.Index] = e.NewValue == CheckState.Checked;
+            developerCheckedStatus[e.Index] = e.NewValue == CheckState.Checked;
             SaveDeveloper();
         }
         //----------DEVELOPER----------

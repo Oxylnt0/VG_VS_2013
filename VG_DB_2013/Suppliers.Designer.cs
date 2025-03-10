@@ -37,18 +37,22 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.refresh = new System.Windows.Forms.Button();
-            this.searchbtn = new System.Windows.Forms.Button();
-            this.editsupplierbtn = new System.Windows.Forms.Button();
-            this.applybtn = new System.Windows.Forms.Button();
-            this.addsupplierbtn = new System.Windows.Forms.Button();
-            this.search = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.sortby = new System.Windows.Forms.ComboBox();
+            this.applybtn = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.addsupplierbtn = new System.Windows.Forms.Button();
+            this.editsupplierbtn = new System.Windows.Forms.Button();
+            this.refresh = new System.Windows.Forms.Button();
+            this.searchbtn = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.TextBox();
             this.suppliergrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.suppliergrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +73,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::VG_DB_2013.Properties.Resources.GAME_SUPPLIERS_3_9_2025;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(-77, -6);
+            this.pictureBox1.Location = new System.Drawing.Point(-86, -6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(673, 99);
             this.pictureBox1.TabIndex = 25;
@@ -103,19 +107,109 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.refresh);
             this.panel3.Controls.Add(this.searchbtn);
-            this.panel3.Controls.Add(this.editsupplierbtn);
-            this.panel3.Controls.Add(this.applybtn);
-            this.panel3.Controls.Add(this.addsupplierbtn);
             this.panel3.Controls.Add(this.search);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.sortby);
             this.panel3.Controls.Add(this.suppliergrid);
-            this.panel3.Location = new System.Drawing.Point(164, 99);
+            this.panel3.Location = new System.Drawing.Point(174, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1109, 630);
+            this.panel3.Size = new System.Drawing.Size(1101, 630);
             this.panel3.TabIndex = 8;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.sortby);
+            this.panel4.Controls.Add(this.applybtn);
+            this.panel4.Location = new System.Drawing.Point(842, 194);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(245, 83);
+            this.panel4.TabIndex = 57;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Azure;
+            this.label2.Location = new System.Drawing.Point(14, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 25);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Sort:";
+            // 
+            // sortby
+            // 
+            this.sortby.BackColor = System.Drawing.Color.White;
+            this.sortby.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sortby.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortby.FormattingEnabled = true;
+            this.sortby.Items.AddRange(new object[] {
+            "Supplier Name - Ascending",
+            "Supplier Name - Descending"});
+            this.sortby.Location = new System.Drawing.Point(71, 11);
+            this.sortby.Name = "sortby";
+            this.sortby.Size = new System.Drawing.Size(161, 25);
+            this.sortby.TabIndex = 15;
+            // 
+            // applybtn
+            // 
+            this.applybtn.BackColor = System.Drawing.Color.Gold;
+            this.applybtn.FlatAppearance.BorderSize = 0;
+            this.applybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.applybtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applybtn.ForeColor = System.Drawing.Color.Black;
+            this.applybtn.Location = new System.Drawing.Point(71, 42);
+            this.applybtn.Name = "applybtn";
+            this.applybtn.Size = new System.Drawing.Size(161, 25);
+            this.applybtn.TabIndex = 25;
+            this.applybtn.Text = "Apply";
+            this.applybtn.UseVisualStyleBackColor = false;
+            this.applybtn.Click += new System.EventHandler(this.applybtn_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SlateBlue;
+            this.panel2.Controls.Add(this.addsupplierbtn);
+            this.panel2.Controls.Add(this.editsupplierbtn);
+            this.panel2.Location = new System.Drawing.Point(842, 40);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(248, 134);
+            this.panel2.TabIndex = 56;
+            // 
+            // addsupplierbtn
+            // 
+            this.addsupplierbtn.BackColor = System.Drawing.Color.Gold;
+            this.addsupplierbtn.FlatAppearance.BorderSize = 0;
+            this.addsupplierbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addsupplierbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addsupplierbtn.ForeColor = System.Drawing.Color.Black;
+            this.addsupplierbtn.Location = new System.Drawing.Point(19, 12);
+            this.addsupplierbtn.Name = "addsupplierbtn";
+            this.addsupplierbtn.Size = new System.Drawing.Size(213, 44);
+            this.addsupplierbtn.TabIndex = 54;
+            this.addsupplierbtn.Text = "Add Suppliers";
+            this.addsupplierbtn.UseVisualStyleBackColor = false;
+            this.addsupplierbtn.Click += new System.EventHandler(this.addsupplierbtn_Click);
+            // 
+            // editsupplierbtn
+            // 
+            this.editsupplierbtn.BackColor = System.Drawing.Color.Gold;
+            this.editsupplierbtn.FlatAppearance.BorderSize = 0;
+            this.editsupplierbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editsupplierbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editsupplierbtn.ForeColor = System.Drawing.Color.Black;
+            this.editsupplierbtn.Location = new System.Drawing.Point(19, 75);
+            this.editsupplierbtn.Name = "editsupplierbtn";
+            this.editsupplierbtn.Size = new System.Drawing.Size(213, 44);
+            this.editsupplierbtn.TabIndex = 55;
+            this.editsupplierbtn.Text = "Edit Suppliers";
+            this.editsupplierbtn.UseVisualStyleBackColor = false;
+            this.editsupplierbtn.Click += new System.EventHandler(this.editsupplierbtn_Click);
             // 
             // refresh
             // 
@@ -147,51 +241,6 @@
             this.searchbtn.UseVisualStyleBackColor = false;
             this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
             // 
-            // editsupplierbtn
-            // 
-            this.editsupplierbtn.BackColor = System.Drawing.Color.Gold;
-            this.editsupplierbtn.FlatAppearance.BorderSize = 0;
-            this.editsupplierbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editsupplierbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editsupplierbtn.ForeColor = System.Drawing.Color.Black;
-            this.editsupplierbtn.Location = new System.Drawing.Point(842, 90);
-            this.editsupplierbtn.Name = "editsupplierbtn";
-            this.editsupplierbtn.Size = new System.Drawing.Size(248, 44);
-            this.editsupplierbtn.TabIndex = 55;
-            this.editsupplierbtn.Text = "Edit Suppliers";
-            this.editsupplierbtn.UseVisualStyleBackColor = false;
-            this.editsupplierbtn.Click += new System.EventHandler(this.editsupplierbtn_Click);
-            // 
-            // applybtn
-            // 
-            this.applybtn.BackColor = System.Drawing.Color.Gold;
-            this.applybtn.FlatAppearance.BorderSize = 0;
-            this.applybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.applybtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applybtn.ForeColor = System.Drawing.Color.Black;
-            this.applybtn.Location = new System.Drawing.Point(899, 195);
-            this.applybtn.Name = "applybtn";
-            this.applybtn.Size = new System.Drawing.Size(191, 25);
-            this.applybtn.TabIndex = 25;
-            this.applybtn.Text = "Apply";
-            this.applybtn.UseVisualStyleBackColor = false;
-            this.applybtn.Click += new System.EventHandler(this.applybtn_Click);
-            // 
-            // addsupplierbtn
-            // 
-            this.addsupplierbtn.BackColor = System.Drawing.Color.Gold;
-            this.addsupplierbtn.FlatAppearance.BorderSize = 0;
-            this.addsupplierbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addsupplierbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addsupplierbtn.ForeColor = System.Drawing.Color.Black;
-            this.addsupplierbtn.Location = new System.Drawing.Point(842, 40);
-            this.addsupplierbtn.Name = "addsupplierbtn";
-            this.addsupplierbtn.Size = new System.Drawing.Size(248, 44);
-            this.addsupplierbtn.TabIndex = 54;
-            this.addsupplierbtn.Text = "Add Suppliers";
-            this.addsupplierbtn.UseVisualStyleBackColor = false;
-            this.addsupplierbtn.Click += new System.EventHandler(this.addsupplierbtn_Click);
-            // 
             // search
             // 
             this.search.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,33 +248,6 @@
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(243, 25);
             this.search.TabIndex = 26;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Azure;
-            this.label2.Location = new System.Drawing.Point(842, 164);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 25);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Sort:";
-            // 
-            // sortby
-            // 
-            this.sortby.BackColor = System.Drawing.Color.White;
-            this.sortby.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sortby.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortby.FormattingEnabled = true;
-            this.sortby.Items.AddRange(new object[] {
-            "Supplier Name - Ascending",
-            "Supplier Name - Descending"});
-            this.sortby.Location = new System.Drawing.Point(899, 164);
-            this.sortby.Name = "sortby";
-            this.sortby.Size = new System.Drawing.Size(191, 25);
-            this.sortby.TabIndex = 15;
             // 
             // suppliergrid
             // 
@@ -290,6 +312,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.suppliergrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -311,5 +336,7 @@
         private System.Windows.Forms.Button editsupplierbtn;
         private System.Windows.Forms.Button addsupplierbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

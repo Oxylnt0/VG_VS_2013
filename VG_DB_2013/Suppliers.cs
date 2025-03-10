@@ -155,9 +155,5 @@ namespace VG_DB_2013
             supplier.Show();
             supplier.TopMost = true;
         }
-
- 
-    
-
     }
 }
