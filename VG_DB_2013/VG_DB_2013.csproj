@@ -406,6 +406,21 @@
   <ItemGroup>
     <None Include="Resources\187-1873650_click-to-expand-aigis-persona-3-pixel-art.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2c6b47e002fa8945c58cbc99abc56706.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8a17a85a06bcff5b341a849a8d5b985d.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ead1d3c435945e4c4e490589f57f965a.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a10b5340623c58c23aac1569c6eddd23.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rise-kujikawa-microphone-attack.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -83,6 +83,16 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2c6b47e002fa8945c58cbc99abc56706 {
+            get {
+                object obj = ResourceManager.GetObject("2c6b47e002fa8945c58cbc99abc56706", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4c972f52280221_590b153db2f7f {
             get {
                 object obj = ResourceManager.GetObject("4c972f52280221.590b153db2f7f", resourceCulture);
@@ -163,9 +173,29 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8a17a85a06bcff5b341a849a8d5b985d {
+            get {
+                object obj = ResourceManager.GetObject("8a17a85a06bcff5b341a849a8d5b985d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _91738_character_symbol_metal_slug_fictional_png_download_free {
             get {
                 object obj = ResourceManager.GetObject("91738-character-symbol-metal-slug-fictional-png-download-free", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap a10b5340623c58c23aac1569c6eddd23 {
+            get {
+                object obj = ResourceManager.GetObject("a10b5340623c58c23aac1569c6eddd23", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +276,16 @@ namespace VG_DB_2013.Properties {
         internal static System.Drawing.Bitmap e9277452280221_590b153db20bf {
             get {
                 object obj = ResourceManager.GetObject("e9277452280221.590b153db20bf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ead1d3c435945e4c4e490589f57f965a {
+            get {
+                object obj = ResourceManager.GetObject("ead1d3c435945e4c4e490589f57f965a", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -507,6 +547,16 @@ namespace VG_DB_2013.Properties {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-fire-emblem-fates-fire-emblem-awakening-sprite-role-playing-game-" +
                         "overworld-sprite-purple-rectangle-symmetry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rise_kujikawa_microphone_attack {
+            get {
+                object obj = ResourceManager.GetObject("rise-kujikawa-microphone-attack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -139,11 +139,11 @@
   <data name="Game-Purchases-3-10-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Game-Purchases-3-10-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2c6b47e002fa8945c58cbc99abc56706" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2c6b47e002fa8945c58cbc99abc56706.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ChromMapIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChromMapIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="d7zocpm-cc542e02-187f-420a-8757-b66662090417" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\d7zocpm-cc542e02-187f-420a-8757-b66662090417.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-admin-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-admin-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +154,8 @@
   <data name="Mario-Coin-PNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mario-Coin-PNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AnnaMapIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AnnaMapIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mega-man-pixel-art-sprite-s9iz80toolajhtd0-s9iz80toolajhtd0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mega-man-pixel-art-sprite-s9iz80toolajhtd0-s9iz80toolajhtd0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-purchases-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-purchases-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,14 +175,17 @@
   <data name="7b2d1341e20f6741" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7b2d1341e20f6741.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="187-1873650_click-to-expand-aigis-persona-3-pixel-art" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\187-1873650_click-to-expand-aigis-persona-3-pixel-art.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="8624c2affb9d249" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8624c2affb9d249.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Main-Menu-3-10-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Main-Menu-3-10-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pixelated-sonic-gold-ring-ko7m1p5bgzjh753i" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pixelated-sonic-gold-ring-ko7m1p5bgzjh753i.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Game-inventory-3-10-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game-inventory-3-10-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-inventory-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-inventory-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +196,8 @@
   <data name="y409ay4tac651" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\y409ay4tac651.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="original-25e3ea9859161088373176df9917eb7b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\original-25e3ea9859161088373176df9917eb7b.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="60a7c101219ee5f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\60a7c101219ee5f.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Wartortle-Pokemon-Transparent-Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wartortle-Pokemon-Transparent-Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,20 +214,20 @@
   <data name="Game-suppliers-3-10-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Game-suppliers-3-10-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mega-man-pixel-art-sprite-s9iz80toolajhtd0-s9iz80toolajhtd0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mega-man-pixel-art-sprite-s9iz80toolajhtd0-s9iz80toolajhtd0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-close-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-close-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AnnaMapIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AnnaMapIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-home-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-home-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Game-inventory-3-10-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Game-inventory-3-10-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-close-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-close-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ac436bf4c39be73" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ac436bf4c39be73.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login-3-10-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login-3-10-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4c972f52280221.590b153db2f7f" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4c972f52280221.590b153db2f7f.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,17 +238,23 @@
   <data name="icons8-Customerss-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-Customerss-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ead1d3c435945e4c4e490589f57f965a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ead1d3c435945e4c4e490589f57f965a.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Game-Store-Inventory-Managemen-3-10-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Game-Store-Inventory-Managemen-3-10-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-fire-emblem-fates-fire-emblem-awakening-sprite-role-playing-game-overworld-sprite-purple-rectangle-symmetry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-fire-emblem-fates-fire-emblem-awakening-sprite-role-playing-game-overworld-sprite-purple-rectangle-symmetry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-close-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-close-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login-3-10-2025" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login-3-10-2025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="original-25e3ea9859161088373176df9917eb7b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\original-25e3ea9859161088373176df9917eb7b.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="png-transparent-fire-emblem-fates-fire-emblem-awakening-sprite-role-playing-game-overworld-sprite-purple-rectangle-symmetry" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-fire-emblem-fates-fire-emblem-awakening-sprite-role-playing-game-overworld-sprite-purple-rectangle-symmetry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pixelated-sonic-gold-ring-ko7m1p5bgzjh753i" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pixelated-sonic-gold-ring-ko7m1p5bgzjh753i.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="725487-final" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\725487-final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,13 +265,19 @@
   <data name="SPf12H" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SPf12H.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="60a7c101219ee5f" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\60a7c101219ee5f.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="8a17a85a06bcff5b341a849a8d5b985d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8a17a85a06bcff5b341a849a8d5b985d.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d7zocpm-cc542e02-187f-420a-8757-b66662090417" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d7zocpm-cc542e02-187f-420a-8757-b66662090417.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a10b5340623c58c23aac1569c6eddd23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a10b5340623c58c23aac1569c6eddd23.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="d1c0afa23ad55e199d8a6931fd230cafe9f1303a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d1c0afa23ad55e199d8a6931fd230cafe9f1303a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="187-1873650_click-to-expand-aigis-persona-3-pixel-art" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\187-1873650_click-to-expand-aigis-persona-3-pixel-art.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rise-kujikawa-microphone-attack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rise-kujikawa-microphone-attack.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

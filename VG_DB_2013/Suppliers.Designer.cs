@@ -39,6 +39,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.editsupplierbtn = new System.Windows.Forms.Button();
             this.sortby = new System.Windows.Forms.ComboBox();
@@ -53,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliergrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,10 +142,22 @@
             this.panel3.Controls.Add(this.searchbtn);
             this.panel3.Controls.Add(this.search);
             this.panel3.Controls.Add(this.suppliergrid);
+            this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Location = new System.Drawing.Point(174, 99);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1115, 675);
             this.panel3.TabIndex = 8;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Image = global::VG_DB_2013.Properties.Resources._2c6b47e002fa8945c58cbc99abc56706;
+            this.pictureBox4.Location = new System.Drawing.Point(842, 235);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(248, 413);
+            this.pictureBox4.TabIndex = 56;
+            this.pictureBox4.TabStop = false;
             // 
             // label2
             // 
@@ -321,6 +335,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliergrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -344,5 +359,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
