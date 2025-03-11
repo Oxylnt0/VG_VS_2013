@@ -135,13 +135,6 @@
             this.genrecombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.genrecombo.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genrecombo.FormattingEnabled = true;
-            this.genrecombo.Items.AddRange(new object[] {
-            "Action ",
-            "Adventure",
-            "Casual",
-            "Fighting",
-            "Horror",
-            "RPG"});
             this.genrecombo.Location = new System.Drawing.Point(113, 263);
             this.genrecombo.Name = "genrecombo";
             this.genrecombo.Size = new System.Drawing.Size(209, 25);
@@ -153,11 +146,6 @@
             this.platformcombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.platformcombo.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.platformcombo.FormattingEnabled = true;
-            this.platformcombo.Items.AddRange(new object[] {
-            "PS4",
-            "PS5",
-            "Nintendo Switch",
-            "Xbox One"});
             this.platformcombo.Location = new System.Drawing.Point(113, 165);
             this.platformcombo.Name = "platformcombo";
             this.platformcombo.Size = new System.Drawing.Size(209, 25);
@@ -169,23 +157,6 @@
             this.developercombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.developercombo.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.developercombo.FormattingEnabled = true;
-            this.developercombo.Items.AddRange(new object[] {
-            "Aerosoft",
-            "Aniplex",
-            "Atlus",
-            "Bandai Namco Games",
-            "Capcom",
-            "Dotemu",
-            "Electronic Arts",
-            "Falcom",
-            "FromSoftware",
-            "Natsume",
-            "Nintendo",
-            "Rockstar Games",
-            "Sony Interactive Entertainment",
-            "Supergiant Games",
-            "Unknown Worlds",
-            "Warner Bros."});
             this.developercombo.Location = new System.Drawing.Point(113, 213);
             this.developercombo.Name = "developercombo";
             this.developercombo.Size = new System.Drawing.Size(209, 25);

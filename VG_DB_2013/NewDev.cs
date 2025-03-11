@@ -24,22 +24,8 @@ namespace VG_DB_2013
 
         private void adddevbox_Click(object sender, EventArgs e)
         {
-            string newDeveloper = newdevbox.Text.Trim(); 
-
-            if (!string.IsNullOrEmpty(newDeveloper))
-            {
-                Inventory inventory = new Inventory();
-                if (inventory != null)
-                {
-                    inventory.AddDeveloper(newDeveloper); 
-                    newdevbox.Clear(); 
-                    MessageBox.Show("Developer added successfully!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid Developer name.");
-            }
+ 
+            
         }
 
 

@@ -24,22 +24,7 @@ namespace VG_DB_2013
 
         private void addgenbox_Click(object sender, EventArgs e)
         {
-            string newGenre = newgenrebox.Text.Trim();
 
-            if (!string.IsNullOrEmpty(newGenre))
-            {
-                Inventory inventory = new Inventory();
-                if (inventory != null)
-                {
-                    inventory.AddGenre(newGenre);
-                    newgenrebox.Clear();
-                    MessageBox.Show("Genre added successfully!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid Genre name.");
-            }
         }
 
     }

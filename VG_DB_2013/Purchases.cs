@@ -20,6 +20,9 @@ namespace VG_DB_2013
         public Purchases()
         {
             InitializeComponent();
+
+            supplierbox.Format += new ListControlConvertEventHandler(supplierbox_Format);
+            LoadSuppliers();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -30,7 +33,6 @@ namespace VG_DB_2013
         private void Purchases_Load(object sender, EventArgs e)
         {
             this.BindData();
-            LoadCheckedListBox();
         }
 
         private string query = "select Purchase_ID, Game_Suppliers.Supplier_Name, Games.Game_Name, Purchase_QTY, Total_Amount_Purchases, Purchase_Date from Game_Purchases inner join Games on Game_Purchases.Game_ID=Games.Game_ID inner join Game_Suppliers on Game_Purchases.Supplier_ID=Game_Suppliers.Supplier_ID where 1=1";
@@ -64,37 +66,20 @@ namespace VG_DB_2013
 
         }
 
+        List<string> selectedSuppliers = new List<string>();
+
         private void applybtn_Click(object sender, EventArgs e)
         {
-            List<string> selectedSuppliers = new List<string>();
+
 
             //suppliers
-            if (supplierbox.GetItemChecked(0) == true)
-            {
-                selectedSuppliers.Add("GameLab Supplies");
-            }
-            if (supplierbox.GetItemChecked(1) == true)
-            {
-                selectedSuppliers.Add("GameXpert");
-            }
-            if (supplierbox.GetItemChecked(2) == true)
-            {
-                selectedSuppliers.Add("Pixel Games");
-            }
-            if (supplierbox.GetItemChecked(3) == true)
-            {
-                selectedSuppliers.Add("Playcraft Supplies");
-            }
-            if (supplierbox.GetItemChecked(4) == true)
-            {
-                selectedSuppliers.Add("Techware");
-            }
+            UpdateSelectedSupplier();
 
             if (selectedSuppliers.Count > 0)
             {
                 query += " AND Supplier_Name IN ('" + string.Join("','", selectedSuppliers) + "')";
             }
-            
+
             if (sortby.SelectedItem == null)
             {
                 sortby.SelectedValue = null;
@@ -119,9 +104,26 @@ namespace VG_DB_2013
 
         }
 
+        private void UpdateSelectedSupplier()
+        {
+            selectedSuppliers.Clear();
+
+            foreach (var item in supplierbox.CheckedItems)
+            {
+                KeyValuePair<int, string> kvp = (KeyValuePair<int, string>)item;
+                selectedSuppliers.Add(kvp.Value);
+            }
+
+        }
+
+        private void supplierbox_Format(object sender, ListControlConvertEventArgs e)
+        {
+            e.Value = ((KeyValuePair<int, string>)e.ListItem).Value;
+        }
+
         private void clear_Click(object sender, EventArgs e)
         {
-  
+
         }
 
         private void refresh_Click(object sender, EventArgs e)
@@ -158,41 +160,38 @@ namespace VG_DB_2013
             update.TopMost = true;
         }
 
-        private void LoadCheckedListBox()
+        private void LoadSuppliers()
         {
-            try
-            {
-                string connectionstring = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+            string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+            string query = "SELECT Supplier_ID, Supplier_Name FROM Game_Suppliers";
 
-                using (SqlConnection conn = new SqlConnection(connectionstring))
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
                 {
                     conn.Open();
-                    string query = "SELECT Supplier_ID, Supplier_Name FROM Game_Suppliers"; // Adjust table and column names
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    supplierbox.Items.Clear();
+
+                    while (reader.Read())
                     {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            supplierbox.Items.Clear(); // Clear existing items
-
-                            while (reader.Read())
-                            {
-                                // Add item (you can store the ID as a Tag for reference)
-                                supplierbox.Items.Add(new ListItem(reader["Supplier_Name"].ToString(), reader["Supplier_ID"].ToString()));
-                            }
-                        }
+                        supplierbox.Items.Add(new KeyValuePair<int, string>(
+                            reader.GetInt32(0),
+                            reader.GetString(1)
+                        ));
                     }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
         }
-
-
     }
-
 
     public class ListItem
     {
@@ -207,7 +206,7 @@ namespace VG_DB_2013
 
         public override string ToString()
         {
-            return Name; // This will display in the CheckedListBox
+            return Name; 
         }
     }
 

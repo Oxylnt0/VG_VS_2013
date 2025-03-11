@@ -15,15 +15,25 @@ namespace VG_DB_2013
     public partial class Inventory : Form
     {
 
-        private string query = "select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Games.Game_Platform, Games.Developer, Games.Genre, Games.Picture from Games_Inventory inner join Games on Games.Game_ID = Games_Inventory.Game_ID WHERE 1=1";
+        private string query = @"select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Game_Platform.Platform_Name, Developer.Developer_Name, Genre.Genre_Name, Games.Picture from Games_Inventory  
+                                 inner join Games on Games.Game_ID = Games_Inventory.Game_ID 
+                                 inner join Game_Platform on Games.Platform_ID = Game_Platform.Platform_ID
+                                 inner join Developer on Games.Developer_ID = Developer.Developer_ID
+                                 inner join Genre on Games.Genre_ID = Genre.Genre_ID where 1=1";
 
 
         public Inventory()
         {
             InitializeComponent();
+
+            platformbox.Format += new ListControlConvertEventHandler(platformbox_Format);
             LoadPlatforms();
-            LoadDeveloper();
-            LoadGenre();
+
+            developerbox.Format += new ListControlConvertEventHandler(developerbox_Format);
+            LoadDevelopers();
+
+            genrebox.Format += new ListControlConvertEventHandler(genrebox_Format);
+            LoadGenres();
         }
 
         private void Inventory_Load(object sender, EventArgs e)
@@ -73,9 +83,9 @@ namespace VG_DB_2013
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Game Name", DataPropertyName = "Game_Name" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Stock", DataPropertyName = "Games_Stock" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Price", DataPropertyName = "Price" });
-                InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Platform", DataPropertyName = "Game_Platform" });
-                InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Developer", DataPropertyName = "Developer" });
-                InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Genre", DataPropertyName = "Genre" });
+                InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Platform", DataPropertyName = "Platform_Name" });
+                InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Developer", DataPropertyName = "Developer_Name" });
+                InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Genre", DataPropertyName = "Genre_Name" });
                 InventoryGrid.Columns.Add(imgColumn);
 
                 InventoryGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -118,12 +128,9 @@ namespace VG_DB_2013
         List<string> selectedDeveloper = new List<string>();
         List<string> selectedGenre = new List<string>();
 
-        private List<bool> platformCheckedStatus = new List<bool>();
-        private List<bool> developerCheckedStatus = new List<bool>();
-        private List<bool> genreCheckedStatus = new List<bool>();
-
         private void applybtn_Click(object sender, EventArgs e)
         {
+
             //platform
             UpdateSelectedPlatforms();
 
@@ -135,17 +142,17 @@ namespace VG_DB_2013
 
             if (selectedPlatforms.Count > 0)
             {
-                query += " AND Game_Platform IN ('" + string.Join("','", selectedPlatforms) + "')";
+                query += " AND Platform_Name IN ('" + string.Join("','", selectedPlatforms) + "')";
             }
 
             if (selectedDeveloper.Count > 0)
             {
-                query += " AND Developer IN ('" + string.Join("','", selectedDeveloper) + "')";
+                query += " AND Developer_Name IN ('" + string.Join("','", selectedDeveloper) + "')";
             }
             
             if (selectedGenre.Count > 0)
             {
-                query += " AND Genre IN ('" + string.Join("','", selectedGenre) + "')";
+                query += " AND Genre_Name IN ('" + string.Join("','", selectedGenre) + "')";
             }
 
             //sortby
@@ -193,230 +200,164 @@ namespace VG_DB_2013
             InventoryGrid.Update();
             InventoryGrid.Refresh();
 
-            query = "select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Games.Game_Platform, Games.Developer, Games.Genre, Games.Picture from Games_Inventory inner join Games on Games.Game_ID = Games_Inventory.Game_ID WHERE 1=1";
+            query = @"select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Game_Platform.Platform_Name, Developer.Developer_Name, Genre.Genre_Name, Games.Picture from Games_Inventory  
+                                 inner join Games on Games.Game_ID = Games_Inventory.Game_ID 
+                                 inner join Game_Platform on Games.Platform_ID = Game_Platform.Platform_ID
+                                 inner join Developer on Games.Developer_ID = Developer.Developer_ID
+                                 inner join Genre on Games.Genre_ID = Genre.Genre_ID where 1=1";
             
         }
         
 
         //----------PLATFORM----------
-        public void UpdateSelectedPlatforms()
+        private void UpdateSelectedPlatforms()
         {
             selectedPlatforms.Clear();
 
-            for (int i = 0; i < platformbox.Items.Count; i++)
+            foreach (var item in platformbox.CheckedItems)
             {
-                if (platformbox.GetItemChecked(i))
-                {
-                    selectedPlatforms.Add(platformbox.Items[i].ToString());
-                }
+                KeyValuePair<int, string> kvp = (KeyValuePair<int, string>)item;
+                selectedPlatforms.Add(kvp.Value);
             }
-        }
 
-        public void AddPlatform(string platform)
-        {
-            if (!selectedPlatforms.Contains(platform))
-            {
-                selectedPlatforms.Add(platform);     
-                platformCheckedStatus.Add(false);  
-
-                SavePlatforms();
-
-                LoadPlatforms();
-            }
-        }
-
-        private void SavePlatforms()
-        {
-            using (StreamWriter writer = new StreamWriter("platforms.txt", append: true))
-            {
-                int lastIndex = selectedPlatforms.Count - 1;
-                writer.WriteLine(selectedPlatforms[lastIndex] + "|" + platformCheckedStatus[lastIndex]);
-            }
         }
 
         private void LoadPlatforms()
         {
-            platformbox.Items.Clear();
-            selectedPlatforms.Clear();
-            platformCheckedStatus.Clear();
+            string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+            string query = "SELECT Platform_ID, Platform_Name FROM Game_Platform";
 
-            if (File.Exists("platforms.txt"))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                using (StreamReader reader = new StreamReader("platforms.txt"))
+                try
                 {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    platformbox.Items.Clear();
+
+                    while (reader.Read())
                     {
-                        string[] parts = line.Split('|');
-                        if (parts.Length == 2)
-                        {
-                            selectedPlatforms.Add(parts[0]);  
-                            platformCheckedStatus.Add(bool.Parse(parts[1])); 
-                        }
+                        platformbox.Items.Add(new KeyValuePair<int, string>(
+                            reader.GetInt32(0),
+                            reader.GetString(1)
+                        ));
                     }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
-
-  
-            for (int i = 0; i < selectedPlatforms.Count; i++)
-            {
-                platformbox.Items.Add(selectedPlatforms[i]); 
-                platformbox.SetItemChecked(i, platformCheckedStatus[i]); 
-            }
         }
 
-        private void platformbox_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void platformbox_Format(object sender, ListControlConvertEventArgs e)
         {
-            platformCheckedStatus[e.Index] = e.NewValue == CheckState.Checked; 
-            SavePlatforms();
+            e.Value = ((KeyValuePair<int, string>)e.ListItem).Value;
         }
+
         //----------PLATFORM----------
 
         //----------DEVELOPER----------
-        public void UpdateSelectedDeveloper()
+        private void UpdateSelectedDeveloper()
         {
             selectedDeveloper.Clear();
 
-            for (int i = 0; i < developerbox.Items.Count; i++)
+            foreach (var item in developerbox.CheckedItems)
             {
-                if (developerbox.GetItemChecked(i))
+                KeyValuePair<int, string> kvp = (KeyValuePair<int, string>)item;
+                selectedDeveloper.Add(kvp.Value);
+            }
+        }
+
+        private void LoadDevelopers()
+        {
+            string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+            string query = "SELECT Developer_ID, Developer_Name FROM Developer";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
                 {
-                    selectedDeveloper.Add(developerbox.Items[i].ToString());
-                }
-            }
-        }
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-        public void AddDeveloper(string developer)
-        {
-            if (!selectedDeveloper.Contains(developer))
-            {
-                selectedDeveloper.Add(developer);
-                developerCheckedStatus.Add(false);
+                    developerbox.Items.Clear();
 
-                SaveDeveloper();
-
-                LoadDeveloper();
-            }
-        }
-
-        private void SaveDeveloper()
-        {
-            using (StreamWriter writer = new StreamWriter("developer.txt", append: true))
-            {
-                int lastIndex = selectedDeveloper.Count - 1;
-                writer.WriteLine(selectedDeveloper[lastIndex] + "|" + developerCheckedStatus[lastIndex]);
-            }
-        }
-
-        private void LoadDeveloper()
-        {
-            developerbox.Items.Clear();
-            selectedDeveloper.Clear();
-            developerCheckedStatus.Clear();
-
-            if (File.Exists("developer.txt"))
-            {
-                using (StreamReader reader = new StreamReader("developer.txt"))
-                {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
+                    while (reader.Read())
                     {
-                        string[] parts = line.Split('|');
-                        if (parts.Length == 2)
-                        {
-                            selectedDeveloper.Add(parts[0]);
-                            developerCheckedStatus.Add(bool.Parse(parts[1]));
-                        }
+                        developerbox.Items.Add(new KeyValuePair<int, string>(
+                            reader.GetInt32(0),
+                            reader.GetString(1)
+                        ));
                     }
+
+                    reader.Close();
                 }
-            }
-
-
-            for (int i = 0; i < selectedDeveloper.Count; i++)
-            {
-                developerbox.Items.Add(selectedDeveloper[i]);
-                developerbox.SetItemChecked(i, developerCheckedStatus[i]);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
         }
 
-        private void developerbox_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void developerbox_Format(object sender, ListControlConvertEventArgs e)
         {
-            developerCheckedStatus[e.Index] = e.NewValue == CheckState.Checked;
-            SaveDeveloper();
+            e.Value = ((KeyValuePair<int, string>)e.ListItem).Value;
         }
         //----------DEVELOPER----------
 
         //----------GENRE----------
-        public void UpdateSelectedGenre()
+        private void UpdateSelectedGenre()
         {
             selectedGenre.Clear();
 
-            for (int i = 0; i < genrebox.Items.Count; i++)
+            foreach (var item in genrebox.CheckedItems)
             {
-                if (genrebox.GetItemChecked(i))
+                KeyValuePair<int, string> kvp = (KeyValuePair<int, string>)item;
+                selectedGenre.Add(kvp.Value);
+            }
+        }
+
+        private void LoadGenres()
+        {
+            string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+            string query = "SELECT Genre_ID, Genre_Name FROM Genre";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
                 {
-                    selectedGenre.Add(genrebox.Items[i].ToString());
-                }
-            }
-        }
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-        public void AddGenre(string genre)
-        {
-            if (!selectedGenre.Contains(genre))
-            {
-                selectedGenre.Add(genre);
-                genreCheckedStatus.Add(false);
+                    genrebox.Items.Clear();
 
-                SaveGenre();
-
-                LoadGenre();
-            }
-        }
-
-        private void SaveGenre()
-        {
-            using (StreamWriter writer = new StreamWriter("genre.txt", append: true))
-            {
-                int lastIndex = selectedGenre.Count - 1;
-                writer.WriteLine(selectedGenre[lastIndex] + "|" + genreCheckedStatus[lastIndex]);
-            }
-        }
-
-        private void LoadGenre()
-        {
-            genrebox.Items.Clear();
-            selectedGenre.Clear();
-            genreCheckedStatus.Clear();
-
-            if (File.Exists("genre.txt"))
-            {
-                using (StreamReader reader = new StreamReader("genre.txt"))
-                {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
+                    while (reader.Read())
                     {
-                        string[] parts = line.Split('|');
-                        if (parts.Length == 2)
-                        {
-                            selectedGenre.Add(parts[0]);
-                            genreCheckedStatus.Add(bool.Parse(parts[1]));
-                        }
+                        genrebox.Items.Add(new KeyValuePair<int, string>(
+                            reader.GetInt32(0),
+                            reader.GetString(1)
+                        ));
                     }
+
+                    reader.Close();
                 }
-            }
-
-
-            for (int i = 0; i < selectedGenre.Count; i++)
-            {
-                genrebox.Items.Add(selectedGenre[i]);
-                genrebox.SetItemChecked(i, genreCheckedStatus[i]);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
         }
 
-        private void genrebox_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void genrebox_Format(object sender, ListControlConvertEventArgs e)
         {
-            genreCheckedStatus[e.Index] = e.NewValue == CheckState.Checked;
-            SaveGenre();
+            e.Value = ((KeyValuePair<int, string>)e.ListItem).Value;
         }
         //----------GENRE----------
 
@@ -427,11 +368,19 @@ namespace VG_DB_2013
 
         private void searchbtn_Click(object sender, EventArgs e)
         {
-            query = "select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Games.Game_Platform, Games.Developer, Games.Genre, Games.Picture from Games_Inventory inner join Games on Games.Game_ID = Games_Inventory.Game_ID where Game_Name Like '%" + search.Text + "%';";
+            query = @"select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Game_Platform.Platform_Name, Developer.Developer_Name, Genre.Genre_Name, Games.Picture from Games_Inventory  
+                                 inner join Games on Games.Game_ID = Games_Inventory.Game_ID 
+                                 inner join Game_Platform on Games.Platform_ID = Game_Platform.Platform_ID
+                                 inner join Developer on Games.Developer_ID = Developer.Developer_ID
+                                 inner join Genre on Games.Genre_ID = Genre.Genre_ID where Game_Name Like '%" + search.Text + "%';";
             this.BindData();
             InventoryGrid.Update();
             InventoryGrid.Refresh();
-            query = "select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Games.Game_Platform, Games.Developer, Games.Genre, Games.Picture from Games_Inventory inner join Games on Games.Game_ID = Games_Inventory.Game_ID WHERE 1=1";
+            query = @"select Games.Game_ID, Games.Game_Name, Games_Stock, Games.Price, Game_Platform.Platform_Name, Developer.Developer_Name, Genre.Genre_Name, Games.Picture from Games_Inventory  
+                                 inner join Games on Games.Game_ID = Games_Inventory.Game_ID 
+                                 inner join Game_Platform on Games.Platform_ID = Game_Platform.Platform_ID
+                                 inner join Developer on Games.Developer_ID = Developer.Developer_ID
+                                 inner join Genre on Games.Genre_ID = Genre.Genre_ID where 1=1";
         }
 
         private void button3_Click(object sender, EventArgs e)

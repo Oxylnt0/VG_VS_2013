@@ -220,10 +220,13 @@ namespace VG_DB_2013
 
         private void AddPurchases_Load(object sender, EventArgs e)
         {
-            LoadComboBox();
+            LoadSuppliers();
+            LoadPlatforms();
+            LoadDevelopers();
+            LoadGenres();
         }
 
-        private void LoadComboBox()
+        private void LoadSuppliers()
         {
             try
             {
@@ -232,7 +235,7 @@ namespace VG_DB_2013
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "SELECT Supplier_ID, Supplier_Name FROM Game_Suppliers"; // Adjust table and column names
+                    string query = "SELECT Supplier_ID, Supplier_Name FROM Game_Suppliers"; 
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -241,8 +244,8 @@ namespace VG_DB_2013
                         da.Fill(dt);
 
                         suppliercombo.DataSource = dt;
-                        suppliercombo.DisplayMember = "Supplier_Name";  // Column to display
-                        suppliercombo.ValueMember = "Supplier_ID";      // Column holding actual values
+                        suppliercombo.DisplayMember = "Supplier_Name";  
+                        suppliercombo.ValueMember = "Supplier_ID";      
                     }
                 }
             }
@@ -251,7 +254,84 @@ namespace VG_DB_2013
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-  
+
+        private void LoadPlatforms()
+        {
+            string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+            string query = "SELECT Platform_ID, Platform_Name FROM Game_Platform";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    platformcombo.DisplayMember = "Platform_Name"; 
+                    platformcombo.ValueMember = "Platform_ID"; 
+                    platformcombo.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void LoadDevelopers()
+        {
+            string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+            string query = "SELECT Developer_ID, Developer_Name FROM Developer";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    developercombo.DisplayMember = "Developer_Name";
+                    developercombo.ValueMember = "Developer_ID";
+                    developercombo.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void LoadGenres()
+        {
+            string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
+            string query = "SELECT Genre_ID, Genre_Name FROM Genre";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    genrecombo.DisplayMember = "Genre_Name";
+                    genrecombo.ValueMember = "Genre_ID";
+                    genrecombo.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
 
   
 
