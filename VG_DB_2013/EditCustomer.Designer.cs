@@ -49,16 +49,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.update = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.delete = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.delete_custid = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,7 +61,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(772, 55);
+            this.panel1.Size = new System.Drawing.Size(413, 55);
             this.panel1.TabIndex = 51;
             // 
             // backbtn
@@ -79,7 +71,7 @@
             this.backbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backbtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backbtn.ForeColor = System.Drawing.Color.Black;
-            this.backbtn.Location = new System.Drawing.Point(684, 12);
+            this.backbtn.Location = new System.Drawing.Point(325, 12);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(76, 25);
             this.backbtn.TabIndex = 54;
@@ -309,102 +301,11 @@
             this.update.UseVisualStyleBackColor = false;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.delete);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.button4);
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.delete_custid);
-            this.panel5.Location = new System.Drawing.Point(401, 61);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(359, 167);
-            this.panel5.TabIndex = 53;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(4, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(215, 37);
-            this.label11.TabIndex = 41;
-            this.label11.Text = "Delete Customer";
-            // 
-            // delete
-            // 
-            this.delete.BackColor = System.Drawing.Color.Gold;
-            this.delete.FlatAppearance.BorderSize = 0;
-            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete.ForeColor = System.Drawing.Color.Black;
-            this.delete.Location = new System.Drawing.Point(116, 99);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(139, 30);
-            this.delete.TabIndex = 44;
-            this.delete.Text = "Delete Customer";
-            this.delete.UseVisualStyleBackColor = false;
-            this.delete.Click += new System.EventHandler(this.delete_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Gold;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(246, 332);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 25);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Gold;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(113, 332);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(76, 25);
-            this.button4.TabIndex = 38;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(10, 63);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 21);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "Customer ID:";
-            // 
-            // delete_custid
-            // 
-            this.delete_custid.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete_custid.Location = new System.Drawing.Point(116, 59);
-            this.delete_custid.Name = "delete_custid";
-            this.delete_custid.Size = new System.Drawing.Size(209, 25);
-            this.delete_custid.TabIndex = 41;
-            // 
             // EditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 601);
-            this.Controls.Add(this.panel5);
+            this.ClientSize = new System.Drawing.Size(413, 601);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -415,8 +316,6 @@
             this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -442,13 +341,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button update;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button delete;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox delete_custid;
         private System.Windows.Forms.TextBox addressedit;
         private System.Windows.Forms.Label label2;
     }

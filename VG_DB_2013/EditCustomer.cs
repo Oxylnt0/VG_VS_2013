@@ -99,20 +99,5 @@ namespace VG_DB_2013
             }
         }
 
-
-
-        private void delete_Click(object sender, EventArgs e)
-        {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True");
-            sqlcon.Open();
-            SqlCommand cmd = new SqlCommand("delete Game_Customers where Customer_ID=" + Convert.ToInt32(delete_custid.Text), sqlcon);
-            cmd.ExecuteNonQuery();
-            sqlcon.Close();
-            MessageBox.Show("Delete Successful", "Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            delete_custid.Text = "";
-        }
-
-
-
     }
 }

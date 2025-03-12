@@ -37,7 +37,7 @@ namespace VG_DB_2013
         {
             int adminId = int.Parse(find_admin_id.Text);
 
-            string query = "SELECT Username, Admin_password, Last_Name, First_Name, Middle_Initial FROM admins WHERE Admin_ID = @AdminId";
+            string query = "SELECT Username, Last_Name, First_Name, Middle_Initial FROM admins WHERE Admin_ID = @AdminId";
 
             using (SqlConnection conn = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True"))
             {
@@ -50,7 +50,6 @@ namespace VG_DB_2013
                 if (reader.Read())
                 {
                     useredit.Text = reader["Username"].ToString();
-                    passedit.Text = reader["Admin_Password"].ToString();
                     lastedit.Text = reader["Last_Name"].ToString();
                     firstedit.Text = reader["First_Name"].ToString();
                     middleedit.Text = reader["Middle_initial"].ToString();
@@ -68,12 +67,11 @@ namespace VG_DB_2013
         {
             int adminId = int.Parse(find_admin_id.Text);
             string username = useredit.Text;
-            string password = passedit.Text;
             string lastname = lastedit.Text;
             string firstname = firstedit.Text;
             string middlename = middleedit.Text;
 
-            string updateQuery = "UPDATE admins SET Username = @Username, Admin_Password = @Password, Last_Name = @Lastname, First_Name = @Firstname, Middle_initial = @Middleinitial WHERE Admin_ID = @AdminId";
+            string updateQuery = "UPDATE admins SET Username = @Username, Last_Name = @Lastname, First_Name = @Firstname, Middle_initial = @Middleinitial WHERE Admin_ID = @AdminId";
 
             using (SqlConnection conn = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True"))
             {
@@ -81,7 +79,6 @@ namespace VG_DB_2013
 
                 cmd.Parameters.AddWithValue("@AdminId", adminId);
                 cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Password", password);
                 cmd.Parameters.AddWithValue("@Lastname", lastname);
                 cmd.Parameters.AddWithValue("@Firstname", firstname);
                 cmd.Parameters.AddWithValue("@Middleinitial", middlename);

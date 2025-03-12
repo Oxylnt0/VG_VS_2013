@@ -96,12 +96,12 @@ namespace VG_DB_2013
 
             else if (sortby.SelectedItem.ToString() == "Amount - Highest")
             {
-                query += " order by Total_Amount_Sales asc";
+                query += " order by Total_Amount_Sales desc";
             }
 
             else if (sortby.SelectedItem.ToString() == "Amount - Lowest")
             {
-                query += " order by Total_Amount_Sales desc";
+                query += " order by Total_Amount_Sales asc";
             }
 
             this.BindData();

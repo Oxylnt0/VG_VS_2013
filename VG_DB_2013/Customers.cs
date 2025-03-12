@@ -78,6 +78,7 @@ namespace VG_DB_2013
 
             EditCustomer custform = new EditCustomer(opacity);
             custform.Show();
+            custform.TopMost = true;
         }
 
         private void refresh_Click(object sender, EventArgs e)
@@ -94,6 +95,26 @@ namespace VG_DB_2013
             {
                 mainForm.WindowState = FormWindowState.Minimized;
             }
+        }
+
+        private void applybtn_Click(object sender, EventArgs e)
+        {
+            if (sortby.SelectedItem.ToString() == "Last Name - Ascending")
+            {
+                query += " order by Last_Name asc";
+            }
+
+            else if (sortby.SelectedItem.ToString() == "Last Name - Descending")
+            {
+                query += " order by Last_Name desc";
+
+            }
+
+            this.BindData();
+            customergrid.Update();
+            customergrid.Refresh();
+
+            query = "select Customer_ID, Last_Name, First_Name, Middle_Initial, Email, Phone_Number, Customer_Address from Game_Customers where 1=1";
         }
 
    

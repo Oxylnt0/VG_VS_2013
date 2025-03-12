@@ -310,7 +310,7 @@
             this.suppliergrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.suppliergrid.RowHeadersVisible = false;
             this.suppliergrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
             this.suppliergrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.suppliergrid.Size = new System.Drawing.Size(833, 630);

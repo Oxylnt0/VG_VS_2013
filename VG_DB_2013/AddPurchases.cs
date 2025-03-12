@@ -34,9 +34,9 @@ namespace VG_DB_2013
         {
             string game_name = gamenamebox.Text;
             double price = Convert.ToDouble(pricebox.Text);
-            string platform = platformcombo.Text;
-            string developer = developercombo.Text;
-            string genre = genrecombo.Text;
+            int platform = Convert.ToInt32(platformcombo.SelectedValue);
+            int developer = Convert.ToInt32(developercombo.SelectedValue);
+            int genre = Convert.ToInt32(genrecombo.SelectedValue);
             int qty = Convert.ToInt32(qtybox.Text);
             DateTime date_purchased = dateTimePicker1.Value;
             double total_amount;
@@ -81,10 +81,10 @@ namespace VG_DB_2013
             }
         }
 
-        private void InsertToGames(string gameName, byte[] picture, double price, string platform, string dev, string genre)
+        private void InsertToGames(string gameName, byte[] picture, double price, int platform, int dev, int genre)
         {
             string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
-            string query = "INSERT INTO Games (Game_Name, Picture, Price, Game_Platform, Developer, Genre) VALUES (@GameName, @Picture, @Price, @GamePlatform, @Developer, @Genre)";
+            string query = "INSERT INTO Games (Game_Name, Picture, Price, Platform_ID, Developer_ID, Genre_ID) VALUES (@GameName, @Picture, @Price, @GamePlatform, @Developer, @Genre)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -96,10 +96,10 @@ namespace VG_DB_2013
 
                         cmd.Parameters.Add("@GameName", System.Data.SqlDbType.VarChar).Value = gameName;
                         cmd.Parameters.Add("@Picture", System.Data.SqlDbType.VarBinary).Value = picture;
-                        cmd.Parameters.Add("@Price", System.Data.SqlDbType.Money).Value = price;
-                        cmd.Parameters.Add("@GamePlatform", System.Data.SqlDbType.VarChar).Value = platform;
-                        cmd.Parameters.Add("@Developer", System.Data.SqlDbType.VarChar).Value = dev;
-                        cmd.Parameters.Add("@Genre", System.Data.SqlDbType.VarChar).Value = genre;
+                        cmd.Parameters.Add("@Price", System.Data.SqlDbType.Decimal).Value = price;
+                        cmd.Parameters.Add("@GamePlatform", System.Data.SqlDbType.Int).Value = platform;
+                        cmd.Parameters.Add("@Developer", System.Data.SqlDbType.Int).Value = dev;
+                        cmd.Parameters.Add("@Genre", System.Data.SqlDbType.Int).Value = genre;
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Game inserted successfully!");
@@ -128,7 +128,7 @@ namespace VG_DB_2013
                         cmd.Parameters.Add("@supplierID", System.Data.SqlDbType.Int).Value = supplierid;
                         cmd.Parameters.Add("@gameID", System.Data.SqlDbType.Int).Value = gameid;
                         cmd.Parameters.Add("@QTY", System.Data.SqlDbType.Int).Value = qty;
-                        cmd.Parameters.Add("@Amount", System.Data.SqlDbType.Money).Value = amount;
+                        cmd.Parameters.Add("@Amount", System.Data.SqlDbType.Decimal).Value = amount;
                         cmd.Parameters.Add("@Date", System.Data.SqlDbType.Date).Value = date;
 
                         cmd.ExecuteNonQuery();

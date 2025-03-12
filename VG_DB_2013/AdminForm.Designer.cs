@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -41,6 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.changepswdbtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.addadminbtn = new System.Windows.Forms.Button();
             this.sortby = new System.Windows.Forms.ComboBox();
@@ -160,6 +161,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.changepswdbtn);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.addadminbtn);
             this.panel3.Controls.Add(this.sortby);
@@ -175,6 +177,21 @@
             this.panel3.Size = new System.Drawing.Size(1097, 675);
             this.panel3.TabIndex = 7;
             // 
+            // changepswdbtn
+            // 
+            this.changepswdbtn.BackColor = System.Drawing.Color.Gold;
+            this.changepswdbtn.FlatAppearance.BorderSize = 0;
+            this.changepswdbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changepswdbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changepswdbtn.ForeColor = System.Drawing.Color.Black;
+            this.changepswdbtn.Location = new System.Drawing.Point(823, 140);
+            this.changepswdbtn.Name = "changepswdbtn";
+            this.changepswdbtn.Size = new System.Drawing.Size(269, 44);
+            this.changepswdbtn.TabIndex = 58;
+            this.changepswdbtn.Text = "Change Password";
+            this.changepswdbtn.UseVisualStyleBackColor = false;
+            this.changepswdbtn.Click += new System.EventHandler(this.changepswdbtn_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -182,7 +199,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Azure;
-            this.label2.Location = new System.Drawing.Point(822, 169);
+            this.label2.Location = new System.Drawing.Point(830, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 25);
             this.label2.TabIndex = 16;
@@ -212,7 +229,7 @@
             this.sortby.Items.AddRange(new object[] {
             "Last Name - Ascending",
             "Last Name - Descending"});
-            this.sortby.Location = new System.Drawing.Point(878, 169);
+            this.sortby.Location = new System.Drawing.Point(886, 201);
             this.sortby.Name = "sortby";
             this.sortby.Size = new System.Drawing.Size(193, 25);
             this.sortby.TabIndex = 15;
@@ -224,7 +241,7 @@
             this.applybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.applybtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applybtn.ForeColor = System.Drawing.Color.Black;
-            this.applybtn.Location = new System.Drawing.Point(878, 200);
+            this.applybtn.Location = new System.Drawing.Point(886, 232);
             this.applybtn.Name = "applybtn";
             this.applybtn.Size = new System.Drawing.Size(193, 25);
             this.applybtn.TabIndex = 25;
@@ -291,22 +308,22 @@
             this.AdminGrid.AllowUserToDeleteRows = false;
             this.AdminGrid.AllowUserToResizeColumns = false;
             this.AdminGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lavender;
-            this.AdminGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.AdminGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.AdminGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.AdminGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.AdminGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.AdminGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.AdminGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.AdminGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.AntiqueWhite;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AdminGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AntiqueWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AdminGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.AdminGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AdminGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.AdminGrid.EnableHeadersVisualStyles = false;
@@ -315,18 +332,18 @@
             this.AdminGrid.Name = "AdminGrid";
             this.AdminGrid.ReadOnly = true;
             this.AdminGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AdminGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AdminGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.AdminGrid.RowHeadersVisible = false;
             this.AdminGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
-            this.AdminGrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            this.AdminGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.AdminGrid.Size = new System.Drawing.Size(814, 630);
             this.AdminGrid.TabIndex = 5;
             // 
@@ -335,7 +352,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox5.Image = global::VG_DB_2013.Properties.Resources.rise_kujikawa_microphone_attack;
-            this.pictureBox5.Location = new System.Drawing.Point(662, 106);
+            this.pictureBox5.Location = new System.Drawing.Point(649, 149);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(430, 506);
             this.pictureBox5.TabIndex = 57;
@@ -388,6 +405,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button changepswdbtn;
 
 
     }

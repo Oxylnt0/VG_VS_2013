@@ -41,8 +41,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.lastedit = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.passedit = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.useredit = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -112,15 +110,13 @@
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.lastedit);
             this.panel6.Controls.Add(this.label14);
-            this.panel6.Controls.Add(this.passedit);
-            this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.useredit);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.update);
             this.panel6.Location = new System.Drawing.Point(12, 61);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(359, 474);
+            this.panel6.Size = new System.Drawing.Size(359, 425);
             this.panel6.TabIndex = 51;
             // 
             // find
@@ -141,7 +137,7 @@
             // middleedit
             // 
             this.middleedit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middleedit.Location = new System.Drawing.Point(115, 382);
+            this.middleedit.Location = new System.Drawing.Point(115, 321);
             this.middleedit.Name = "middleedit";
             this.middleedit.Size = new System.Drawing.Size(209, 25);
             this.middleedit.TabIndex = 48;
@@ -171,7 +167,7 @@
             this.label16.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label16.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(6, 386);
+            this.label16.Location = new System.Drawing.Point(6, 325);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(103, 21);
             this.label16.TabIndex = 49;
@@ -180,7 +176,7 @@
             // firstedit
             // 
             this.firstedit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstedit.Location = new System.Drawing.Point(115, 325);
+            this.firstedit.Location = new System.Drawing.Point(115, 264);
             this.firstedit.Name = "firstedit";
             this.firstedit.Size = new System.Drawing.Size(209, 25);
             this.firstedit.TabIndex = 46;
@@ -191,7 +187,7 @@
             this.label15.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label15.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(25, 329);
+            this.label15.Location = new System.Drawing.Point(25, 268);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(89, 21);
             this.label15.TabIndex = 47;
@@ -200,7 +196,7 @@
             // lastedit
             // 
             this.lastedit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastedit.Location = new System.Drawing.Point(115, 266);
+            this.lastedit.Location = new System.Drawing.Point(115, 205);
             this.lastedit.Name = "lastedit";
             this.lastedit.Size = new System.Drawing.Size(209, 25);
             this.lastedit.TabIndex = 44;
@@ -211,31 +207,11 @@
             this.label14.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label14.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(25, 270);
+            this.label14.Location = new System.Drawing.Point(25, 209);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(87, 21);
             this.label14.TabIndex = 45;
             this.label14.Text = "Last Name:";
-            // 
-            // passedit
-            // 
-            this.passedit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passedit.Location = new System.Drawing.Point(115, 212);
-            this.passedit.Name = "passedit";
-            this.passedit.Size = new System.Drawing.Size(209, 25);
-            this.passedit.TabIndex = 42;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(25, 216);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(79, 21);
-            this.label13.TabIndex = 43;
-            this.label13.Text = "Password:";
             // 
             // useredit
             // 
@@ -277,7 +253,7 @@
             this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.update.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.ForeColor = System.Drawing.Color.Black;
-            this.update.Location = new System.Drawing.Point(115, 423);
+            this.update.Location = new System.Drawing.Point(115, 366);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(95, 36);
             this.update.TabIndex = 38;
@@ -379,7 +355,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 548);
+            this.ClientSize = new System.Drawing.Size(746, 500);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
@@ -412,8 +388,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox lastedit;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox passedit;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox useredit;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;

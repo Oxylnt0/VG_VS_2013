@@ -169,7 +169,10 @@ namespace VG_DB_2013
 
         private void clearbtn_Click(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < supplierbox.Items.Count; i++)
+            {
+                supplierbox.SetItemChecked(i, false);
+            }
         }
 
         private void updategamestock_Click(object sender, EventArgs e)

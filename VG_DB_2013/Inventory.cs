@@ -212,12 +212,12 @@ namespace VG_DB_2013
 
             else if (sortby.SelectedItem.ToString() == "Stock - Highest")
             {
-                query += " order by Games_Stock asc";
+                query += " order by Games_Stock desc";
             }
 
             else if (sortby.SelectedItem.ToString() == "Stock - Lowest")
             {
-                query += " order by Games_Stock desc";
+                query += " order by Games_Stock asc";
             }
 
             this.BindData();
@@ -418,6 +418,24 @@ namespace VG_DB_2013
             if (mainForm != null)
             {
                 mainForm.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < platformbox.Items.Count; i++)
+            {
+                platformbox.SetItemChecked(i, false); 
+            }
+
+            for (int i = 0; i < developerbox.Items.Count; i++)
+            {
+                developerbox.SetItemChecked(i, false); 
+            }
+
+            for (int i = 0; i < genrebox.Items.Count; i++)
+            {
+                genrebox.SetItemChecked(i, false); 
             }
         }
 

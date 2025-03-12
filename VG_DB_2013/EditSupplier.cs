@@ -22,21 +22,6 @@ namespace VG_DB_2013
             this.opacity = opacity;
         }
 
-        private void editmode_Click(object sender, EventArgs e)
-        {
-            DialogResult Result = MessageBox.Show("Deleting a Supplier turns Supplier in Purchases Null, Proceed?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (Result == DialogResult.Yes)
-            {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True");
-                sqlcon.Open();
-                SqlCommand cmd = new SqlCommand("delete Game_Suppliers where Supplier_ID=" + Convert.ToInt32(admin_id.Text), sqlcon);
-                cmd.ExecuteNonQuery();
-                sqlcon.Close();
-                MessageBox.Show("Delete Successful", "Game Supplier", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                admin_id.Text = "";
-            }
-        }
-
         private void find_Click(object sender, EventArgs e)
         {
             int supplierid = int.Parse(find_supplier_id.Text);
@@ -75,7 +60,7 @@ namespace VG_DB_2013
             string suppliernumber = numberedit.Text;
             string supplieraddress = addressedit.Text;
 
-            string updateQuery = "UPDATE Game_Suppliers SET Supplier_Name = @SupplierName, Supplier_Email = @SupplierEmail, Supplier_Phone_Number = @PhoneNumber, Address = @ADDRESS WHERE Supplier_ID = @SupplierID";
+            string updateQuery = "UPDATE Game_Suppliers SET Supplier_Name = @SupplierName, Supplier_Email = @SupplierEmail, Supplier_Phone_Number = @PhoneNumber, Supplier_Address = @ADDRESS WHERE Supplier_ID = @SupplierID";
 
             using (SqlConnection conn = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True"))
             {

@@ -21,7 +21,7 @@ namespace VG_DB_2013
             InitializeComponent();
         }
 
-        private string query = "select Admin_ID, Username, Admin_Password, Last_Name, First_Name, Middle_Initial from Admins where 1=1";
+        private string query = "select Admin_ID, Username, Last_Name, First_Name, Middle_Initial from Admins where 1=1";
 
         public void BindData()
         {
@@ -42,7 +42,6 @@ namespace VG_DB_2013
 
                AdminGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Admin ID", DataPropertyName = "Admin_ID" });
                AdminGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Username", DataPropertyName = "Username" });
-               AdminGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Password", DataPropertyName = "Admin_Password" });
                AdminGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Last Name", DataPropertyName = "Last_Name" });
                AdminGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "First Name", DataPropertyName = "First_Name" });
                AdminGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Middle Initial", DataPropertyName = "Middle_Initial" });
@@ -62,7 +61,6 @@ namespace VG_DB_2013
             this.AdminGrid.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
             this.AdminGrid.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
             this.AdminGrid.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
-            this.AdminGrid.Columns[5].SortMode = DataGridViewColumnSortMode.NotSortable;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -72,11 +70,11 @@ namespace VG_DB_2013
 
         private void searchbtn_Click(object sender, EventArgs e)
         {
-            query = "select Admin_ID, Username, Admin_Password, Last_Name, First_Name, Middle_Initial from Admins where Username Like '%" + search.Text + "%';";
+            query = "select Admin_ID, Username, Last_Name, First_Name, Middle_Initial from Admins where Username Like '%" + search.Text + "%';";
             this.BindData();
             AdminGrid.Update();
             AdminGrid.Refresh();
-            query = "select Admin_ID, Username, Admin_Password, Last_Name, First_Name, Middle_Initial from Admins";
+            query = "select Admin_ID, Username, Last_Name, First_Name, Middle_Initial from Admins";
         }
 
         private void applybtn_Click(object sender, EventArgs e)
@@ -96,7 +94,7 @@ namespace VG_DB_2013
             AdminGrid.Update();
             AdminGrid.Refresh();
 
-            query = "select Admin_ID, Username, Admin_Password, Last_Name, First_Name, Middle_Initial from Admins where 1=1";
+            query = "select Admin_ID, Username, Last_Name, First_Name, Middle_Initial from Admins where 1=1";
         }
 
         private void refresh_Click_1(object sender, EventArgs e)
@@ -135,6 +133,17 @@ namespace VG_DB_2013
             {
                 mainForm.WindowState = FormWindowState.Minimized;
             }
+        }
+
+        private void changepswdbtn_Click(object sender, EventArgs e)
+        {
+            opacity = new Opacity();
+            opacity.Show();
+            opacity.Opacity = 0.6;
+
+            ChangePassword pass = new ChangePassword(opacity);
+            pass.Show();
+            pass.TopMost = true;
         }
 
 
