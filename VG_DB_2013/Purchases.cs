@@ -191,6 +191,15 @@ namespace VG_DB_2013
                 }
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu mainForm = Application.OpenForms["Menu"] as Menu;
+            if (mainForm != null)
+            {
+                mainForm.WindowState = FormWindowState.Minimized;
+            }
+        }
     }
 
     public class ListItem

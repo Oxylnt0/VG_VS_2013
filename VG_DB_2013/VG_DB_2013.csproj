@@ -454,6 +454,39 @@
   <ItemGroup>
     <None Include="Resources\725487-finaldim.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-insert-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2c10d1989f0d04cd3e70307555ff28f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipart990656.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-pixel-art-game-controllers-bead-cross-stitch-pixilart-game-controller-by-itzmehere-5b884ea64ba9c5.8648233015356596863099.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-pixel-art-portable-network-graphics-kawaii-image-cute-kawaii-pixel-pastel-gaming-5be33285aa2213.7596839415416162616969.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngkey.com-wii-controller-png-3698817.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize2-50.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

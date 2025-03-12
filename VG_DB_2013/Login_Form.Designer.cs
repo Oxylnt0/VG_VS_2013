@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.clearbtn = new System.Windows.Forms.Button();
@@ -45,6 +48,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -56,6 +61,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -63,6 +71,39 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1440, 93);
             this.panel2.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(1363, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(34, 34);
+            this.button3.TabIndex = 4;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::VG_DB_2013.Properties.Resources.a2c10d1989f0d04cd3e70307555ff28f;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(1220, 4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(82, 86);
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::VG_DB_2013.Properties.Resources.a2c10d1989f0d04cd3e70307555ff28f;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(144, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(82, 86);
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -76,7 +117,7 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_close_48;
+            this.button1.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_close_50;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -143,23 +184,25 @@
             // 
             // passwordbox
             // 
-            this.passwordbox.BackColor = System.Drawing.Color.SteelBlue;
+            this.passwordbox.BackColor = System.Drawing.Color.Azure;
+            this.passwordbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordbox.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordbox.ForeColor = System.Drawing.Color.White;
+            this.passwordbox.ForeColor = System.Drawing.Color.Black;
             this.passwordbox.Location = new System.Drawing.Point(340, 219);
             this.passwordbox.Name = "passwordbox";
             this.passwordbox.PasswordChar = '*';
-            this.passwordbox.Size = new System.Drawing.Size(209, 29);
+            this.passwordbox.Size = new System.Drawing.Size(209, 22);
             this.passwordbox.TabIndex = 5;
             // 
             // usernamebox
             // 
-            this.usernamebox.BackColor = System.Drawing.Color.SteelBlue;
+            this.usernamebox.BackColor = System.Drawing.Color.Azure;
+            this.usernamebox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usernamebox.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernamebox.ForeColor = System.Drawing.Color.White;
+            this.usernamebox.ForeColor = System.Drawing.Color.Black;
             this.usernamebox.Location = new System.Drawing.Point(340, 145);
             this.usernamebox.Name = "usernamebox";
-            this.usernamebox.Size = new System.Drawing.Size(209, 29);
+            this.usernamebox.Size = new System.Drawing.Size(209, 22);
             this.usernamebox.TabIndex = 4;
             // 
             // panel1
@@ -208,7 +251,7 @@
             // 
             this.pictureBox6.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_password_48;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(304, 218);
+            this.pictureBox6.Location = new System.Drawing.Point(304, 211);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(30, 30);
             this.pictureBox6.TabIndex = 13;
@@ -218,7 +261,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_user_48;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(304, 144);
+            this.pictureBox2.Location = new System.Drawing.Point(304, 137);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
             this.pictureBox2.TabIndex = 12;
@@ -252,6 +295,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Video Game Store Inventory Management System";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -280,5 +325,8 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button button3;
     }
 }

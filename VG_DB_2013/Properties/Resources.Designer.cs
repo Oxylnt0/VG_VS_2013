@@ -213,6 +213,16 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a2c10d1989f0d04cd3e70307555ff28f {
+            get {
+                object obj = ResourceManager.GetObject("a2c10d1989f0d04cd3e70307555ff28f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ac436bf4c39be73 {
             get {
                 object obj = ResourceManager.GetObject("ac436bf4c39be73", resourceCulture);
@@ -246,6 +256,16 @@ namespace VG_DB_2013.Properties {
         internal static System.Drawing.Bitmap ChromMapIcon {
             get {
                 object obj = ResourceManager.GetObject("ChromMapIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clipart990656 {
+            get {
+                object obj = ResourceManager.GetObject("clipart990656", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -423,6 +443,16 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-close-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_customers_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-customers-50", resourceCulture);
@@ -453,6 +483,16 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_insert_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-insert-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_inventory_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-inventory-50", resourceCulture);
@@ -466,6 +506,26 @@ namespace VG_DB_2013.Properties {
         internal static System.Drawing.Bitmap icons8_logout_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-logout-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_minimize_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-minimize-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_minimize2_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-minimize2-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -543,6 +603,28 @@ namespace VG_DB_2013.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_pixel_art_game_controllers_bead_cross_stitch_pixilart_game_controller_by_itzmehere_5b884ea64ba9c5_8648233015356596863099 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-pixel-art-game-controllers-bead-cross-stitch-pixilart-game-controller-by-" +
+                        "itzmehere-5b884ea64ba9c5.8648233015356596863099", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_pixel_art_portable_network_graphics_kawaii_image_cute_kawaii_pixel_pastel_gaming_5be33285aa2213_7596839415416162616969 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-pixel-art-portable-network-graphics-kawaii-image-cute-kawaii-pixel-pastel" +
+                        "-gaming-5be33285aa2213.7596839415416162616969", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_3_10_2025 {
             get {
                 object obj = ResourceManager.GetObject("login-3-10-2025", resourceCulture);
@@ -607,6 +689,36 @@ namespace VG_DB_2013.Properties {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-fire-emblem-fates-fire-emblem-awakening-sprite-role-playing-game-" +
                         "overworld-sprite-purple-rectangle-symmetry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngegg {
+            get {
+                object obj = ResourceManager.GetObject("pngegg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngkey_com_wii_controller_png_3698817 {
+            get {
+                object obj = ResourceManager.GetObject("pngkey.com-wii-controller-png-3698817", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com {
+            get {
+                object obj = ResourceManager.GetObject("pngwing.com", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

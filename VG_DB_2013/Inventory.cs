@@ -388,6 +388,15 @@ namespace VG_DB_2013
             Application.Exit();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Menu mainForm = Application.OpenForms["Menu"] as Menu;
+            if (mainForm != null)
+            {
+                mainForm.WindowState = FormWindowState.Minimized;
+            }
+        }
+
  
 
     }

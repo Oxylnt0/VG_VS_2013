@@ -156,6 +156,15 @@ namespace VG_DB_2013
             supplier.TopMost = true;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu mainForm = Application.OpenForms["Menu"] as Menu;
+            if (mainForm != null)
+            {
+                mainForm.WindowState = FormWindowState.Minimized;
+            }
+        }
+
       
 
     }

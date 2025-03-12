@@ -93,6 +93,11 @@ namespace VG_DB_2013
             passwordbox.PasswordChar = '\0';
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
  
 
 
