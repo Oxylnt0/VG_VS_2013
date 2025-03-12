@@ -196,7 +196,7 @@ namespace VG_DB_2013
 
         private void addnewplatform_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            NewPlatform plat = new NewPlatform();
+            NewPlatform plat = new NewPlatform(this);
 
             plat.Show();
             plat.TopMost = true;
@@ -204,7 +204,7 @@ namespace VG_DB_2013
 
         private void addnewdev_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            NewDev dev = new NewDev();
+            NewDev dev = new NewDev(this);
 
             dev.Show();
             dev.TopMost = true;
@@ -212,7 +212,7 @@ namespace VG_DB_2013
 
         private void addnewgenre_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            NewGenre gen = new NewGenre();
+            NewGenre gen = new NewGenre(this);
 
             gen.Show();
             gen.TopMost = true;
@@ -255,7 +255,7 @@ namespace VG_DB_2013
             }
         }
 
-        private void LoadPlatforms()
+        public void LoadPlatforms()
         {
             string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
             string query = "SELECT Platform_ID, Platform_Name FROM Game_Platform";
@@ -281,7 +281,7 @@ namespace VG_DB_2013
             }
         }
 
-        private void LoadDevelopers()
+        public void LoadDevelopers()
         {
             string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
             string query = "SELECT Developer_ID, Developer_Name FROM Developer";
@@ -307,7 +307,7 @@ namespace VG_DB_2013
             }
         }
 
-        private void LoadGenres()
+        public void LoadGenres()
         {
             string connectionString = "Data Source=SIMOUNANDRE\\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True";
             string query = "SELECT Genre_ID, Genre_Name FROM Genre";

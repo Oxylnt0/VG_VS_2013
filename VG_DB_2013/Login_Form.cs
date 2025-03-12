@@ -83,6 +83,18 @@ namespace VG_DB_2013
             Application.Exit();
         }
 
+        private void button2_MouseUp(object sender, MouseEventArgs e)
+        {
+            passwordbox.PasswordChar = '*';
+        }
+
+        private void button2_MouseDown(object sender, MouseEventArgs e)
+        {
+            passwordbox.PasswordChar = '\0';
+        }
+
+ 
+
 
 
     }

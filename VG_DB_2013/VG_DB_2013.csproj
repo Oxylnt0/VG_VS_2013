@@ -98,6 +98,12 @@
     <Compile Include="EditSupplier.Designer.cs">
       <DependentUpon>EditSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewDev.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditSupplier.resx">
       <DependentUpon>EditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewDev.resx">
       <DependentUpon>NewDev.cs</DependentUpon>
@@ -420,6 +429,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rise-kujikawa-microphone-attack.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home-3-12-2025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-show-password-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\space.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The-Legend-of-Heroes-Trails-through-Daybreak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddcogcm-f288fbe5-5f81-416b-a656-6dbbc51c6c59.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\725487-finaldim.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

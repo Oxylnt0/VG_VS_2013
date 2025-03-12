@@ -15,6 +15,7 @@ namespace VG_DB_2013
         public Menu()
         {
             InitializeComponent();
+            loadform(new Home());
         }
 
         public void loadform(object Form)
@@ -74,12 +75,10 @@ namespace VG_DB_2013
             loadform(new Customers());
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void homebtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            loadform(new Home());
         }
-
-   
 
     }
 }
