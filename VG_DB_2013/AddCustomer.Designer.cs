@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.addcustbtn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.backbtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.address = new System.Windows.Forms.TextBox();
             this.num = new System.Windows.Forms.TextBox();
             this.email = new System.Windows.Forms.TextBox();
@@ -43,11 +47,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.backbtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.addcustbtn = new System.Windows.Forms.Button();
-            this.clear = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +55,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.clear);
             this.panel2.Controls.Add(this.addcustbtn);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.address);
@@ -77,6 +75,60 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(409, 418);
             this.panel2.TabIndex = 61;
+            // 
+            // addcustbtn
+            // 
+            this.addcustbtn.BackColor = System.Drawing.Color.Gold;
+            this.addcustbtn.FlatAppearance.BorderSize = 0;
+            this.addcustbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addcustbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addcustbtn.ForeColor = System.Drawing.Color.Black;
+            this.addcustbtn.Location = new System.Drawing.Point(138, 342);
+            this.addcustbtn.Name = "addcustbtn";
+            this.addcustbtn.Size = new System.Drawing.Size(91, 35);
+            this.addcustbtn.TabIndex = 55;
+            this.addcustbtn.Text = "Add";
+            this.addcustbtn.UseVisualStyleBackColor = false;
+            this.addcustbtn.Click += new System.EventHandler(this.addcustbtn_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.backbtn);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(409, 55);
+            this.panel1.TabIndex = 62;
+            // 
+            // backbtn
+            // 
+            this.backbtn.BackColor = System.Drawing.Color.Gold;
+            this.backbtn.FlatAppearance.BorderSize = 0;
+            this.backbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backbtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbtn.ForeColor = System.Drawing.Color.Black;
+            this.backbtn.Location = new System.Drawing.Point(318, 9);
+            this.backbtn.Name = "backbtn";
+            this.backbtn.Size = new System.Drawing.Size(76, 25);
+            this.backbtn.TabIndex = 54;
+            this.backbtn.Text = "Back";
+            this.backbtn.UseVisualStyleBackColor = false;
+            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Lime;
+            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Add Customer";
             // 
             // address
             // 
@@ -226,74 +278,6 @@
             this.label16.TabIndex = 32;
             this.label16.Text = "Email:";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Controls.Add(this.backbtn);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 55);
-            this.panel1.TabIndex = 62;
-            // 
-            // backbtn
-            // 
-            this.backbtn.BackColor = System.Drawing.Color.Gold;
-            this.backbtn.FlatAppearance.BorderSize = 0;
-            this.backbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backbtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backbtn.ForeColor = System.Drawing.Color.Black;
-            this.backbtn.Location = new System.Drawing.Point(318, 9);
-            this.backbtn.Name = "backbtn";
-            this.backbtn.Size = new System.Drawing.Size(76, 25);
-            this.backbtn.TabIndex = 54;
-            this.backbtn.Text = "Back";
-            this.backbtn.UseVisualStyleBackColor = false;
-            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Add Customer";
-            // 
-            // addcustbtn
-            // 
-            this.addcustbtn.BackColor = System.Drawing.Color.Gold;
-            this.addcustbtn.FlatAppearance.BorderSize = 0;
-            this.addcustbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addcustbtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addcustbtn.ForeColor = System.Drawing.Color.Black;
-            this.addcustbtn.Location = new System.Drawing.Point(138, 351);
-            this.addcustbtn.Name = "addcustbtn";
-            this.addcustbtn.Size = new System.Drawing.Size(76, 25);
-            this.addcustbtn.TabIndex = 55;
-            this.addcustbtn.Text = "Add";
-            this.addcustbtn.UseVisualStyleBackColor = false;
-            this.addcustbtn.Click += new System.EventHandler(this.addcustbtn_Click);
-            // 
-            // clear
-            // 
-            this.clear.BackColor = System.Drawing.Color.Gold;
-            this.clear.FlatAppearance.BorderSize = 0;
-            this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.ForeColor = System.Drawing.Color.Black;
-            this.clear.Location = new System.Drawing.Point(263, 351);
-            this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(76, 25);
-            this.clear.TabIndex = 63;
-            this.clear.Text = "Clear";
-            this.clear.UseVisualStyleBackColor = false;
-            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,7 +317,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button backbtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button addcustbtn;
     }
 }

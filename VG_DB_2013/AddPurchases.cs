@@ -189,11 +189,6 @@ namespace VG_DB_2013
             return currentIdentity;
         }
 
-        private void clear_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addnewplatform_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NewPlatform plat = new NewPlatform(this);

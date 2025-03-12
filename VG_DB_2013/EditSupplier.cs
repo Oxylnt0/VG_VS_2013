@@ -102,20 +102,13 @@ namespace VG_DB_2013
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            find_supplier_id.Text = "";
-            nameedit.Text = "";
-            emailedit.Text = "";
-            numberedit.Text = "";
-            addressedit.Text = "";
-        }
-
         private void backbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
 
             opacity.Close();
         }
+
+
     }
 }

@@ -48,7 +48,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.gamenamebox = new System.Windows.Forms.TextBox();
-            this.clear = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -238,30 +237,16 @@
             this.gamenamebox.Size = new System.Drawing.Size(209, 25);
             this.gamenamebox.TabIndex = 60;
             // 
-            // clear
-            // 
-            this.clear.BackColor = System.Drawing.Color.Gold;
-            this.clear.FlatAppearance.BorderSize = 0;
-            this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.ForeColor = System.Drawing.Color.Black;
-            this.clear.Location = new System.Drawing.Point(239, 331);
-            this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(76, 25);
-            this.clear.TabIndex = 74;
-            this.clear.Text = "Clear";
-            this.clear.UseVisualStyleBackColor = false;
-            // 
             // add
             // 
             this.add.BackColor = System.Drawing.Color.Gold;
             this.add.FlatAppearance.BorderSize = 0;
             this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add.ForeColor = System.Drawing.Color.Black;
-            this.add.Location = new System.Drawing.Point(115, 331);
+            this.add.Location = new System.Drawing.Point(115, 324);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(76, 25);
+            this.add.Size = new System.Drawing.Size(82, 32);
             this.add.TabIndex = 73;
             this.add.Text = "Add";
             this.add.UseVisualStyleBackColor = false;
@@ -275,7 +260,7 @@
             this.panel3.Controls.Add(this.gamegrid);
             this.panel3.Location = new System.Drawing.Point(16, 61);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(411, 192);
+            this.panel3.Size = new System.Drawing.Size(411, 387);
             this.panel3.TabIndex = 75;
             // 
             // label5
@@ -339,11 +324,12 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
             this.gamegrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gamegrid.Size = new System.Drawing.Size(403, 147);
+            this.gamegrid.Size = new System.Drawing.Size(403, 342);
             this.gamegrid.TabIndex = 5;
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.find);
@@ -354,7 +340,6 @@
             this.panel2.Controls.Add(this.pricebox);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.clear);
             this.panel2.Controls.Add(this.qtybox);
             this.panel2.Controls.Add(this.add);
             this.panel2.Controls.Add(this.label13);
@@ -407,7 +392,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox gamenamebox;
-        private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;

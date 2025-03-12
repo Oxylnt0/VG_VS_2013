@@ -103,37 +103,6 @@ namespace VG_DB_2013
             suppliergrid.Refresh();
         }
 
-        private void add_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void clear_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void editmode_Click(object sender, EventArgs e)
-        {
-
-            
-        }
-
-        private void find_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void update_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addsupplierbtn_Click(object sender, EventArgs e)
         {
             opacity = new Opacity();

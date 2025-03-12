@@ -87,11 +87,11 @@
             this.addplatbox.BackColor = System.Drawing.Color.Gold;
             this.addplatbox.FlatAppearance.BorderSize = 0;
             this.addplatbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addplatbox.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addplatbox.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addplatbox.ForeColor = System.Drawing.Color.Black;
             this.addplatbox.Location = new System.Drawing.Point(40, 127);
             this.addplatbox.Name = "addplatbox";
-            this.addplatbox.Size = new System.Drawing.Size(76, 25);
+            this.addplatbox.Size = new System.Drawing.Size(81, 37);
             this.addplatbox.TabIndex = 55;
             this.addplatbox.Text = "Add";
             this.addplatbox.UseVisualStyleBackColor = false;

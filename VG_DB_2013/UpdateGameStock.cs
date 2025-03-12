@@ -215,6 +215,11 @@ namespace VG_DB_2013
             }
         }
 
+        private void clear_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

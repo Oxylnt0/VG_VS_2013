@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,6 @@
             this.refresh = new System.Windows.Forms.Button();
             this.salesgrid = new System.Windows.Forms.DataGridView();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -71,6 +71,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1440, 93);
             this.panel1.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(1363, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 34);
+            this.button2.TabIndex = 28;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
@@ -162,9 +175,9 @@
             this.addsalesbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addsalesbtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addsalesbtn.ForeColor = System.Drawing.Color.Black;
-            this.addsalesbtn.Location = new System.Drawing.Point(868, 21);
+            this.addsalesbtn.Location = new System.Drawing.Point(868, 3);
             this.addsalesbtn.Name = "addsalesbtn";
-            this.addsalesbtn.Size = new System.Drawing.Size(237, 44);
+            this.addsalesbtn.Size = new System.Drawing.Size(254, 44);
             this.addsalesbtn.TabIndex = 54;
             this.addsalesbtn.Text = "Add Sales";
             this.addsalesbtn.UseVisualStyleBackColor = false;
@@ -177,10 +190,10 @@
             this.sortby.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sortby.FormattingEnabled = true;
             this.sortby.Items.AddRange(new object[] {
-            "Sales Date - Ascending",
-            "Sales Date - Descending",
-            "Amount - Ascending",
-            "Amount - Descending"});
+            "Date - Newest",
+            "Date - Oldest",
+            "Amount - Highest",
+            "Amount - Lowest"});
             this.sortby.Location = new System.Drawing.Point(922, 106);
             this.sortby.Name = "sortby";
             this.sortby.Size = new System.Drawing.Size(183, 25);
@@ -208,9 +221,9 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(868, 627);
+            this.refresh.Location = new System.Drawing.Point(868, 640);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(237, 30);
+            this.refresh.Size = new System.Drawing.Size(254, 30);
             this.refresh.TabIndex = 40;
             this.refresh.Text = "Refresh Table";
             this.refresh.UseVisualStyleBackColor = false;
@@ -222,43 +235,43 @@
             this.salesgrid.AllowUserToDeleteRows = false;
             this.salesgrid.AllowUserToResizeColumns = false;
             this.salesgrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Lavender;
-            this.salesgrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.salesgrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.salesgrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.salesgrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.salesgrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.salesgrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.salesgrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.salesgrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.AntiqueWhite;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.salesgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AntiqueWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.salesgrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.salesgrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.salesgrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.salesgrid.EnableHeadersVisualStyles = false;
             this.salesgrid.GridColor = System.Drawing.Color.White;
-            this.salesgrid.Location = new System.Drawing.Point(18, 21);
+            this.salesgrid.Location = new System.Drawing.Point(3, 3);
             this.salesgrid.Name = "salesgrid";
             this.salesgrid.ReadOnly = true;
             this.salesgrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.salesgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.salesgrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.salesgrid.RowHeadersVisible = false;
             this.salesgrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
-            this.salesgrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.salesgrid.Size = new System.Drawing.Size(844, 636);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            this.salesgrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.salesgrid.Size = new System.Drawing.Size(859, 667);
             this.salesgrid.TabIndex = 5;
             // 
             // pictureBox6
@@ -271,19 +284,6 @@
             this.pictureBox6.Size = new System.Drawing.Size(282, 427);
             this.pictureBox6.TabIndex = 57;
             this.pictureBox6.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1363, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 34);
-            this.button2.TabIndex = 28;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Sales
             // 

@@ -32,7 +32,6 @@
             this.middlebox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.clear = new System.Windows.Forms.Button();
             this.firstbox = new System.Windows.Forms.TextBox();
             this.add = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,7 +55,6 @@
             this.panel4.Controls.Add(this.middlebox);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.clear);
             this.panel4.Controls.Add(this.firstbox);
             this.panel4.Controls.Add(this.add);
             this.panel4.Controls.Add(this.label7);
@@ -104,21 +102,6 @@
             this.label8.TabIndex = 36;
             this.label8.Text = "Middle Initial:";
             // 
-            // clear
-            // 
-            this.clear.BackColor = System.Drawing.Color.Gold;
-            this.clear.FlatAppearance.BorderSize = 0;
-            this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.ForeColor = System.Drawing.Color.Black;
-            this.clear.Location = new System.Drawing.Point(246, 332);
-            this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(76, 25);
-            this.clear.TabIndex = 39;
-            this.clear.Text = "Clear";
-            this.clear.UseVisualStyleBackColor = false;
-            this.clear.Click += new System.EventHandler(this.clear_Click);
-            // 
             // firstbox
             // 
             this.firstbox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -132,11 +115,11 @@
             this.add.BackColor = System.Drawing.Color.Gold;
             this.add.FlatAppearance.BorderSize = 0;
             this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add.ForeColor = System.Drawing.Color.Black;
             this.add.Location = new System.Drawing.Point(113, 332);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(76, 25);
+            this.add.Size = new System.Drawing.Size(88, 42);
             this.add.TabIndex = 38;
             this.add.Text = "Add";
             this.add.UseVisualStyleBackColor = false;
@@ -279,7 +262,6 @@
         private System.Windows.Forms.TextBox middlebox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button clear;
         private System.Windows.Forms.TextBox firstbox;
         private System.Windows.Forms.Button add;
         private System.Windows.Forms.Label label7;

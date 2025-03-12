@@ -101,22 +101,14 @@ namespace VG_DB_2013
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            find_admin_id.Text = "";
-            useredit.Text = "";
-            passedit.Text = "";
-            lastedit.Text = "";
-            firstedit.Text = "";
-            middleedit.Text = "";
-        }
-
         private void backbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
 
             opacity.Close();
         }
+
+
 
   
     }

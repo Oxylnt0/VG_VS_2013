@@ -99,16 +99,7 @@ namespace VG_DB_2013
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            find_custid.Text = "";
-            lastedit.Text = "";
-            firstedit.Text = "";
-            middleedit.Text = "";
-            emailedit.Text = "";
-            numberedit.Text = "";
-            addressedit.Text = "";
-        }
+
 
         private void delete_Click(object sender, EventArgs e)
         {

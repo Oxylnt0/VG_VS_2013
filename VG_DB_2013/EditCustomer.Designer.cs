@@ -32,6 +32,8 @@
             this.backbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.addressedit = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.find = new System.Windows.Forms.Button();
             this.numberedit = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -46,7 +48,6 @@
             this.lastedit = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -55,8 +56,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.delete_custid = new System.Windows.Forms.TextBox();
-            this.addressedit = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -122,12 +121,31 @@
             this.panel6.Controls.Add(this.lastedit);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.button5);
             this.panel6.Controls.Add(this.update);
             this.panel6.Location = new System.Drawing.Point(12, 61);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(383, 526);
             this.panel6.TabIndex = 52;
+            // 
+            // addressedit
+            // 
+            this.addressedit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressedit.Location = new System.Drawing.Point(131, 433);
+            this.addressedit.Name = "addressedit";
+            this.addressedit.Size = new System.Drawing.Size(209, 25);
+            this.addressedit.TabIndex = 50;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(56, 437);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 21);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Address:";
             // 
             // find
             // 
@@ -276,31 +294,16 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "Update Customer";
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Gold;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(264, 476);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(76, 25);
-            this.button5.TabIndex = 39;
-            this.button5.Text = "Clear";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // update
             // 
             this.update.BackColor = System.Drawing.Color.Gold;
             this.update.FlatAppearance.BorderSize = 0;
             this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.ForeColor = System.Drawing.Color.Black;
-            this.update.Location = new System.Drawing.Point(131, 476);
+            this.update.Location = new System.Drawing.Point(131, 477);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(76, 25);
+            this.update.Size = new System.Drawing.Size(87, 32);
             this.update.TabIndex = 38;
             this.update.Text = "Update";
             this.update.UseVisualStyleBackColor = false;
@@ -396,26 +399,6 @@
             this.delete_custid.Size = new System.Drawing.Size(209, 25);
             this.delete_custid.TabIndex = 41;
             // 
-            // addressedit
-            // 
-            this.addressedit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressedit.Location = new System.Drawing.Point(131, 433);
-            this.addressedit.Name = "addressedit";
-            this.addressedit.Size = new System.Drawing.Size(209, 25);
-            this.addressedit.TabIndex = 50;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(56, 437);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 21);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Address:";
-            // 
             // EditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,7 +441,6 @@
         private System.Windows.Forms.TextBox lastedit;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button update;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label11;

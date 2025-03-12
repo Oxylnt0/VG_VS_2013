@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -55,7 +56,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.supplierbox = new System.Windows.Forms.CheckedListBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,6 +82,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1440, 93);
             this.panel1.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(1363, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 34);
+            this.button2.TabIndex = 58;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox3
             // 
@@ -143,43 +156,43 @@
             this.purchasegrid.AllowUserToDeleteRows = false;
             this.purchasegrid.AllowUserToResizeColumns = false;
             this.purchasegrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Lavender;
-            this.purchasegrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lavender;
+            this.purchasegrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.purchasegrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.purchasegrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.purchasegrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.purchasegrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.purchasegrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.purchasegrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.AntiqueWhite;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.purchasegrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.AntiqueWhite;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.purchasegrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.purchasegrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.purchasegrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.purchasegrid.EnableHeadersVisualStyles = false;
             this.purchasegrid.GridColor = System.Drawing.Color.White;
-            this.purchasegrid.Location = new System.Drawing.Point(17, 17);
+            this.purchasegrid.Location = new System.Drawing.Point(3, 4);
             this.purchasegrid.Name = "purchasegrid";
             this.purchasegrid.ReadOnly = true;
             this.purchasegrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.purchasegrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.purchasegrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.purchasegrid.RowHeadersVisible = false;
             this.purchasegrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
-            this.purchasegrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.purchasegrid.Size = new System.Drawing.Size(831, 637);
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
+            this.purchasegrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.purchasegrid.Size = new System.Drawing.Size(845, 666);
             this.purchasegrid.TabIndex = 5;
             // 
             // panel3
@@ -203,9 +216,9 @@
             this.addpurchasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addpurchasebtn.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addpurchasebtn.ForeColor = System.Drawing.Color.Black;
-            this.addpurchasebtn.Location = new System.Drawing.Point(854, 17);
+            this.addpurchasebtn.Location = new System.Drawing.Point(854, 4);
             this.addpurchasebtn.Name = "addpurchasebtn";
-            this.addpurchasebtn.Size = new System.Drawing.Size(230, 44);
+            this.addpurchasebtn.Size = new System.Drawing.Size(248, 44);
             this.addpurchasebtn.TabIndex = 54;
             this.addpurchasebtn.Text = "Add Purchases";
             this.addpurchasebtn.UseVisualStyleBackColor = false;
@@ -218,9 +231,9 @@
             this.updategamestock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updategamestock.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updategamestock.ForeColor = System.Drawing.Color.Black;
-            this.updategamestock.Location = new System.Drawing.Point(854, 67);
+            this.updategamestock.Location = new System.Drawing.Point(854, 54);
             this.updategamestock.Name = "updategamestock";
-            this.updategamestock.Size = new System.Drawing.Size(230, 44);
+            this.updategamestock.Size = new System.Drawing.Size(248, 44);
             this.updategamestock.TabIndex = 55;
             this.updategamestock.Text = "Update Game Stock";
             this.updategamestock.UseVisualStyleBackColor = false;
@@ -233,9 +246,9 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(854, 624);
+            this.refresh.Location = new System.Drawing.Point(854, 640);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(230, 30);
+            this.refresh.Size = new System.Drawing.Size(248, 30);
             this.refresh.TabIndex = 40;
             this.refresh.Text = "Refresh Table";
             this.refresh.UseVisualStyleBackColor = false;
@@ -254,7 +267,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel5.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel5.Controls.Add(this.clearbtn);
             this.panel5.Controls.Add(this.applybtn);
             this.panel5.Controls.Add(this.sortby);
@@ -301,8 +314,10 @@
             this.sortby.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sortby.FormattingEnabled = true;
             this.sortby.Items.AddRange(new object[] {
-            "Newest",
-            "Oldest"});
+            "Date - Newest",
+            "Date - Oldest",
+            "Amount - Highest",
+            "Amount - Lowest"});
             this.sortby.Location = new System.Drawing.Point(70, 13);
             this.sortby.Name = "sortby";
             this.sortby.Size = new System.Drawing.Size(133, 25);
@@ -324,7 +339,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.flowLayoutPanel1.Controls.Add(this.label3);
             this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.label5);
@@ -385,19 +400,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1363, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 34);
-            this.button2.TabIndex = 58;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Purchases
             // 

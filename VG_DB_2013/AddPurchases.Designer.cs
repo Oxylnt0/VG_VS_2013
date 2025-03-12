@@ -39,14 +39,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.pricebox = new System.Windows.Forms.TextBox();
             this.qtybox = new System.Windows.Forms.NumericUpDown();
             this.suppliercombo = new System.Windows.Forms.ComboBox();
-            this.clear = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -54,11 +53,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.backbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.add = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qtybox)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel6
@@ -82,7 +81,6 @@
             this.panel6.Controls.Add(this.pricebox);
             this.panel6.Controls.Add(this.qtybox);
             this.panel6.Controls.Add(this.suppliercombo);
-            this.panel6.Controls.Add(this.clear);
             this.panel6.Controls.Add(this.add);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.label9);
@@ -210,6 +208,19 @@
             this.label8.TabIndex = 47;
             this.label8.Text = "Insert Picture:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox1.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_insert_48;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(113, 388);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 211);
+            this.pictureBox1.TabIndex = 46;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -267,36 +278,6 @@
             this.suppliercombo.Name = "suppliercombo";
             this.suppliercombo.Size = new System.Drawing.Size(209, 25);
             this.suppliercombo.TabIndex = 27;
-            // 
-            // clear
-            // 
-            this.clear.BackColor = System.Drawing.Color.Gold;
-            this.clear.FlatAppearance.BorderSize = 0;
-            this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.ForeColor = System.Drawing.Color.Black;
-            this.clear.Location = new System.Drawing.Point(237, 619);
-            this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(76, 25);
-            this.clear.TabIndex = 39;
-            this.clear.Text = "Clear";
-            this.clear.UseVisualStyleBackColor = false;
-            this.clear.Click += new System.EventHandler(this.clear_Click);
-            // 
-            // add
-            // 
-            this.add.BackColor = System.Drawing.Color.Gold;
-            this.add.FlatAppearance.BorderSize = 0;
-            this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.ForeColor = System.Drawing.Color.Black;
-            this.add.Location = new System.Drawing.Point(113, 619);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(76, 25);
-            this.add.TabIndex = 38;
-            this.add.Text = "Add";
-            this.add.UseVisualStyleBackColor = false;
-            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // label6
             // 
@@ -382,17 +363,20 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Add Purchases";
             // 
-            // pictureBox1
+            // add
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox1.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_insert_48;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(113, 388);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 211);
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.add.BackColor = System.Drawing.Color.Gold;
+            this.add.FlatAppearance.BorderSize = 0;
+            this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add.ForeColor = System.Drawing.Color.Black;
+            this.add.Location = new System.Drawing.Point(113, 617);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(95, 34);
+            this.add.TabIndex = 38;
+            this.add.Text = "Add";
+            this.add.UseVisualStyleBackColor = false;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // AddPurchases
             // 
@@ -408,10 +392,10 @@
             this.Load += new System.EventHandler(this.AddPurchases_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qtybox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,8 +414,6 @@
         private System.Windows.Forms.TextBox pricebox;
         private System.Windows.Forms.NumericUpDown qtybox;
         private System.Windows.Forms.ComboBox suppliercombo;
-        private System.Windows.Forms.Button clear;
-        private System.Windows.Forms.Button add;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
@@ -445,6 +427,7 @@
         private System.Windows.Forms.LinkLabel addnewgenre;
         private System.Windows.Forms.LinkLabel addnewdev;
         private System.Windows.Forms.LinkLabel addnewplatform;
+        private System.Windows.Forms.Button add;
 
     }
 }

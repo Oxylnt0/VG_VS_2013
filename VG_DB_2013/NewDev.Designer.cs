@@ -43,11 +43,11 @@
             this.adddevbox.BackColor = System.Drawing.Color.Gold;
             this.adddevbox.FlatAppearance.BorderSize = 0;
             this.adddevbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adddevbox.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adddevbox.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adddevbox.ForeColor = System.Drawing.Color.Black;
             this.adddevbox.Location = new System.Drawing.Point(41, 126);
             this.adddevbox.Name = "adddevbox";
-            this.adddevbox.Size = new System.Drawing.Size(76, 25);
+            this.adddevbox.Size = new System.Drawing.Size(80, 35);
             this.adddevbox.TabIndex = 63;
             this.adddevbox.Text = "Add";
             this.adddevbox.UseVisualStyleBackColor = false;

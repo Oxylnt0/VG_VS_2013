@@ -61,6 +61,13 @@ namespace VG_DB_2013
         private void Customers_Load(object sender, EventArgs e)
         {
             this.BindData();
+            this.customergrid.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.customergrid.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.customergrid.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.customergrid.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.customergrid.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.customergrid.Columns[5].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.customergrid.Columns[6].SortMode = DataGridViewColumnSortMode.NotSortable;
         }
 
         private void editcustbtn_Click(object sender, EventArgs e)

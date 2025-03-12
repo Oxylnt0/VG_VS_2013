@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.search = new System.Windows.Forms.TextBox();
             this.AdminGrid = new System.Windows.Forms.DataGridView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -77,16 +77,18 @@
             this.panel1.Size = new System.Drawing.Size(1440, 93);
             this.panel1.TabIndex = 4;
             // 
-            // button1
+            // button2
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1403, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 34);
-            this.button1.TabIndex = 22;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button2.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(1363, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 34);
+            this.button2.TabIndex = 58;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox3
             // 
@@ -130,6 +132,17 @@
             this.button3.TabIndex = 23;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(1403, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 34);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // MainPanel
             // 
@@ -184,7 +197,7 @@
             this.addadminbtn.ForeColor = System.Drawing.Color.Black;
             this.addadminbtn.Location = new System.Drawing.Point(823, 40);
             this.addadminbtn.Name = "addadminbtn";
-            this.addadminbtn.Size = new System.Drawing.Size(248, 44);
+            this.addadminbtn.Size = new System.Drawing.Size(269, 44);
             this.addadminbtn.TabIndex = 54;
             this.addadminbtn.Text = "Add Admin";
             this.addadminbtn.UseVisualStyleBackColor = false;
@@ -228,7 +241,7 @@
             this.editadminbtn.ForeColor = System.Drawing.Color.Black;
             this.editadminbtn.Location = new System.Drawing.Point(823, 90);
             this.editadminbtn.Name = "editadminbtn";
-            this.editadminbtn.Size = new System.Drawing.Size(248, 44);
+            this.editadminbtn.Size = new System.Drawing.Size(269, 44);
             this.editadminbtn.TabIndex = 55;
             this.editadminbtn.Text = "Edit Admin";
             this.editadminbtn.UseVisualStyleBackColor = false;
@@ -241,9 +254,9 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(823, 618);
+            this.refresh.Location = new System.Drawing.Point(823, 640);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(248, 30);
+            this.refresh.Size = new System.Drawing.Size(269, 30);
             this.refresh.TabIndex = 39;
             this.refresh.Text = "Refresh Table";
             this.refresh.UseVisualStyleBackColor = false;
@@ -256,7 +269,7 @@
             this.searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchbtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchbtn.ForeColor = System.Drawing.Color.Black;
-            this.searchbtn.Location = new System.Drawing.Point(293, 9);
+            this.searchbtn.Location = new System.Drawing.Point(270, 9);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(76, 25);
             this.searchbtn.TabIndex = 25;
@@ -267,7 +280,7 @@
             // search
             // 
             this.search.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(26, 9);
+            this.search.Location = new System.Drawing.Point(3, 9);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(261, 25);
             this.search.TabIndex = 26;
@@ -278,43 +291,43 @@
             this.AdminGrid.AllowUserToDeleteRows = false;
             this.AdminGrid.AllowUserToResizeColumns = false;
             this.AdminGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Lavender;
-            this.AdminGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Lavender;
+            this.AdminGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.AdminGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.AdminGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.AdminGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.AdminGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.AdminGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.AdminGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.AntiqueWhite;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AdminGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.AntiqueWhite;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AdminGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.AdminGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AdminGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.AdminGrid.EnableHeadersVisualStyles = false;
             this.AdminGrid.GridColor = System.Drawing.Color.White;
-            this.AdminGrid.Location = new System.Drawing.Point(26, 40);
+            this.AdminGrid.Location = new System.Drawing.Point(3, 40);
             this.AdminGrid.Name = "AdminGrid";
             this.AdminGrid.ReadOnly = true;
             this.AdminGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AdminGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AdminGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.AdminGrid.RowHeadersVisible = false;
             this.AdminGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
-            this.AdminGrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.AdminGrid.Size = new System.Drawing.Size(791, 608);
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
+            this.AdminGrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.AdminGrid.Size = new System.Drawing.Size(814, 630);
             this.AdminGrid.TabIndex = 5;
             // 
             // pictureBox5
@@ -327,19 +340,6 @@
             this.pictureBox5.Size = new System.Drawing.Size(430, 506);
             this.pictureBox5.TabIndex = 57;
             this.pictureBox5.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1363, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 34);
-            this.button2.TabIndex = 58;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AdminForm
             // 

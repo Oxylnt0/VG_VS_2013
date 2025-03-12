@@ -24,6 +24,13 @@ namespace VG_DB_2013
         private void Sales_Load(object sender, EventArgs e)
         {
             this.BindData();
+            this.salesgrid.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.salesgrid.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.salesgrid.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.salesgrid.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.salesgrid.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.salesgrid.Columns[5].SortMode = DataGridViewColumnSortMode.NotSortable;
+
         }
 
         private string query = "select CONCAT(Game_Customers.First_Name, ' ', Game_Customers.Middle_Initial, '. ', Game_Customers.Last_Name) AS Full_Name, Games.Game_Name, Sale_QTY, Total_Amount_Sales, Payment_Method, Sales_Date from Games_Sales inner join Games on Games_Sales.Game_ID=Games.Game_ID inner join Game_Customers on Games_Sales.Customer_ID=Game_Customers.Customer_ID where 1=1";
@@ -47,7 +54,15 @@ namespace VG_DB_2013
                 salesgrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Customer Name", DataPropertyName = "Full_Name" });
                 salesgrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Game Title", DataPropertyName = "Game_Name" });
                 salesgrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Quantity", DataPropertyName = "Sale_QTY" });
-                salesgrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Total Amount", DataPropertyName = "Total_Amount_Sales" });
+
+                var totalColumn = new DataGridViewTextBoxColumn
+                {
+                    HeaderText = "Total Amount",
+                    DataPropertyName = "Total_Amount_Sales",
+                    DefaultCellStyle = { Format = "C2", FormatProvider = new System.Globalization.CultureInfo("en-PH") }
+                };
+                salesgrid.Columns.Add(totalColumn);
+
                 salesgrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Payment Method", DataPropertyName = "Payment_Method" });
                 salesgrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Date of Sale", DataPropertyName = "Sales_Date" });
 
@@ -69,22 +84,22 @@ namespace VG_DB_2013
                 sortby.SelectedValue = null;
             }
 
-            else if (sortby.SelectedItem.ToString() == "Sales Date - Ascending")
-            {
-                query += " order by Sales_Date asc";
-            }
-
-            else if (sortby.SelectedItem.ToString() == "Sales Date - Descending")
+            else if (sortby.SelectedItem.ToString() == "Date - Newest")
             {
                 query += " order by Sales_Date desc";
             }
 
-            else if (sortby.SelectedItem.ToString() == "Amount - Ascending")
+            else if (sortby.SelectedItem.ToString() == "Date - Oldest")
+            {
+                query += " order by Sales_Date asc";
+            }
+
+            else if (sortby.SelectedItem.ToString() == "Amount - Highest")
             {
                 query += " order by Total_Amount_Sales asc";
             }
 
-            else if (sortby.SelectedItem.ToString() == "Amount - Descending")
+            else if (sortby.SelectedItem.ToString() == "Amount - Lowest")
             {
                 query += " order by Total_Amount_Sales desc";
             }
@@ -123,6 +138,8 @@ namespace VG_DB_2013
                 mainForm.WindowState = FormWindowState.Minimized;
             }
         }
+
+     
 
 
     }

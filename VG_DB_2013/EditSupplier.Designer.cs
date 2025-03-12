@@ -44,7 +44,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.find_supplier_id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -114,7 +113,6 @@
             this.panel6.Controls.Add(this.label17);
             this.panel6.Controls.Add(this.find_supplier_id);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.button5);
             this.panel6.Controls.Add(this.update);
             this.panel6.Location = new System.Drawing.Point(12, 61);
             this.panel6.Name = "panel6";
@@ -248,31 +246,16 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "Update Supplier";
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Gold;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(265, 358);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(76, 25);
-            this.button5.TabIndex = 39;
-            this.button5.Text = "Clear";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // update
             // 
             this.update.BackColor = System.Drawing.Color.Gold;
             this.update.FlatAppearance.BorderSize = 0;
             this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.ForeColor = System.Drawing.Color.Black;
-            this.update.Location = new System.Drawing.Point(132, 358);
+            this.update.Location = new System.Drawing.Point(132, 349);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(76, 25);
+            this.update.Size = new System.Drawing.Size(98, 37);
             this.update.TabIndex = 38;
             this.update.Text = "Update";
             this.update.UseVisualStyleBackColor = false;
@@ -408,7 +391,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox find_supplier_id;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button update;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label11;

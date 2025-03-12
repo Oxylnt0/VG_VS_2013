@@ -38,14 +38,6 @@ namespace VG_DB_2013
             MessageBox.Show("Supplier Added", "Game Suppliers", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void clear_Click(object sender, EventArgs e)
-        {
-            suppliernamebox.Text = "";
-            emailbox.Text = "";
-            numberbox.Text = "";
-            addressbox.Text = "";
-        }
-
         private void backbtn_Click(object sender, EventArgs e)
         {
             this.Hide();

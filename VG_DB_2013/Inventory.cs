@@ -39,6 +39,13 @@ namespace VG_DB_2013
         private void Inventory_Load(object sender, EventArgs e)
         {
             this.BindData();
+            this.InventoryGrid.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.InventoryGrid.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.InventoryGrid.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.InventoryGrid.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.InventoryGrid.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.InventoryGrid.Columns[5].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.InventoryGrid.Columns[6].SortMode = DataGridViewColumnSortMode.NotSortable;
         }
 
         public void BindData()
@@ -82,7 +89,15 @@ namespace VG_DB_2013
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Game ID", DataPropertyName = "Game_ID" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Game Name", DataPropertyName = "Game_Name" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Stock", DataPropertyName = "Games_Stock" });
-                InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Price", DataPropertyName = "Price" });
+
+                var priceColumn = new DataGridViewTextBoxColumn
+                {
+                    HeaderText = "Price",
+                    DataPropertyName = "Price",
+                    DefaultCellStyle = { Format = "C2", FormatProvider = new System.Globalization.CultureInfo("en-PH") }
+                };
+                InventoryGrid.Columns.Add(priceColumn);
+
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Platform", DataPropertyName = "Platform_Name" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Developer", DataPropertyName = "Developer_Name" });
                 InventoryGrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Genre", DataPropertyName = "Genre_Name" });
@@ -172,13 +187,13 @@ namespace VG_DB_2013
 
             }
 
-            else if (sortby.SelectedItem.ToString() == "Price - Ascending")
+            else if (sortby.SelectedItem.ToString() == "Price - Highest")
             {
                 query += " order by Price asc";
 
             }
 
-            else if (sortby.SelectedItem.ToString() == "Price - Descending")
+            else if (sortby.SelectedItem.ToString() == "Price - Lowest")
             {
                 query += " order by Price desc";
 
@@ -193,7 +208,16 @@ namespace VG_DB_2013
             else if (sortby.SelectedItem.ToString() == "Game ID - Descending")
             {
                 query += " order by Game_ID desc";
+            }
 
+            else if (sortby.SelectedItem.ToString() == "Stock - Highest")
+            {
+                query += " order by Games_Stock asc";
+            }
+
+            else if (sortby.SelectedItem.ToString() == "Stock - Lowest")
+            {
+                query += " order by Games_Stock desc";
             }
 
             this.BindData();

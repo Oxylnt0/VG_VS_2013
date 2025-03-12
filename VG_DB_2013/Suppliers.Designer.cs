@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,7 +50,6 @@
             this.search = new System.Windows.Forms.TextBox();
             this.suppliergrid = new System.Windows.Forms.DataGridView();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,6 +74,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1440, 93);
             this.panel1.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(1363, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 34);
+            this.button2.TabIndex = 57;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox3
             // 
@@ -170,7 +183,7 @@
             this.editsupplierbtn.ForeColor = System.Drawing.Color.Black;
             this.editsupplierbtn.Location = new System.Drawing.Point(842, 90);
             this.editsupplierbtn.Name = "editsupplierbtn";
-            this.editsupplierbtn.Size = new System.Drawing.Size(248, 44);
+            this.editsupplierbtn.Size = new System.Drawing.Size(268, 44);
             this.editsupplierbtn.TabIndex = 55;
             this.editsupplierbtn.Text = "Edit Suppliers";
             this.editsupplierbtn.UseVisualStyleBackColor = false;
@@ -214,7 +227,7 @@
             this.addsupplierbtn.ForeColor = System.Drawing.Color.Black;
             this.addsupplierbtn.Location = new System.Drawing.Point(842, 40);
             this.addsupplierbtn.Name = "addsupplierbtn";
-            this.addsupplierbtn.Size = new System.Drawing.Size(248, 44);
+            this.addsupplierbtn.Size = new System.Drawing.Size(268, 44);
             this.addsupplierbtn.TabIndex = 54;
             this.addsupplierbtn.Text = "Add Suppliers";
             this.addsupplierbtn.UseVisualStyleBackColor = false;
@@ -227,9 +240,9 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.Black;
-            this.refresh.Location = new System.Drawing.Point(842, 618);
+            this.refresh.Location = new System.Drawing.Point(842, 640);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(248, 30);
+            this.refresh.Size = new System.Drawing.Size(268, 30);
             this.refresh.TabIndex = 39;
             this.refresh.Text = "Refresh Table";
             this.refresh.UseVisualStyleBackColor = false;
@@ -242,7 +255,7 @@
             this.searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchbtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchbtn.ForeColor = System.Drawing.Color.Black;
-            this.searchbtn.Location = new System.Drawing.Point(271, 10);
+            this.searchbtn.Location = new System.Drawing.Point(252, 10);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(76, 24);
             this.searchbtn.TabIndex = 25;
@@ -253,7 +266,7 @@
             // search
             // 
             this.search.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(22, 9);
+            this.search.Location = new System.Drawing.Point(3, 9);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(243, 25);
             this.search.TabIndex = 26;
@@ -264,43 +277,43 @@
             this.suppliergrid.AllowUserToDeleteRows = false;
             this.suppliergrid.AllowUserToResizeColumns = false;
             this.suppliergrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Lavender;
-            this.suppliergrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.suppliergrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.suppliergrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.suppliergrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.suppliergrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.suppliergrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.suppliergrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.suppliergrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.AntiqueWhite;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.suppliergrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AntiqueWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.suppliergrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.suppliergrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.suppliergrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.suppliergrid.EnableHeadersVisualStyles = false;
             this.suppliergrid.GridColor = System.Drawing.Color.White;
-            this.suppliergrid.Location = new System.Drawing.Point(22, 40);
+            this.suppliergrid.Location = new System.Drawing.Point(3, 40);
             this.suppliergrid.Name = "suppliergrid";
             this.suppliergrid.ReadOnly = true;
             this.suppliergrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.suppliergrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.suppliergrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.suppliergrid.RowHeadersVisible = false;
             this.suppliergrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
-            this.suppliergrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.suppliergrid.Size = new System.Drawing.Size(814, 608);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            this.suppliergrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.suppliergrid.Size = new System.Drawing.Size(833, 630);
             this.suppliergrid.TabIndex = 5;
             // 
             // pictureBox4
@@ -313,19 +326,6 @@
             this.pictureBox4.Size = new System.Drawing.Size(248, 413);
             this.pictureBox4.TabIndex = 56;
             this.pictureBox4.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1363, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(34, 34);
-            this.button2.TabIndex = 57;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Suppliers
             // 

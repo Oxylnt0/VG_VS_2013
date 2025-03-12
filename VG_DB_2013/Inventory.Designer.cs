@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,7 +57,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.genrebox = new System.Windows.Forms.CheckedListBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -82,6 +82,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1440, 93);
             this.panel1.TabIndex = 3;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(1363, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(34, 34);
+            this.button4.TabIndex = 27;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox2
             // 
@@ -142,18 +155,20 @@
             // 
             this.sortby.BackColor = System.Drawing.Color.White;
             this.sortby.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sortby.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortby.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sortby.FormattingEnabled = true;
             this.sortby.Items.AddRange(new object[] {
             "Name - Ascending",
             "Name - Descending",
-            "Price - Ascending",
-            "Price - Descending",
+            "Price - Highest",
+            "Price - Lowest",
             "Game ID - Ascending",
-            "Game ID - Descending"});
+            "Game ID - Descending",
+            "Stock - Highest",
+            "Stock - Lowest"});
             this.sortby.Location = new System.Drawing.Point(60, 10);
             this.sortby.Name = "sortby";
-            this.sortby.Size = new System.Drawing.Size(133, 21);
+            this.sortby.Size = new System.Drawing.Size(153, 25);
             this.sortby.TabIndex = 2;
             // 
             // label2
@@ -163,7 +178,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 6);
+            this.label2.Location = new System.Drawing.Point(8, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 25);
             this.label2.TabIndex = 3;
@@ -204,43 +219,43 @@
             this.InventoryGrid.AllowUserToDeleteRows = false;
             this.InventoryGrid.AllowUserToResizeColumns = false;
             this.InventoryGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Lavender;
-            this.InventoryGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
+            this.InventoryGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.InventoryGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.InventoryGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.InventoryGrid.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.InventoryGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.InventoryGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.InventoryGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.AntiqueWhite;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.InventoryGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AntiqueWhite;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.InventoryGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.InventoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InventoryGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.InventoryGrid.EnableHeadersVisualStyles = false;
             this.InventoryGrid.GridColor = System.Drawing.Color.White;
-            this.InventoryGrid.Location = new System.Drawing.Point(15, 40);
+            this.InventoryGrid.Location = new System.Drawing.Point(3, 40);
             this.InventoryGrid.Name = "InventoryGrid";
             this.InventoryGrid.ReadOnly = true;
             this.InventoryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.InventoryGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.InventoryGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.InventoryGrid.RowHeadersVisible = false;
             this.InventoryGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(5);
-            this.InventoryGrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.InventoryGrid.Size = new System.Drawing.Size(1161, 618);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            this.InventoryGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.InventoryGrid.Size = new System.Drawing.Size(1185, 630);
             this.InventoryGrid.TabIndex = 4;
             // 
             // label5
@@ -285,7 +300,7 @@
             // search
             // 
             this.search.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(15, 9);
+            this.search.Location = new System.Drawing.Point(3, 8);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(380, 25);
             this.search.TabIndex = 24;
@@ -297,7 +312,7 @@
             this.searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchbtn.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchbtn.ForeColor = System.Drawing.Color.Black;
-            this.searchbtn.Location = new System.Drawing.Point(401, 9);
+            this.searchbtn.Location = new System.Drawing.Point(389, 9);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(76, 25);
             this.searchbtn.TabIndex = 24;
@@ -322,7 +337,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.label3);
             this.flowLayoutPanel1.Controls.Add(this.panel3);
@@ -405,19 +420,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1193, 675);
             this.panel2.TabIndex = 27;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::VG_DB_2013.Properties.Resources.icons8_minimize2_50;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(1363, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(34, 34);
-            this.button4.TabIndex = 27;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Inventory
             // 

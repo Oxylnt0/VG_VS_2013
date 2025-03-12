@@ -43,11 +43,11 @@
             this.addgenbox.BackColor = System.Drawing.Color.Gold;
             this.addgenbox.FlatAppearance.BorderSize = 0;
             this.addgenbox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addgenbox.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addgenbox.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addgenbox.ForeColor = System.Drawing.Color.Black;
             this.addgenbox.Location = new System.Drawing.Point(45, 127);
             this.addgenbox.Name = "addgenbox";
-            this.addgenbox.Size = new System.Drawing.Size(76, 25);
+            this.addgenbox.Size = new System.Drawing.Size(87, 37);
             this.addgenbox.TabIndex = 59;
             this.addgenbox.Text = "Add";
             this.addgenbox.UseVisualStyleBackColor = false;

@@ -33,6 +33,12 @@ namespace VG_DB_2013
         private void Purchases_Load(object sender, EventArgs e)
         {
             this.BindData();
+            this.purchasegrid.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.purchasegrid.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.purchasegrid.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.purchasegrid.Columns[3].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.purchasegrid.Columns[4].SortMode = DataGridViewColumnSortMode.NotSortable;
+            this.purchasegrid.Columns[5].SortMode = DataGridViewColumnSortMode.NotSortable;
         }
 
         private string query = "select Purchase_ID, Game_Suppliers.Supplier_Name, Games.Game_Name, Purchase_QTY, Total_Amount_Purchases, Purchase_Date from Game_Purchases inner join Games on Game_Purchases.Game_ID=Games.Game_ID inner join Game_Suppliers on Game_Purchases.Supplier_ID=Game_Suppliers.Supplier_ID where 1=1";
@@ -57,7 +63,15 @@ namespace VG_DB_2013
                 purchasegrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Supplier", DataPropertyName = "Supplier_Name" });
                 purchasegrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Game Title", DataPropertyName = "Game_Name" });
                 purchasegrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Purchase Quantity", DataPropertyName = "Purchase_QTY" });
-                purchasegrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Total Amount", DataPropertyName = "Total_Amount_Purchases" });
+
+                var totalColumn = new DataGridViewTextBoxColumn
+                {
+                    HeaderText = "Total Amount",
+                    DataPropertyName = "Total_Amount_Purchases",
+                    DefaultCellStyle = { Format = "C2", FormatProvider = new System.Globalization.CultureInfo("en-PH") }
+                };
+                purchasegrid.Columns.Add(totalColumn);
+
                 purchasegrid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Purchases Date", DataPropertyName = "Purchase_Date" });
 
                 purchasegrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -85,15 +99,24 @@ namespace VG_DB_2013
                 sortby.SelectedValue = null;
             }
 
-            else if (sortby.SelectedItem.ToString() == "Newest")
+            else if (sortby.SelectedItem.ToString() == "Date - Newest")
             {
                 query += " order by Purchase_Date desc";
             }
 
-            else if (sortby.SelectedItem.ToString() == "Oldest")
+            else if (sortby.SelectedItem.ToString() == "Date - Oldest")
             {
                 query += " order by Purchase_Date asc";
+            }
 
+            else if (sortby.SelectedItem.ToString() == "Amount - Highest")
+            {
+                query += " order by Total_Amount_Purchases desc";
+            }
+
+            else if (sortby.SelectedItem.ToString() == "Amount - Lowest")
+            {
+                query += " order by Total_Amount_Purchases asc";
             }
 
             this.BindData();
