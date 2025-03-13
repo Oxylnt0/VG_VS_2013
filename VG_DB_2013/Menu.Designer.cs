@@ -66,7 +66,7 @@
             this.logoutbtn.ForeColor = System.Drawing.Color.White;
             this.logoutbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_logout_50;
             this.logoutbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.logoutbtn.Location = new System.Drawing.Point(986, 10);
+            this.logoutbtn.Location = new System.Drawing.Point(998, 10);
             this.logoutbtn.Name = "logoutbtn";
             this.logoutbtn.Size = new System.Drawing.Size(101, 92);
             this.logoutbtn.TabIndex = 7;
@@ -84,7 +84,7 @@
             this.adminbtn.ForeColor = System.Drawing.Color.White;
             this.adminbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_admin_50;
             this.adminbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.adminbtn.Location = new System.Drawing.Point(879, 10);
+            this.adminbtn.Location = new System.Drawing.Point(891, 10);
             this.adminbtn.Name = "adminbtn";
             this.adminbtn.Size = new System.Drawing.Size(101, 92);
             this.adminbtn.TabIndex = 6;
@@ -102,7 +102,7 @@
             this.suppliersbtn.ForeColor = System.Drawing.Color.White;
             this.suppliersbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_supplier_50;
             this.suppliersbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.suppliersbtn.Location = new System.Drawing.Point(772, 10);
+            this.suppliersbtn.Location = new System.Drawing.Point(784, 10);
             this.suppliersbtn.Name = "suppliersbtn";
             this.suppliersbtn.Size = new System.Drawing.Size(101, 92);
             this.suppliersbtn.TabIndex = 5;
@@ -120,7 +120,7 @@
             this.purchasesbtn.ForeColor = System.Drawing.Color.White;
             this.purchasesbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_purchases_50;
             this.purchasesbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.purchasesbtn.Location = new System.Drawing.Point(665, 10);
+            this.purchasesbtn.Location = new System.Drawing.Point(677, 10);
             this.purchasesbtn.Name = "purchasesbtn";
             this.purchasesbtn.Size = new System.Drawing.Size(101, 92);
             this.purchasesbtn.TabIndex = 4;
@@ -138,7 +138,7 @@
             this.customersbtn.ForeColor = System.Drawing.Color.White;
             this.customersbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_Customerss_50;
             this.customersbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.customersbtn.Location = new System.Drawing.Point(558, 10);
+            this.customersbtn.Location = new System.Drawing.Point(570, 10);
             this.customersbtn.Name = "customersbtn";
             this.customersbtn.Size = new System.Drawing.Size(101, 92);
             this.customersbtn.TabIndex = 3;
@@ -156,7 +156,7 @@
             this.salesbtn.ForeColor = System.Drawing.Color.White;
             this.salesbtn.Image = global::VG_DB_2013.Properties.Resources.icons8_sales_50;
             this.salesbtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.salesbtn.Location = new System.Drawing.Point(451, 10);
+            this.salesbtn.Location = new System.Drawing.Point(463, 10);
             this.salesbtn.Name = "salesbtn";
             this.salesbtn.Size = new System.Drawing.Size(101, 92);
             this.salesbtn.TabIndex = 2;
@@ -174,7 +174,7 @@
             this.inventorybtn.ForeColor = System.Drawing.Color.White;
             this.inventorybtn.Image = global::VG_DB_2013.Properties.Resources.icons8_inventory_50;
             this.inventorybtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.inventorybtn.Location = new System.Drawing.Point(344, 10);
+            this.inventorybtn.Location = new System.Drawing.Point(356, 10);
             this.inventorybtn.Name = "inventorybtn";
             this.inventorybtn.Size = new System.Drawing.Size(101, 92);
             this.inventorybtn.TabIndex = 1;
