@@ -85,6 +85,12 @@ namespace VG_DB_2013
 
         private void game_id_search_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(game_id.Text))
+            {
+                MessageBox.Show("Enter Game ID!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             FetchGameName(Convert.ToInt32(game_id.Text));
         }
 
@@ -163,7 +169,6 @@ namespace VG_DB_2013
                 {
                     conn.Open();
 
-                    // Step 1: Get the current stock
                     string selectQuery = "SELECT Games_Stock FROM Games_Inventory WHERE Game_ID = @GameID";
                     int currentStock = 0;
 
@@ -182,21 +187,19 @@ namespace VG_DB_2013
                         }
                     }
 
-                    // Step 2: Check if there's enough stock
                     if (currentStock < salesQty)
                     {
                         MessageBox.Show("Not enough stock available!", "Stock Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
-                    // Step 3: Update the stock
                     string updateQuery = "UPDATE Games_Inventory SET Games_Stock = Games_Stock - @SalesQty WHERE Game_ID = @GameID";
 
                     using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@GameID", gameId);
                         cmd.Parameters.AddWithValue("@SalesQty", salesQty);
-                        cmd.ExecuteNonQuery(); // Execute update
+                        cmd.ExecuteNonQuery();
                     }
 
                     string insertQuery = "insert into Games_Sales values (@GameID, @CustomerID, @qty, @amount, @payment_method, @date)";
@@ -209,7 +212,7 @@ namespace VG_DB_2013
                         cmd.Parameters.AddWithValue("@amount", totalamount);
                         cmd.Parameters.AddWithValue("@payment_method", paymethod);
                         cmd.Parameters.AddWithValue("@date", saledate);
-                        cmd.ExecuteNonQuery(); // Execute update
+                        cmd.ExecuteNonQuery(); 
                     }
 
                     MessageBox.Show("Stock updated and Game Sale Added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -224,6 +227,18 @@ namespace VG_DB_2013
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(game_id.Text) ||
+              string.IsNullOrWhiteSpace(game_name.Text) ||
+              string.IsNullOrWhiteSpace(price.Text) ||
+              string.IsNullOrWhiteSpace(game_qty.Text) ||
+              string.IsNullOrWhiteSpace(total_amount.Text) ||
+              string.IsNullOrWhiteSpace(cust_id.Text) ||
+              string.IsNullOrWhiteSpace(payment_method.Text))
+            {
+                MessageBox.Show("All Fields Required", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
            decimal salesQty = game_qty.Value;
            string payment = payment_method.Text;
            DateTime dateofsale = date.Value;

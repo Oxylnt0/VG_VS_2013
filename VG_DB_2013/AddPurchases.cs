@@ -32,6 +32,18 @@ namespace VG_DB_2013
 
         private void add_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(suppliercombo.Text) ||
+             string.IsNullOrWhiteSpace(gamenamebox.Text) ||
+             string.IsNullOrWhiteSpace(pricebox.Text) ||
+             string.IsNullOrWhiteSpace(platformcombo.Text) ||
+             string.IsNullOrWhiteSpace(developercombo.Text) ||
+             string.IsNullOrWhiteSpace(genrecombo.Text) ||
+             string.IsNullOrWhiteSpace(qtybox.Text))
+            {
+                MessageBox.Show("All Fields Required", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string game_name = gamenamebox.Text;
             double price = Convert.ToDouble(pricebox.Text);
             int platform = Convert.ToInt32(platformcombo.SelectedValue);

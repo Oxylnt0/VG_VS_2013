@@ -25,6 +25,15 @@ namespace VG_DB_2013
 
         private void add_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(suppliernamebox.Text) ||
+             string.IsNullOrWhiteSpace(emailbox.Text) ||
+             string.IsNullOrWhiteSpace(numberbox.Text) ||
+             string.IsNullOrWhiteSpace(addressbox.Text))
+            {
+                MessageBox.Show("All Fields Required", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             SqlConnection sqlcon = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True");
             sqlcon.Open();
             SqlCommand cmd = new SqlCommand("insert into Game_Suppliers values (@Supplier_Name, @Supplier_Email, @Supplier_Phone_Number, @Supplier_Address)", sqlcon);

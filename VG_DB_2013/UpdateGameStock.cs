@@ -30,6 +30,12 @@ namespace VG_DB_2013
 
         private void find_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(find_gameid.Text))
+            {
+                MessageBox.Show("Enter Game ID!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             FetchGameName(Convert.ToInt32(find_gameid.Text));
         }
 
@@ -105,7 +111,15 @@ namespace VG_DB_2013
 
         private void add_Click(object sender, EventArgs e)
         {
-        
+            if (string.IsNullOrWhiteSpace(gamenamebox.Text) ||
+                string.IsNullOrWhiteSpace(suppliercombo.Text) ||
+                string.IsNullOrWhiteSpace(pricebox.Text) ||
+                string.IsNullOrWhiteSpace(qtybox.Text))
+            {
+                MessageBox.Show("All Fields Required", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             double price = Convert.ToDouble(pricebox.Text);
             int qty = Convert.ToInt32(qtybox.Text);
             DateTime date_purchased = dateTimePicker1.Value;

@@ -29,6 +29,12 @@ namespace VG_DB_2013
 
         private void find_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(find_custid.Text))
+            {
+                MessageBox.Show("Enter Customer ID!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             int custId = int.Parse(find_custid.Text);
 
             string query = "SELECT Last_Name, First_Name, Middle_Initial, Email, Phone_Number, Customer_Address FROM Game_Customers WHERE Customer_ID = @CustomerId";
@@ -61,6 +67,16 @@ namespace VG_DB_2013
 
         private void update_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(lastedit.Text) ||
+                string.IsNullOrWhiteSpace(firstedit.Text) ||
+                string.IsNullOrWhiteSpace(middleedit.Text) ||
+                string.IsNullOrWhiteSpace(emailedit.Text) ||
+                string.IsNullOrWhiteSpace(numberedit.Text) ||
+                string.IsNullOrWhiteSpace(addressedit.Text))
+            {
+                MessageBox.Show("All Fields Required", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             int custoId = int.Parse(find_custid.Text);
             string lastname = lastedit.Text;

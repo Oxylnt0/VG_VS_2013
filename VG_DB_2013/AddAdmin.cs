@@ -24,6 +24,16 @@ namespace VG_DB_2013
 
         private void add_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(usernamebox.Text) || 
+                string.IsNullOrWhiteSpace(passwordbox.Text) || 
+                string.IsNullOrWhiteSpace(lastbox.Text) || 
+                string.IsNullOrWhiteSpace(firstbox.Text) ||
+                string.IsNullOrWhiteSpace(middlebox.Text)) 
+            {
+                MessageBox.Show("All Fields Required", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
+
             SqlConnection sqlcon = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True");
             sqlcon.Open();
             SqlCommand cmd = new SqlCommand("insert into Admins values (@Username, @Admin_Password, @Last_Name, @First_Name, @Middle_Initial)", sqlcon);
@@ -36,15 +46,6 @@ namespace VG_DB_2013
 
             sqlcon.Close();
             MessageBox.Show("Admin Added", "System Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void clear_Click(object sender, EventArgs e)
-        {
-            usernamebox.Text = "";
-            passwordbox.Text = "";
-            lastbox.Text = "";
-            firstbox.Text = "";
-            middlebox.Text = "";
         }
 
         private void backbtn_Click(object sender, EventArgs e)

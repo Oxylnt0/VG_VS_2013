@@ -24,6 +24,12 @@ namespace VG_DB_2013
 
         private void find_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(find_supplier_id.Text))
+            {
+                MessageBox.Show("Enter Supplier ID!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             int supplierid = int.Parse(find_supplier_id.Text);
 
             string query = "SELECT Supplier_Name, Supplier_Email, Supplier_Phone_Number, Supplier_Address FROM Game_Suppliers WHERE Supplier_ID = @SupplierID";
@@ -54,6 +60,15 @@ namespace VG_DB_2013
 
         private void update_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(nameedit.Text) ||
+                string.IsNullOrWhiteSpace(emailedit.Text) ||
+                string.IsNullOrWhiteSpace(numberedit.Text) ||
+                string.IsNullOrWhiteSpace(addressedit.Text))
+            {
+                MessageBox.Show("All Fields Required", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             int supplierId = int.Parse(find_supplier_id.Text);
             string suppliername = nameedit.Text;
             string supplieremail = emailedit.Text;

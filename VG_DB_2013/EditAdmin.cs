@@ -24,6 +24,12 @@ namespace VG_DB_2013
 
         private void editmode_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(admin_id.Text))
+            {
+                MessageBox.Show("Enter Admin ID!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             SqlConnection sqlcon = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True");
             sqlcon.Open();
             SqlCommand cmd = new SqlCommand("delete Admins where Admin_ID=" + Convert.ToInt32(admin_id.Text), sqlcon);
@@ -35,6 +41,13 @@ namespace VG_DB_2013
 
         private void find_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(find_admin_id.Text))
+        
+            {
+                MessageBox.Show("Enter Admin ID!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             int adminId = int.Parse(find_admin_id.Text);
 
             string query = "SELECT Username, Last_Name, First_Name, Middle_Initial FROM admins WHERE Admin_ID = @AdminId";
@@ -65,6 +78,15 @@ namespace VG_DB_2013
 
         private void update_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(useredit.Text) ||
+             string.IsNullOrWhiteSpace(lastedit.Text) ||
+             string.IsNullOrWhiteSpace(firstedit.Text) ||
+             string.IsNullOrWhiteSpace(middleedit.Text))
+            {
+                MessageBox.Show("All Fields Required", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             int adminId = int.Parse(find_admin_id.Text);
             string username = useredit.Text;
             string lastname = lastedit.Text;
@@ -104,6 +126,7 @@ namespace VG_DB_2013
 
             opacity.Close();
         }
+
 
 
 

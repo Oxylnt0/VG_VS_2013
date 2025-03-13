@@ -26,6 +26,17 @@ namespace VG_DB_2013
 
         private void addcustbtn_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(last.Text) ||
+              string.IsNullOrWhiteSpace(first.Text) ||
+              string.IsNullOrWhiteSpace(middle.Text) ||
+              string.IsNullOrWhiteSpace(email.Text) ||
+              string.IsNullOrWhiteSpace(num.Text) ||
+              string.IsNullOrWhiteSpace(email.Text))
+            {
+                MessageBox.Show("All Fields Required", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             SqlConnection sqlcon = new SqlConnection(@"Data Source=SIMOUNANDRE\SQLEXPRESS;Initial Catalog=VG_Inventory_Management;Integrated Security=True");
             sqlcon.Open();
             SqlCommand cmd = new SqlCommand("insert into Game_Customers values (@Last, @First, @Middle, @Email, @Phone, @Address)", sqlcon);

@@ -47,33 +47,23 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.addcustbtn);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.address);
-            this.panel2.Controls.Add(this.num);
-            this.panel2.Controls.Add(this.email);
-            this.panel2.Controls.Add(this.middle);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.first);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.last);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(40, 37);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(409, 418);
+            this.panel2.Size = new System.Drawing.Size(409, 433);
             this.panel2.TabIndex = 61;
             // 
             // addcustbtn
@@ -83,7 +73,7 @@
             this.addcustbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addcustbtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addcustbtn.ForeColor = System.Drawing.Color.Black;
-            this.addcustbtn.Location = new System.Drawing.Point(138, 342);
+            this.addcustbtn.Location = new System.Drawing.Point(123, 291);
             this.addcustbtn.Name = "addcustbtn";
             this.addcustbtn.Size = new System.Drawing.Size(91, 35);
             this.addcustbtn.TabIndex = 55;
@@ -133,7 +123,7 @@
             // address
             // 
             this.address.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.address.Location = new System.Drawing.Point(138, 301);
+            this.address.Location = new System.Drawing.Point(123, 248);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(201, 25);
             this.address.TabIndex = 62;
@@ -141,7 +131,7 @@
             // num
             // 
             this.num.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num.Location = new System.Drawing.Point(138, 253);
+            this.num.Location = new System.Drawing.Point(123, 205);
             this.num.Name = "num";
             this.num.Size = new System.Drawing.Size(201, 25);
             this.num.TabIndex = 61;
@@ -149,7 +139,7 @@
             // email
             // 
             this.email.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email.Location = new System.Drawing.Point(138, 207);
+            this.email.Location = new System.Drawing.Point(123, 157);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(201, 25);
             this.email.TabIndex = 60;
@@ -157,7 +147,7 @@
             // middle
             // 
             this.middle.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middle.Location = new System.Drawing.Point(138, 157);
+            this.middle.Location = new System.Drawing.Point(123, 110);
             this.middle.Name = "middle";
             this.middle.Size = new System.Drawing.Size(201, 25);
             this.middle.TabIndex = 59;
@@ -168,7 +158,7 @@
             this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(29, 161);
+            this.label7.Location = new System.Drawing.Point(14, 114);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 21);
             this.label7.TabIndex = 58;
@@ -180,7 +170,7 @@
             this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(43, 114);
+            this.label8.Location = new System.Drawing.Point(28, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 21);
             this.label8.TabIndex = 57;
@@ -189,7 +179,7 @@
             // first
             // 
             this.first.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.first.Location = new System.Drawing.Point(138, 110);
+            this.first.Location = new System.Drawing.Point(123, 63);
             this.first.Name = "first";
             this.first.Size = new System.Drawing.Size(201, 25);
             this.first.TabIndex = 56;
@@ -200,7 +190,7 @@
             this.label10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(16, 257);
+            this.label10.Location = new System.Drawing.Point(1, 209);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 21);
             this.label10.TabIndex = 48;
@@ -212,7 +202,7 @@
             this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(63, 305);
+            this.label11.Location = new System.Drawing.Point(48, 252);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 21);
             this.label11.TabIndex = 46;
@@ -224,7 +214,7 @@
             this.label15.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label15.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(45, 73);
+            this.label15.Location = new System.Drawing.Point(30, 20);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(87, 21);
             this.label15.TabIndex = 42;
@@ -233,7 +223,7 @@
             // last
             // 
             this.last.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.last.Location = new System.Drawing.Point(138, 69);
+            this.last.Location = new System.Drawing.Point(123, 16);
             this.last.Name = "last";
             this.last.Size = new System.Drawing.Size(201, 25);
             this.last.TabIndex = 43;
@@ -272,11 +262,32 @@
             this.label16.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label16.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(81, 211);
+            this.label16.Location = new System.Drawing.Point(66, 161);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(51, 21);
             this.label16.TabIndex = 32;
             this.label16.Text = "Email:";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.addcustbtn);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.last);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.first);
+            this.panel3.Controls.Add(this.middle);
+            this.panel3.Controls.Add(this.email);
+            this.panel3.Controls.Add(this.num);
+            this.panel3.Controls.Add(this.address);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Location = new System.Drawing.Point(15, 69);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(378, 345);
+            this.panel3.TabIndex = 63;
             // 
             // AddCustomer
             // 
@@ -290,9 +301,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCustomer";
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -318,5 +330,6 @@
         private System.Windows.Forms.Button backbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button addcustbtn;
+        private System.Windows.Forms.Panel panel3;
     }
 }
